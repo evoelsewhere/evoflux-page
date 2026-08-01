@@ -33,7 +33,7 @@
   <rect x="1430" y="116" width="94" height="26" rx="6" fill="#172235"/><text x="1450" y="133" fill="white" font-family="Arial,sans-serif" font-size="10" font-weight="700">FY2027</text>
 
   <rect x="58" y="171" width="1484" height="473" rx="15" fill="#F5F7FA" stroke="#172033" stroke-opacity=".08"/>
-  <text x="82" y="205" fill="#18864B" font-family="Arial,sans-serif" font-size="9" font-weight="700" letter-spacing="1.3">FHM Q9 × FPT JAPAN · AI PORTFOLIO</text>
+  <text x="82" y="205" fill="#18864B" font-family="Arial,sans-serif" font-size="9" font-weight="700" letter-spacing="1.3">ENTERPRISE · AI PORTFOLIO</text>
   <text x="82" y="245" fill="#172235" font-family="Arial,sans-serif" font-size="27" font-weight="700">Executive transformation dashboard</text>
   <text x="82" y="270" fill="#6A7485" font-family="Arial,sans-serif" font-size="11">18 initiatives · scenario-linked financial model · refreshed 06 Oct 2027</text>
 
@@ -62,8 +62,8 @@
   <rect x="741" y="397" width="370" height="222" rx="13" fill="white"/>
   <text x="762" y="425" fill="#273246" font-family="Arial,sans-serif" font-size="12" font-weight="700">Investment by business unit</text>
   <g font-family="Arial,sans-serif" font-size="9">
-    <text x="762" y="467" fill="#687284">FPT Software</text><rect x="850" y="454" width="224" height="17" rx="8.5" fill="#E5E9F0"/><rect x="850" y="454" width="182" height="17" rx="8.5" fill="#5069DD"/><text x="1039" y="467" fill="white" font-weight="700">¥388M</text>
-    <text x="762" y="510" fill="#687284">FPT Japan</text><rect x="850" y="497" width="224" height="17" rx="8.5" fill="#E5E9F0"/><rect x="850" y="497" width="123" height="17" rx="8.5" fill="#34B971"/><text x="980" y="510" fill="#268456" font-weight="700">¥232M</text>
+    <text x="762" y="467" fill="#687284">Product teams</text><rect x="850" y="454" width="224" height="17" rx="8.5" fill="#E5E9F0"/><rect x="850" y="454" width="182" height="17" rx="8.5" fill="#5069DD"/><text x="1039" y="467" fill="white" font-weight="700">¥388M</text>
+    <text x="762" y="510" fill="#687284">Delivery teams</text><rect x="850" y="497" width="224" height="17" rx="8.5" fill="#E5E9F0"/><rect x="850" y="497" width="123" height="17" rx="8.5" fill="#34B971"/><text x="980" y="510" fill="#268456" font-weight="700">¥232M</text>
     <text x="762" y="553" fill="#687284">Contingency</text><rect x="850" y="540" width="224" height="17" rx="8.5" fill="#E5E9F0"/><rect x="850" y="540" width="61" height="17" rx="8.5" fill="#FB923C"/><text x="919" y="553" fill="#C8651E" font-weight="700">¥48M</text>
   </g>
   <rect x="1130" y="397" width="388" height="222" rx="13" fill="white"/>

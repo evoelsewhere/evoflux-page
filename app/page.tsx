@@ -3,9 +3,6 @@ import { withBasePath } from "./base-path";
 import { ModeShowcase } from "./components/ModeShowcase";
 import { localizeHomeNode, type HomeLocale } from "./home-locales";
 
-const RELEASE_URL = "https://github.com/khuonghung/evoflux/releases/latest";
-const GITHUB_URL = "https://github.com/khuonghung/evoflux";
-
 export const metadata: Metadata = {
   title: "EvoFlux FHM — Open Cowork AI & AIM for FPT Japan",
   description: "EvoFlux brings open cowork AI, Coding, WebBridge browser work, and AIM modernization to FHM Q9, FPT, FPT Japan, and FJP teams.",
@@ -21,19 +18,20 @@ const steps = [
   { number: "06", label: "Deliver", note: "Ship evidence, not promises" },
 ];
 
+const PROVIDER_ICON_BASE = "https://cdn.jsdelivr.net/npm/@lobehub/icons-static-svg@1.94.0/icons";
 const providers = [
-  "OpenAI",
-  "Anthropic",
-  "Gemini",
-  "Bedrock",
-  "OpenRouter",
-  "Ollama",
-  "DeepSeek",
-  "Kimi",
-  "xAI",
-  "Vertex AI",
-  "GitHub Copilot",
-  "NVIDIA",
+  { name: "OpenAI", icon: "openai" },
+  { name: "Anthropic", icon: "anthropic" },
+  { name: "Gemini", icon: "gemini" },
+  { name: "Bedrock", icon: "bedrock" },
+  { name: "OpenRouter", icon: "openrouter" },
+  { name: "Ollama", icon: "ollama" },
+  { name: "DeepSeek", icon: "deepseek" },
+  { name: "Kimi", icon: "kimi" },
+  { name: "xAI", icon: "xai" },
+  { name: "Vertex AI", icon: "vertexai" },
+  { name: "GitHub Copilot", icon: "githubcopilot" },
+  { name: "NVIDIA", icon: "nvidia" },
 ];
 
 export function HomePageContent({ locale = "en" }: { locale?: HomeLocale }) {
@@ -41,18 +39,15 @@ export function HomePageContent({ locale = "en" }: { locale?: HomeLocale }) {
     <main lang={locale}>
       <header className="site-header">
         <div className="brand-cluster">
-          <a className="brand" href="#top" aria-label="EvoFlux home">
-            <img src={withBasePath("/evoflux-app-icon.png")} alt="" width="34" height="34" />
-            <span>EvoFlux</span>
+          <a className="company-brand-link" href="#top" aria-label="Home">
+            <img
+              className="company-brand"
+              src={withBasePath("/brand/fpt-software-fhm-q9.png")}
+              width="885"
+              height="241"
+              alt="Company logo"
+            />
           </a>
-          <span className="brand-divider" aria-hidden="true" />
-          <img
-            className="company-brand"
-            src={withBasePath("/brand/fpt-software-fhm-q9.png")}
-            width="885"
-            height="241"
-            alt="FPT Software, FHM and Q9 Quy Nhon Delivery Unit"
-          />
         </div>
 
         <nav className="desktop-nav" aria-label="Primary navigation">
@@ -68,12 +63,7 @@ export function HomePageContent({ locale = "en" }: { locale?: HomeLocale }) {
             <a href={withBasePath("/?lang=en")} className={locale === "en" ? "is-active" : ""} lang="en">EN</a>
             <a href={withBasePath("/jp?lang=ja")} className={locale === "ja" ? "is-active" : ""} lang="ja">日本語</a>
           </div>
-          <a className="text-link desktop-only" href={GITHUB_URL} target="_blank" rel="noreferrer">
-            GitHub
-          </a>
-          <a className="button button-dark button-small" href={RELEASE_URL} target="_blank" rel="noreferrer">
-            Download
-          </a>
+          <span className="button button-dark button-small is-coming-soon" aria-disabled="true">Coming soon</span>
           <details className="mobile-menu">
             <summary aria-label="Open navigation"><span /><span /></summary>
             <nav aria-label="Mobile navigation">
@@ -83,7 +73,6 @@ export function HomePageContent({ locale = "en" }: { locale?: HomeLocale }) {
               <a href="#local-first">Local-first</a>
               <a href="#architecture">Architecture</a>
               <a href={withBasePath(locale === "ja" ? "/jp/aim" : "/aim")}>AIM</a>
-              <a href={GITHUB_URL}>GitHub</a>
             </nav>
           </details>
         </div>
@@ -110,9 +99,7 @@ export function HomePageContent({ locale = "en" }: { locale?: HomeLocale }) {
           <h1>AI agents that do <em>real work.</em></h1>
           <p>One desktop workspace for knowledge work, software engineering, and legacy modernization—orchestrated in parallel and verified before delivery.</p>
           <div className="hero-actions">
-            <a className="button button-dark" href={RELEASE_URL} target="_blank" rel="noreferrer">
-              Download EvoFlux <span aria-hidden="true">↓</span>
-            </a>
+            <span className="button button-dark is-coming-soon" aria-disabled="true">Coming soon</span>
             <a className="button button-ghost" href="#modes">Explore the workspace <span aria-hidden="true">↘</span></a>
           </div>
           <div className="trust-row" aria-label="Product attributes">
@@ -399,19 +386,25 @@ export function HomePageContent({ locale = "en" }: { locale?: HomeLocale }) {
       <section className="providers-section" aria-labelledby="providers-title">
         <p id="providers-title">Use the right model for every specialist</p>
         <div className="provider-track">
-          {providers.map((provider) => <span key={provider}>{provider}</span>)}
+          {providers.map((provider) => (
+            <span key={provider.name}>
+              <img src={`${PROVIDER_ICON_BASE}/${provider.icon}.svg`} alt="" width="18" height="18" loading="lazy" />
+              {provider.name}
+            </span>
+          ))}
         </div>
       </section>
 
       <section id="fhm-cowork" className="section ecosystem-section">
+        <span id="team-workspace" className="anchor-alias" aria-hidden="true" />
         <div className="ecosystem-intro">
-          <span className="section-kicker">EvoFlux for FHM Q9 · FPT Japan · FJP</span>
+          <span className="section-kicker">EvoFlux for modern teams</span>
           <h2>Open cowork AI for teams that do more than chat.</h2>
-          <p>EvoFlux gives FHM Q9, FPT, and FPT Japan teams one inspectable workspace for knowledge work, software delivery, browser automation, and governed modernization.</p>
+          <p>EvoFlux gives teams one inspectable workspace for knowledge work, software delivery, browser automation, and governed modernization.</p>
         </div>
         <div className="ecosystem-grid">
           <article><span>01 · COWORK</span><h3>Work together with AI</h3><p>Research, documents, data, and browser tasks become reviewable artifacts—not disposable chat answers.</p><small>Open cowork · local-first</small></article>
-          <article><span>02 · ENGINEERING</span><h3>Build with Coding agents</h3><p>Use repositories, worktrees, tests, code graphs, sandbox policy, and specialist review in one controlled delivery loop.</p><small>FHM · FPT · FJP</small></article>
+          <article><span>02 · ENGINEERING</span><h3>Build with Coding agents</h3><p>Use repositories, worktrees, tests, code graphs, sandbox policy, and specialist review in one controlled delivery loop.</p><small>Code · test · review</small></article>
           <article><span>03 · MODERNIZATION</span><h3>Prove change with AIM</h3><p>AI Innovation Modernization connects legacy understanding, Rulebooks, target mappings, conversion, comparison, and cutover evidence.</p><small>AIM · governed evidence</small></article>
         </div>
       </section>
@@ -472,14 +465,14 @@ export function HomePageContent({ locale = "en" }: { locale?: HomeLocale }) {
         <h2>Start with EvoFlux.</h2>
         <p>Think, build, verify, and ship from one local-first desktop workspace.</p>
         <div className="download-grid">
-          <a className="download-card download-card-mac" href={RELEASE_URL} target="_blank" rel="noreferrer" aria-label="Download EvoFlux for macOS">
+          <div className="download-card download-card-mac is-coming-soon" aria-disabled="true">
             <span className="download-visual" aria-hidden="true"><i className="platform-mark"><img src={withBasePath("/platforms/apple.svg")} alt="" /></i></span>
-            <span className="download-copy"><strong>EvoFlux for Mac</strong><small>macOS · Apple silicon</small><b>Download <i>↓</i></b></span>
-          </a>
-          <a className="download-card download-card-windows" href={RELEASE_URL} target="_blank" rel="noreferrer" aria-label="Download EvoFlux for Windows">
+            <span className="download-copy"><strong>EvoFlux for Mac</strong><small>macOS · Apple silicon</small><b>Coming soon</b></span>
+          </div>
+          <div className="download-card download-card-windows is-coming-soon" aria-disabled="true">
             <span className="download-visual" aria-hidden="true"><i className="platform-mark"><img src={withBasePath("/platforms/windows.svg")} alt="" /></i></span>
-            <span className="download-copy"><strong>EvoFlux for Windows</strong><small>Windows 10 or later</small><b>Download <i>↓</i></b></span>
-          </a>
+            <span className="download-copy"><strong>EvoFlux for Windows</strong><small>Windows 10 or later</small><b>Coming soon</b></span>
+          </div>
         </div>
       </section>
 
@@ -490,7 +483,6 @@ export function HomePageContent({ locale = "en" }: { locale?: HomeLocale }) {
         </div>
         <div className="footer-links">
           <div><strong>Product</strong><a href="#modes">Work</a><a href="#modes">Coding</a><a href={withBasePath(locale === "ja" ? "/jp/aim" : "/aim")}>AIM</a></div>
-          <div><strong>Resources</strong><a href={GITHUB_URL}>GitHub</a><a href={`${GITHUB_URL}#quick-start`}>Quick start</a><a href={`${GITHUB_URL}/blob/main/LICENSE`}>License</a></div>
           <div><strong>Principles</strong><a href="#local-first">Local-first</a><a href="#orchestration">Orchestrated</a><a href="#architecture">Verified</a></div>
         </div>
         <div className="footer-bottom"><span>© 2026 EvoFlux</span><span>Apache 2.0 · Built in the open</span></div>

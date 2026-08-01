@@ -2136,6 +2136,10 @@ footer {
   letter-spacing: .01em;
 }
 
+.aim-brand-cluster { gap: 16px; }
+.aim-company-brand { width: 235px; }
+.aim-brand-logo { width: 82px; height: auto; object-fit: contain; }
+
 .aim2-language-switch { display: inline-flex; align-items: center; gap: 2px; padding: 3px; border: 1px solid rgba(17,17,16,.1); border-radius: 9px; background: rgba(247,247,244,.8); }
 .aim2-language-switch a { display: grid; min-width: 31px; height: 24px; padding: 0 7px; place-items: center; border-radius: 6px; color: #8a8b85; font-family: var(--font-geist-mono),monospace; font-size: 8px; font-weight: 620; transition: color 160ms ease,background 160ms ease,box-shadow 160ms ease; }
 .aim2-language-switch a:hover { color: #292a2e; }
@@ -2436,7 +2440,8 @@ footer {
 @media (max-width: 800px) {
   .aim2-header { padding-right: 18px; padding-left: 18px; }
   .aim2-header .header-actions { gap: 8px; }
-  .aim2-header .brand small { display: none; }
+  .aim-company-brand { width: 180px; }
+  .aim-brand-logo { width: 64px; }
   .aim2-hero { min-height: auto; padding: 100px 22px 85px; }
   .aim2-hero h1 { font-size: clamp(52px,13vw,76px); }
   .aim2-hero-copy > p { font-size: 15px; }
@@ -2460,8 +2465,9 @@ footer {
 
 @media (max-width: 480px) {
   .aim2-header { padding-right: 12px; padding-left: 12px; }
-  .aim2-header .brand { gap: 7px; }
-  .aim2-header .brand img { width: 30px; height: 30px; }
+  .aim-brand-cluster { gap: 8px; }
+  .aim-company-brand { width: 135px; }
+  .aim-brand-logo { width: 52px; }
   .aim2-header .header-actions { gap: 6px; }
   .aim2-header .mobile-menu summary { width: 34px; height: 34px; border-radius: 10px; }
   .aim2-language-switch a { min-width: 28px; padding: 0 5px; }

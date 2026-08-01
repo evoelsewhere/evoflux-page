@@ -30,11 +30,12 @@ test("server-renders the EvoFlux landing page", async () => {
   assert.match(html, /Excel · XLSX/);
   assert.match(html, /Word · DOCX/);
   assert.match(html, /brand\/fpt-software-fhm-q9\.png/);
+  assert.doesNotMatch(html, /class="brand" href="#top"/);
   assert.match(html, /Set it once\./);
   assert.match(html, /Every · Cron · At/);
   assert.match(html, /Any IANA timezone/);
   assert.match(html, /evoflux-scheduler-light\.png/);
-  assert.match(html, /EvoFlux for FHM Q9 · FPT Japan · FJP/);
+  assert.match(html, /EvoFlux for modern teams/);
   assert.match(html, /Open cowork AI for teams that do more than chat\./);
   assert.match(html, /AI Innovation Modernization connects legacy understanding/);
   assert.match(html, /"@type":"SoftwareApplication"/);
@@ -52,13 +53,20 @@ test("server-renders the EvoFlux landing page", async () => {
   assert.match(html, /Your browser is part of the workspace\./);
   assert.match(html, /Durable Goal mode/);
   assert.match(html, /Structural code graph/);
-  assert.match(html, /Download EvoFlux/);
+  assert.match(html, /Coming soon/);
+  assert.doesNotMatch(html, /github\.com|>GitHub</i);
+  assert.match(html, /GitHub Copilot/);
+  assert.match(html, /@lobehub\/icons-static-svg@1\.94\.0\/icons\/openai\.svg/);
+  assert.match(html, /@lobehub\/icons-static-svg@1\.94\.0\/icons\/githubcopilot\.svg/);
+  assert.match(html, /id="fhm-cowork"/);
+  assert.match(html, /id="team-workspace"/);
   assert.match(html, /EvoFlux for Mac/);
   assert.match(html, /EvoFlux for Windows/);
   assert.match(html, /platforms\/apple\.svg/);
   assert.match(html, /platforms\/windows\.svg/);
   assert.doesNotMatch(html, /Linux/i);
   assert.match(html, /evoflux-work-light\.jpg/);
+  assert.match(html, /mode-session-privacy/);
   assert.match(html, /illustrations\/sandbox-settings-mockup\.png/);
   assert.match(html, /illustrations\/webbridge-browser-mockup\.png/);
   assert.match(html, /evoflux-app-icon\.png/);
@@ -82,7 +90,7 @@ test("server-renders the Japanese EvoFlux landing page", async () => {
   assert.match(html, /一度設定すれば、/);
   assert.match(html, /間隔 · Cron · 指定時刻/);
   assert.match(html, /任意のIANAタイムゾーン/);
-  assert.match(html, /FHM Q9 · FPT Japan · FJPのためのEvoFlux/);
+  assert.match(html, /あらゆるチームのためのEvoFlux/);
   assert.match(html, /リポジトリ不要の共同作業/);
   assert.match(html, /ブラウザもワークスペースの一部/);
   assert.match(html, /EvoFluxを始めよう/);
@@ -113,6 +121,9 @@ test("server-renders the dedicated AIM product page", async () => {
   assert.match(html, /evoflux-aim-overview-light\.jpg/);
   assert.match(html, /evoflux-aim-rulebook-light\.jpg/);
   assert.match(html, /evoflux-aim-suggest-light\.jpg/);
+  assert.match(html, /brand\/fpt-software-fhm-q9\.png/);
+  assert.match(html, /brand\/aim-logo\.png/);
+  assert.doesNotMatch(html, /class="brand"[^>]*aria-label="EvoFlux home"/);
   assert.doesNotMatch(html, /codex-preview|Your site is taking shape|react-loading-skeleton/i);
 });
 

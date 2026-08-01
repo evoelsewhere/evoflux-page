@@ -4,9 +4,6 @@ import { Children, cloneElement, isValidElement, type ReactElement, type ReactNo
 import { withBasePath } from "../base-path";
 import AimPipelineShowcase from "../components/AimPipelineShowcase";
 
-const RELEASE_URL = "https://github.com/khuonghung/evoflux/releases/latest";
-const GITHUB_URL = "https://github.com/khuonghung/evoflux";
-
 export const metadata: Metadata = {
   title: "AIM — AI Innovation Modernization | EvoFlux FHM",
   description: "EvoFlux AIM is the governed AI Innovation Modernization control plane for FHM Q9 and FPT Japan: understand legacy systems, transform safely, and prove equivalence.",
@@ -145,12 +142,11 @@ const jaText: Record<string, string> = {
   "Rulebook": "ルールブック",
   "Pipelines": "パイプライン",
   "Traceability": "トレーサビリティ",
-  "Download": "ダウンロード",
+  "Coming soon": "近日公開",
   "Home": "ホーム",
   "Move legacy systems forward.": "レガシーシステムを、次の時代へ。",
   "Keep the proof attached.": "証拠を切り離さずに。",
   "AIM is EvoFlux's migration control plane. It turns legacy source into approved knowledge, bounded target work, and deterministic evidence—through pipelines people can inspect and govern.": "AIMはEvoFluxの移行コントロールプレーンです。レガシーソースを、承認済みの知識、境界が明確なターゲット作業、決定論的な証拠へ変換します。すべてのパイプラインは人が確認し、統制できます。",
-  "Download EvoFlux ": "EvoFluxをダウンロード ",
   "See how AIM works ": "AIMの仕組みを見る ",
   "linked repositories": "接続リポジトリ",
   "executable pipelines": "実行可能なパイプライン",
@@ -429,10 +425,12 @@ export function AimPageContent({ locale = "en" }: { locale?: AimLocale }) {
   const page = (
     <main className="aim2-page" lang={locale}>
       <header className="site-header aim2-header">
-        <a className="brand" href={withBasePath(locale === "ja" ? "/jp" : "/")} aria-label="EvoFlux home">
-          <img src={withBasePath("/evoflux-app-icon.png")} alt="" width="34" height="34" />
-          <span>EvoFlux</span><small>/ AIM</small>
-        </a>
+        <div className="brand-cluster aim-brand-cluster">
+          <a className="company-brand-link" href={withBasePath(locale === "ja" ? "/jp" : "/")} aria-label="Home">
+            <img className="company-brand aim-company-brand" src={withBasePath("/brand/fpt-software-fhm-q9.png")} width="885" height="241" alt="Company logo" />
+          </a>
+          <img className="aim-brand-logo" src={withBasePath("/brand/aim-logo.png")} width="196" height="90" alt="AIM" />
+        </div>
         <nav className="desktop-nav" aria-label="Primary navigation">
           <a href="#product-tour">Product tour</a>
           <a href="#rulebook">Rulebook</a>
@@ -444,8 +442,7 @@ export function AimPageContent({ locale = "en" }: { locale?: AimLocale }) {
             <a href={withBasePath("/aim?lang=en")} className={locale === "en" ? "is-active" : ""} lang="en">EN</a>
             <a href={withBasePath("/jp/aim?lang=ja")} className={locale === "ja" ? "is-active" : ""} lang="ja">日本語</a>
           </div>
-          <a className="text-link desktop-only" href={GITHUB_URL} target="_blank" rel="noreferrer">GitHub</a>
-          <a className="button button-dark button-small" href={RELEASE_URL} target="_blank" rel="noreferrer">Download</a>
+          <span className="button button-dark button-small is-coming-soon" aria-disabled="true">Coming soon</span>
           <details className="mobile-menu">
             <summary aria-label="Open navigation"><span /><span /></summary>
             <nav aria-label="Mobile navigation"><a href={withBasePath(locale === "ja" ? "/jp" : "/")}>Home</a><a href="#product-tour">Product tour</a><a href="#rulebook">Rulebook</a><a href="#pipelines">Pipelines</a><a href="#traceability">Traceability</a></nav>
@@ -464,7 +461,7 @@ export function AimPageContent({ locale = "en" }: { locale?: AimLocale }) {
           <h1>Move legacy systems forward.<br /><em>Keep the proof attached.</em></h1>
           <p>AIM is EvoFlux&apos;s migration control plane. It turns legacy source into approved knowledge, bounded target work, and deterministic evidence—through pipelines people can inspect and govern.</p>
           <div className="hero-actions">
-            <a className="button aim2-button-light" href={RELEASE_URL} target="_blank" rel="noreferrer">Download EvoFlux <span>↓</span></a>
+            <span className="button aim2-button-light is-coming-soon" aria-disabled="true">Coming soon</span>
             <a className="button aim2-button-line" href="#product-tour">See how AIM works <span>↘</span></a>
           </div>
           <div className="aim2-hero-stats">
@@ -620,12 +617,12 @@ export function AimPageContent({ locale = "en" }: { locale?: AimLocale }) {
         <span className="section-kicker">AI Innovation Modernization</span>
         <h2>Make the migration explainable.<br />Make the outcome provable.</h2>
         <p>Bring one legacy estate, one approved target, and the evidence that matters.</p>
-        <div className="hero-actions"><a className="button aim2-button-light" href={RELEASE_URL} target="_blank" rel="noreferrer">Download EvoFlux <span>↓</span></a><a className="button aim2-button-line" href={withBasePath(locale === "ja" ? "/jp" : "/")}>Back to EvoFlux <span>→</span></a></div>
+        <div className="hero-actions"><span className="button aim2-button-light is-coming-soon" aria-disabled="true">Coming soon</span><a className="button aim2-button-line" href={withBasePath(locale === "ja" ? "/jp" : "/")}>Back to EvoFlux <span>→</span></a></div>
       </section>
 
       <footer className="aim2-footer">
         <div className="footer-brand"><img src={withBasePath("/evoflux-app-icon.png")} alt="" width="32" height="32" /><strong>EvoFlux</strong><p>Local-first agent infrastructure for work, coding, and governed modernization.</p></div>
-        <div className="footer-links"><div><strong>Product</strong><a href={withBasePath(locale === "ja" ? "/jp" : "/")}>Overview</a><a href={withBasePath(locale === "ja" ? "/jp#modes" : "/#modes")}>Work & Coding</a><a href={withBasePath(locale === "ja" ? "/jp/aim" : "/aim")}>AIM</a></div><div><strong>AIM</strong><a href="#product-tour">Product tour</a><a href="#rulebook">Rulebook</a><a href="#pipelines">Pipelines</a><a href="#traceability">Traceability</a></div><div><strong>Open source</strong><a href={GITHUB_URL}>GitHub</a><a href={`${GITHUB_URL}#quick-start`}>Quick start</a><a href={`${GITHUB_URL}/blob/main/LICENSE`}>License</a></div></div>
+        <div className="footer-links"><div><strong>Product</strong><a href={withBasePath(locale === "ja" ? "/jp" : "/")}>Overview</a><a href={withBasePath(locale === "ja" ? "/jp#modes" : "/#modes")}>Work & Coding</a><a href={withBasePath(locale === "ja" ? "/jp/aim" : "/aim")}>AIM</a></div><div><strong>AIM</strong><a href="#product-tour">Product tour</a><a href="#rulebook">Rulebook</a><a href="#pipelines">Pipelines</a><a href="#traceability">Traceability</a></div></div>
         <div className="footer-bottom"><span>© 2026 EvoFlux</span><span>Apache 2.0 · Built in the open</span></div>
       </footer>
     </main>
