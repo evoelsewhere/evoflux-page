@@ -255,14 +255,13 @@ export function HomePageContent({ locale = "en" }: { locale?: HomeLocale }) {
             <div className="capability-facts"><span><strong>4</strong>boundary layers</span><span><strong>120s</strong>default command cap</span><span><strong>128 KiB</strong>inline output cap</span></div>
           </div>
           <div className="capability-screen-shell">
-            <div className="capability-screen-bar"><i /><i /><i /><span>EvoFlux · Settings · Sandbox</span><b>LIGHT MODE</b></div>
             <img src={withBasePath("/illustrations/sandbox-settings-mockup.png")} alt="Sharp EvoFlux Sandbox settings mockup showing outbound data protection and process security" />
           </div>
         </article>
 
         <article id="webbridge" className="capability-feature capability-feature-webbridge">
           <div className="capability-screen-shell webbridge-screen-shell">
-            <img src={withBasePath("/illustrations/webbridge-browser-mockup.png")} alt="Sharp EvoFlux WebBridge mockup connected to a real signed-in browser" />
+            <img src={withBasePath("/illustrations/webbridge-browser-mockup.png")} alt="EvoFlux desktop workspace with Work, Coding, WebBridge, and AIM capabilities" />
           </div>
           <div className="capability-feature-copy">
             <span className="capability-feature-label"><i /> WebBridge · real browser</span>
