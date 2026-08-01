@@ -1,6 +1,7 @@
 import type { Metadata, Viewport } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import { headers } from "next/headers";
+import { withBasePath } from "./base-path";
 import "./globals.css";
 
 const geistSans = Geist({
@@ -18,7 +19,7 @@ export async function generateMetadata(): Promise<Metadata> {
   const host = requestHeaders.get("x-forwarded-host") ?? requestHeaders.get("host") ?? "localhost:3000";
   const protocol = host.includes("localhost") || host.startsWith("127.0.0.1") ? "http" : "https";
   const origin = `${protocol}://${host}`;
-  const socialImage = `${origin}/og.png`;
+  const socialImage = `${origin}${withBasePath("/og.png")}`;
 
   return {
     metadataBase: new URL(origin),
@@ -37,9 +38,9 @@ export async function generateMetadata(): Promise<Metadata> {
       "WebBridge",
     ],
     icons: {
-      icon: "/evoflux-app-icon.png",
-      shortcut: "/evoflux-app-icon.png",
-      apple: "/evoflux-app-icon.png",
+      icon: withBasePath("/evoflux-app-icon.png"),
+      shortcut: withBasePath("/evoflux-app-icon.png"),
+      apple: withBasePath("/evoflux-app-icon.png"),
     },
     openGraph: {
       type: "website",

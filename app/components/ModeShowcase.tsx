@@ -1,6 +1,7 @@
 "use client";
 
 import { useState } from "react";
+import { withBasePath } from "../base-path";
 
 const modes = [
   {
@@ -90,13 +91,13 @@ export function ModeShowcase({ locale = "en" }: { locale?: "en" | "ja" }) {
           <h3>{mode.title}</h3>
           <p>{mode.description}</p>
           <div className="mode-proof"><span>✓</span><p><small>{locale === "ja" ? "検証" : "Verification"}</small><strong>{mode.proof}</strong></p></div>
-          {mode.id === "aim" && <a className="mode-deep-link" href={locale === "ja" ? "/jp/aim" : "/aim"}>{locale === "ja" ? "AIMを詳しく見る" : "Explore AIM in depth"} <span aria-hidden="true">→</span></a>}
+          {mode.id === "aim" && <a className="mode-deep-link" href={withBasePath(locale === "ja" ? "/jp/aim" : "/aim")}>{locale === "ja" ? "AIMを詳しく見る" : "Explore AIM in depth"} <span aria-hidden="true">→</span></a>}
         </div>
         <div className="mode-screen-wrap" key={`${mode.id}-image`}>
           <div className="mode-screen-glow" />
           <div className="screen-frame mode-screen">
             <div className="screen-topbar"><span className="traffic red" /><span className="traffic amber" /><span className="traffic green" /><span className="screen-label">EvoFlux · {mode.label}</span></div>
-            <img src={mode.image} alt={mode.alt} />
+            <img src={withBasePath(mode.image)} alt={mode.alt} />
           </div>
         </div>
       </div>

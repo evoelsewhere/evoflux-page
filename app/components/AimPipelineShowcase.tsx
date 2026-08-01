@@ -1,6 +1,7 @@
 "use client";
 
 import { useState } from "react";
+import { withBasePath } from "../base-path";
 
 type Pipeline = {
   id: string;
@@ -239,7 +240,7 @@ export default function AimPipelineShowcase({ locale = "en" }: { locale?: Locale
             onClick={() => setActiveId(pipeline.id)}
             aria-pressed={pipeline.id === active.id}
           >
-            <span className="aim2-thumb-shot"><img src={pipeline.image} alt="" /></span>
+            <span className="aim2-thumb-shot"><img src={withBasePath(pipeline.image)} alt="" /></span>
             <span className="aim2-thumb-meta">
               <small>{String(index + 1).padStart(2, "0")} · {locale === "ja" ? groupJa[pipeline.group] : pipeline.group}</small>
               <strong>{shown.title}</strong>
@@ -267,7 +268,7 @@ export default function AimPipelineShowcase({ locale = "en" }: { locale?: Locale
         </div>
         <div className="aim2-detail-screen">
           <div className="aim2-window-bar"><i /><i /><i /><span>EvoFlux · AIM · {active.title}</span><b>{locale === "ja" ? "ライトモード" : "LIGHT MODE"}</b></div>
-          <img src={active.image} alt={locale === "ja" ? `EvoFlux AIM ${active.title} パイプライン` : `EvoFlux AIM ${active.title} pipeline in light mode`} />
+          <img src={withBasePath(active.image)} alt={locale === "ja" ? `EvoFlux AIM ${active.title} パイプライン` : `EvoFlux AIM ${active.title} pipeline in light mode`} />
         </div>
       </article>
     </div>

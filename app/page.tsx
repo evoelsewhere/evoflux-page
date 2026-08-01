@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { withBasePath } from "./base-path";
 import { ModeShowcase } from "./components/ModeShowcase";
 import { localizeHomeNode, type HomeLocale } from "./home-locales";
 
@@ -8,7 +9,7 @@ const GITHUB_URL = "https://github.com/khuonghung/evoflux";
 export const metadata: Metadata = {
   title: "EvoFlux — AI agents that do real work",
   description: "A local-first desktop agent workspace for knowledge work, software engineering, and governed modernization.",
-  alternates: { languages: { en: "/", ja: "/jp" } },
+  alternates: { languages: { en: withBasePath("/"), ja: withBasePath("/jp") } },
 };
 
 const steps = [
@@ -40,7 +41,7 @@ export function HomePageContent({ locale = "en" }: { locale?: HomeLocale }) {
     <main lang={locale}>
       <header className="site-header">
         <a className="brand" href="#top" aria-label="EvoFlux home">
-          <img src="/evoflux-app-icon.png" alt="" width="34" height="34" />
+          <img src={withBasePath("/evoflux-app-icon.png")} alt="" width="34" height="34" />
           <span>EvoFlux</span>
         </a>
 
@@ -49,13 +50,13 @@ export function HomePageContent({ locale = "en" }: { locale?: HomeLocale }) {
           <a href="#capabilities">Capabilities</a>
           <a href="#orchestration">Orchestration</a>
           <a href="#local-first">Local-first</a>
-          <a href={locale === "ja" ? "/jp/aim" : "/aim"}>AIM</a>
+          <a href={withBasePath(locale === "ja" ? "/jp/aim" : "/aim")}>AIM</a>
         </nav>
 
         <div className="header-actions">
           <div className="aim2-language-switch" aria-label="Language">
-            <a href="/?lang=en" className={locale === "en" ? "is-active" : ""} lang="en">EN</a>
-            <a href="/jp?lang=ja" className={locale === "ja" ? "is-active" : ""} lang="ja">日本語</a>
+            <a href={withBasePath("/?lang=en")} className={locale === "en" ? "is-active" : ""} lang="en">EN</a>
+            <a href={withBasePath("/jp?lang=ja")} className={locale === "ja" ? "is-active" : ""} lang="ja">日本語</a>
           </div>
           <a className="text-link desktop-only" href={GITHUB_URL} target="_blank" rel="noreferrer">
             GitHub
@@ -71,7 +72,7 @@ export function HomePageContent({ locale = "en" }: { locale?: HomeLocale }) {
               <a href="#orchestration">Orchestration</a>
               <a href="#local-first">Local-first</a>
               <a href="#architecture">Architecture</a>
-              <a href={locale === "ja" ? "/jp/aim" : "/aim"}>AIM</a>
+              <a href={withBasePath(locale === "ja" ? "/jp/aim" : "/aim")}>AIM</a>
               <a href={GITHUB_URL}>GitHub</a>
             </nav>
           </details>
@@ -95,7 +96,7 @@ export function HomePageContent({ locale = "en" }: { locale?: HomeLocale }) {
 
         <div className="hero-copy reveal">
           <div className="eyebrow"><span className="eyebrow-dot" />Local-first agent harness</div>
-          <img className="hero-mark" src="/evoflux-app-icon.png" width="92" height="92" alt="EvoFlux" />
+          <img className="hero-mark" src={withBasePath("/evoflux-app-icon.png")} width="92" height="92" alt="EvoFlux" />
           <h1>AI agents that do <em>real work.</em></h1>
           <p>One desktop workspace for knowledge work, software engineering, and legacy modernization—orchestrated in parallel and verified before delivery.</p>
           <div className="hero-actions">
@@ -126,7 +127,7 @@ export function HomePageContent({ locale = "en" }: { locale?: HomeLocale }) {
               <span className="screen-label">EvoFlux · Work</span>
               <span className="screen-live"><i /> Local</span>
             </div>
-            <img src="/screens/evoflux-work-light.jpg" alt="EvoFlux Work mode showing a launch readiness brief" />
+            <img src={withBasePath("/screens/evoflux-work-light.jpg")} alt="EvoFlux Work mode showing a launch readiness brief" />
           </div>
         </div>
       </section>
@@ -159,7 +160,7 @@ export function HomePageContent({ locale = "en" }: { locale?: HomeLocale }) {
             <div className="scheduler-orbit scheduler-orbit-one" aria-hidden="true" />
             <div className="scheduler-orbit scheduler-orbit-two" aria-hidden="true" />
             <div className="scheduler-screen-card">
-              <img src="/screens/evoflux-scheduler-light.png" alt="EvoFlux Scheduler creating a timezone-aware recurring task" />
+              <img src={withBasePath("/screens/evoflux-scheduler-light.png")} alt="EvoFlux Scheduler creating a timezone-aware recurring task" />
             </div>
             <div className="scheduler-float scheduler-float-left"><small>Schedule types</small><strong>Every · Cron · At</strong></div>
             <div className="scheduler-float scheduler-float-right"><i /><span><small>Timezone aware</small><strong>Asia / Saigon</strong></span></div>
@@ -196,13 +197,13 @@ export function HomePageContent({ locale = "en" }: { locale?: HomeLocale }) {
           </div>
           <div className="capability-screen-shell">
             <div className="capability-screen-bar"><i /><i /><i /><span>EvoFlux · Settings · Sandbox</span><b>LIGHT MODE</b></div>
-            <img src="/screens/evoflux-sandbox-light.jpg" alt="EvoFlux Sandbox settings showing outbound data protection and process security" />
+            <img src={withBasePath("/screens/evoflux-sandbox-light.jpg")} alt="EvoFlux Sandbox settings showing outbound data protection and process security" />
           </div>
         </article>
 
         <article id="webbridge" className="capability-feature capability-feature-webbridge">
           <div className="capability-screen-shell webbridge-screen-shell">
-            <img src="/screens/evoflux-webbridge-extension-light.png" alt="EvoFlux WebBridge connected to the EvoFlux website in a real browser" />
+            <img src={withBasePath("/screens/evoflux-webbridge-extension-light.png")} alt="EvoFlux WebBridge connected to the EvoFlux website in a real browser" />
           </div>
           <div className="capability-feature-copy">
             <span className="capability-feature-label"><i /> WebBridge · real browser</span>
@@ -247,7 +248,7 @@ export function HomePageContent({ locale = "en" }: { locale?: HomeLocale }) {
         <div className="orchestration-proof" id="agent-model">
           <div className="agent-model-visual" aria-label="EvoFlux Lead delegates work to four specialists before verification">
             <div className="agent-map" aria-hidden="true">
-              <div className="map-lead"><img src="/evoflux-app-icon.png" alt="" /><span>Lead</span></div>
+              <div className="map-lead"><img src={withBasePath("/evoflux-app-icon.png")} alt="" /><span>Lead</span></div>
               <div className="map-workers">
                 {["Explore", "Build", "Design", "Review"].map((agent, index) => (
                   <div className="map-worker" key={agent}><i data-tone={index} /><p><strong>{agent}</strong><small>Active</small></p></div>
@@ -384,11 +385,11 @@ export function HomePageContent({ locale = "en" }: { locale?: HomeLocale }) {
         <p>Think, build, verify, and ship from one local-first desktop workspace.</p>
         <div className="download-grid">
           <a className="download-card download-card-mac" href={RELEASE_URL} target="_blank" rel="noreferrer" aria-label="Download EvoFlux for macOS">
-            <span className="download-visual" aria-hidden="true"><i className="platform-mark"><img src="/platforms/apple.svg" alt="" /></i></span>
+            <span className="download-visual" aria-hidden="true"><i className="platform-mark"><img src={withBasePath("/platforms/apple.svg")} alt="" /></i></span>
             <span className="download-copy"><strong>EvoFlux for Mac</strong><small>macOS · Apple silicon</small><b>Download <i>↓</i></b></span>
           </a>
           <a className="download-card download-card-windows" href={RELEASE_URL} target="_blank" rel="noreferrer" aria-label="Download EvoFlux for Windows">
-            <span className="download-visual" aria-hidden="true"><i className="platform-mark"><img src="/platforms/windows.svg" alt="" /></i></span>
+            <span className="download-visual" aria-hidden="true"><i className="platform-mark"><img src={withBasePath("/platforms/windows.svg")} alt="" /></i></span>
             <span className="download-copy"><strong>EvoFlux for Windows</strong><small>Windows 10 or later</small><b>Download <i>↓</i></b></span>
           </a>
         </div>
@@ -396,11 +397,11 @@ export function HomePageContent({ locale = "en" }: { locale?: HomeLocale }) {
 
       <footer>
         <div className="footer-brand">
-          <img src="/evoflux-app-icon.png" alt="" width="32" height="32" /><strong>EvoFlux</strong>
+          <img src={withBasePath("/evoflux-app-icon.png")} alt="" width="32" height="32" /><strong>EvoFlux</strong>
           <p>A harness-first desktop workspace for agents that do real work.</p>
         </div>
         <div className="footer-links">
-          <div><strong>Product</strong><a href="#modes">Work</a><a href="#modes">Coding</a><a href={locale === "ja" ? "/jp/aim" : "/aim"}>AIM</a></div>
+          <div><strong>Product</strong><a href="#modes">Work</a><a href="#modes">Coding</a><a href={withBasePath(locale === "ja" ? "/jp/aim" : "/aim")}>AIM</a></div>
           <div><strong>Resources</strong><a href={GITHUB_URL}>GitHub</a><a href={`${GITHUB_URL}#quick-start`}>Quick start</a><a href={`${GITHUB_URL}/blob/main/LICENSE`}>License</a></div>
           <div><strong>Principles</strong><a href="#local-first">Local-first</a><a href="#orchestration">Orchestrated</a><a href="#architecture">Verified</a></div>
         </div>
