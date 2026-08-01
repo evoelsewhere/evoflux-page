@@ -1,7 +1,7 @@
 import type { Metadata, Viewport } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import { headers } from "next/headers";
-import { withBasePath } from "./base-path";
+import { BASE_PATH, withBasePath } from "./base-path";
 import "./globals.css";
 
 const geistSans = Geist({
@@ -13,6 +13,10 @@ const geistMono = Geist_Mono({
   variable: "--font-geist-mono",
   subsets: ["latin"],
 });
+
+const pagesLocaleBootstrap = BASE_PATH
+  ? `(()=>{try{const b=${JSON.stringify(BASE_PATH)},u=new URL(location.href),p=u.pathname.replace(/\\/$/,"")||"/",q=u.searchParams.get("lang"),k="evoflux_locale";if(q==="en"||q==="ja"){localStorage.setItem(k,q);u.searchParams.delete("lang");history.replaceState(null,"",u.pathname+(u.search||"")+(u.hash||""));}if(p===b+"/jp"||p===b+"/jp/aim"){localStorage.setItem(k,"ja");return;}if(p===b||p===b+"/aim"){const s=localStorage.getItem(k),l=s==="en"||s==="ja"?s:(navigator.language||"").toLowerCase().startsWith("ja")?"ja":"en";if(l==="ja")location.replace(b+(p.endsWith("/aim")?"/jp/aim/":"/jp/"));}}catch{}})();`
+  : "";
 
 export async function generateMetadata(): Promise<Metadata> {
   const requestHeaders = await headers();
@@ -73,6 +77,7 @@ export default function RootLayout({
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
+        {pagesLocaleBootstrap && <script dangerouslySetInnerHTML={{ __html: pagesLocaleBootstrap }} />}
         {children}
       </body>
     </html>
