@@ -24,8 +24,11 @@ test("server-renders the EvoFlux landing page", async () => {
   assert.match(html, /One harness, three modes/);
   assert.match(html, /From a prompt to a board-ready artifact/);
   assert.match(html, /illustrations\/office-presentation-mockup\.svg/);
-  assert.match(html, /evoflux-office-excel-light\.png/);
-  assert.match(html, /evoflux-office-word-light\.png/);
+  assert.match(html, /illustrations\/office-spreadsheet-mockup\.svg/);
+  assert.match(html, /illustrations\/office-document-mockup\.svg/);
+  assert.match(html, /PowerPoint · PPTX/);
+  assert.match(html, /Excel · XLSX/);
+  assert.match(html, /Word · DOCX/);
   assert.match(html, /brand\/fpt-software-fhm-q9\.png/);
   assert.match(html, /Set it once\./);
   assert.match(html, /Every · Cron · At/);

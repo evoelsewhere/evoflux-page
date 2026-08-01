@@ -160,14 +160,20 @@ export function HomePageContent({ locale = "en" }: { locale?: HomeLocale }) {
           <p>EvoFlux builds the actual editable file—not a wall of suggestions. Specialist workflows create the content, validate the structure, and visually inspect the result before delivery.</p>
         </div>
 
+        <div className="office-suite-rail" aria-label="Microsoft Office capabilities">
+          <article><i className="word">W</i><span><strong>Word · DOCX</strong><small>Structured reports · styles · layout QA</small></span></article>
+          <article><i className="powerpoint">P</i><span><strong>PowerPoint · PPTX</strong><small>Stories · charts · diagrams · speaker notes</small></span></article>
+          <article><i className="excel">X</i><span><strong>Excel · XLSX</strong><small>Formulas · scenarios · dashboards · controls</small></span></article>
+        </div>
+
         <div className="office-showcase-grid">
           <article className="office-card office-card-featured">
             <div className="office-art office-art-word">
-              <img src={withBasePath("/screens/evoflux-office-word-light.png")} alt="EvoFlux creating and previewing a structured Word transformation report" loading="lazy" />
+              <img src={withBasePath("/illustrations/office-document-mockup.svg")} alt="EvoFlux Word mockup showing a structured AIM transformation report with document QA" loading="lazy" />
               <span className="office-artifact-badge"><i className="docx" /> Structured DOCX</span>
             </div>
             <div className="office-card-copy">
-              <span>01 · DOCUMENTS</span>
+              <span>01 · WORD / DOCX</span>
               <h3>Long-form reports that stay coherent.</h3>
               <p>Cover, table of contents, branded sections, styled tables, diagrams, citations, headers, footers, and page-by-page layout QA.</p>
               <div className="office-metrics"><b>20 pages</b><b>Auto TOC</b><b>Visual QA</b></div>
@@ -189,11 +195,11 @@ export function HomePageContent({ locale = "en" }: { locale?: HomeLocale }) {
 
           <article className="office-card office-card-compact">
             <div className="office-art office-art-excel">
-              <img src={withBasePath("/screens/evoflux-office-excel-light.png")} alt="EvoFlux creating and previewing a multi-sheet Excel portfolio model" loading="lazy" />
+              <img src={withBasePath("/illustrations/office-spreadsheet-mockup.svg")} alt="EvoFlux Excel mockup showing formulas, scenarios, charts, and a portfolio dashboard" loading="lazy" />
               <span className="office-artifact-badge"><i className="xlsx" /> Formula-ready XLSX</span>
             </div>
             <div className="office-card-copy">
-              <span>03 · SPREADSHEETS</span>
+              <span>03 · EXCEL / XLSX</span>
               <h3>Models that calculate, explain, and update.</h3>
               <p>Linked sheets, robust formulas, scenario controls, dashboards, risk heatmaps, validation, and clean number formats.</p>
               <div className="office-metrics"><b>6 sheets</b><b>18 initiatives</b><b>0 formula errors</b></div>

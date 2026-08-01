@@ -1,0 +1,82 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="720" viewBox="0 0 1600 720" fill="none">
+  <defs>
+    <linearGradient id="xlBg" x1="30" y1="20" x2="1570" y2="700" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#E9F7EF"/><stop offset=".5" stop-color="#EFF5FF"/><stop offset="1" stop-color="#FFF3E9"/>
+    </linearGradient>
+    <linearGradient id="xlChart" x1="610" y1="414" x2="958" y2="565" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#5069DD"/><stop offset="1" stop-color="#34B971"/>
+    </linearGradient>
+    <filter id="xlShadow" x="0" y="0" width="1600" height="720" filterUnits="userSpaceOnUse">
+      <feDropShadow dx="0" dy="18" stdDeviation="28" flood-color="#244235" flood-opacity=".14"/>
+    </filter>
+  </defs>
+  <rect width="1600" height="720" rx="34" fill="url(#xlBg)"/>
+  <g filter="url(#xlShadow)">
+    <rect x="38" y="30" width="1524" height="660" rx="24" fill="#FAFBFD"/>
+    <rect x="38.5" y="30.5" width="1523" height="659" rx="23.5" stroke="#172033" stroke-opacity=".12"/>
+  </g>
+  <path d="M38 86H1562" stroke="#172033" stroke-opacity=".1"/>
+  <circle cx="68" cy="58" r="7" fill="#FF7669"/><circle cx="92" cy="58" r="7" fill="#F5BC4E"/><circle cx="116" cy="58" r="7" fill="#48C885"/>
+  <rect x="145" y="44" width="29" height="29" rx="8" fill="#18864B"/><text x="154" y="64" fill="white" font-family="Arial,sans-serif" font-size="15" font-weight="700">X</text>
+  <text x="189" y="64" fill="#273043" font-family="Arial,sans-serif" font-size="14" font-weight="700">EvoFlux · Spreadsheets</text>
+  <rect x="1272" y="44" width="250" height="29" rx="14.5" fill="#ECFDF3" stroke="#28B76B" stroke-opacity=".28"/>
+  <circle cx="1293" cy="58.5" r="5" fill="#28B76B"/><text x="1306" y="63" fill="#23784C" font-family="Arial,sans-serif" font-size="10" font-weight="700" letter-spacing="1">262 FORMULAS · VALIDATED</text>
+
+  <rect x="58" y="105" width="1484" height="48" rx="10" fill="#F0F3F7"/>
+  <rect x="72" y="116" width="74" height="26" rx="6" fill="white" stroke="#D9DEE7"/>
+  <text x="86" y="133" fill="#536073" font-family="Arial,sans-serif" font-size="10" font-weight="700">DASHBOARD</text>
+  <rect x="158" y="116" width="96" height="26" rx="6" fill="white" stroke="#D9DEE7"/><text x="173" y="133" fill="#536073" font-family="Arial,sans-serif" font-size="10">Initiatives</text>
+  <rect x="266" y="116" width="88" height="26" rx="6" fill="white" stroke="#D9DEE7"/><text x="281" y="133" fill="#536073" font-family="Arial,sans-serif" font-size="10">Financials</text>
+  <rect x="366" y="116" width="58" height="26" rx="6" fill="white" stroke="#D9DEE7"/><text x="384" y="133" fill="#536073" font-family="Arial,sans-serif" font-size="10">Risks</text>
+  <rect x="451" y="116" width="845" height="26" rx="6" fill="white" stroke="#D9DEE7"/><text x="470" y="133" fill="#8892A2" font-family="Arial,sans-serif" font-size="10">=SUMIFS(Portfolio[NPV], Portfolio[Scenario], SelectedScenario)</text>
+  <rect x="1312" y="116" width="106" height="26" rx="6" fill="#EAF1FF"/><text x="1331" y="133" fill="#4F63D8" font-family="Arial,sans-serif" font-size="10" font-weight="700">Base case</text>
+  <rect x="1430" y="116" width="94" height="26" rx="6" fill="#172235"/><text x="1450" y="133" fill="white" font-family="Arial,sans-serif" font-size="10" font-weight="700">FY2027</text>
+
+  <rect x="58" y="171" width="1484" height="473" rx="15" fill="#F5F7FA" stroke="#172033" stroke-opacity=".08"/>
+  <text x="82" y="205" fill="#18864B" font-family="Arial,sans-serif" font-size="9" font-weight="700" letter-spacing="1.3">FHM Q9 × FPT JAPAN · AI PORTFOLIO</text>
+  <text x="82" y="245" fill="#172235" font-family="Arial,sans-serif" font-size="27" font-weight="700">Executive transformation dashboard</text>
+  <text x="82" y="270" fill="#6A7485" font-family="Arial,sans-serif" font-size="11">18 initiatives · scenario-linked financial model · refreshed 06 Oct 2027</text>
+
+  <g font-family="Arial,sans-serif">
+    <rect x="82" y="293" width="254" height="87" rx="13" fill="white"/>
+    <text x="100" y="319" fill="#788294" font-size="9" font-weight="700" letter-spacing=".8">PORTFOLIO NPV</text><text x="100" y="354" fill="#1D293D" font-size="30" font-weight="700">¥620M</text><text x="254" y="354" fill="#258756" font-size="10" font-weight="700">+18%</text>
+    <rect x="349" y="293" width="254" height="87" rx="13" fill="white"/>
+    <text x="367" y="319" fill="#788294" font-size="9" font-weight="700" letter-spacing=".8">PORTFOLIO ROI</text><text x="367" y="354" fill="#1D293D" font-size="30" font-weight="700">32%</text><text x="524" y="354" fill="#258756" font-size="10" font-weight="700">+6 pts</text>
+    <rect x="616" y="293" width="254" height="87" rx="13" fill="white"/>
+    <text x="634" y="319" fill="#788294" font-size="9" font-weight="700" letter-spacing=".8">PAYBACK</text><text x="634" y="354" fill="#1D293D" font-size="30" font-weight="700">2.4y</text><text x="789" y="354" fill="#258756" font-size="10" font-weight="700">−0.5y</text>
+    <rect x="883" y="293" width="254" height="87" rx="13" fill="white"/>
+    <text x="901" y="319" fill="#788294" font-size="9" font-weight="700" letter-spacing=".8">INITIATIVES</text><text x="901" y="354" fill="#1D293D" font-size="30" font-weight="700">18</text><text x="1053" y="354" fill="#D87326" font-size="10" font-weight="700">3 at risk</text>
+    <rect x="1150" y="293" width="368" height="87" rx="13" fill="#172235"/>
+    <text x="1171" y="319" fill="#98A4B6" font-size="9" font-weight="700" letter-spacing=".8">SELECTED SCENARIO</text><text x="1171" y="350" fill="white" font-size="18" font-weight="700">Accelerate value</text><rect x="1393" y="326" width="102" height="24" rx="12" fill="#28B76B"/><text x="1416" y="342" fill="white" font-size="9" font-weight="700">RECOMMENDED</text>
+  </g>
+
+  <rect x="82" y="397" width="642" height="222" rx="13" fill="white"/>
+  <text x="103" y="425" fill="#273246" font-family="Arial,sans-serif" font-size="12" font-weight="700">Cumulative value by quarter</text>
+  <text x="103" y="445" fill="#8992A1" font-family="Arial,sans-serif" font-size="9">¥M · benefit realization</text>
+  <path d="M124 571H690M124 523H690M124 475H690" stroke="#E5E9F0" stroke-width="1"/>
+  <path d="M145 568C205 562 227 548 274 539C323 530 348 499 402 494C458 488 487 452 540 446C596 440 627 419 681 410" stroke="url(#xlChart)" stroke-width="5" stroke-linecap="round"/>
+  <path d="M145 568C205 562 227 548 274 539C323 530 348 499 402 494C458 488 487 452 540 446C596 440 627 419 681 410V589H145V568Z" fill="url(#xlChart)" opacity=".1"/>
+  <g fill="#5069DD"><circle cx="145" cy="568" r="5"/><circle cx="274" cy="539" r="5"/><circle cx="402" cy="494" r="5"/><circle cx="540" cy="446" r="5"/><circle cx="681" cy="410" r="5"/></g>
+  <g fill="#8B94A3" font-family="Arial,sans-serif" font-size="8"><text x="135" y="605">Q1</text><text x="264" y="605">Q2</text><text x="392" y="605">Q3</text><text x="530" y="605">Q4</text><text x="667" y="605">Q1 '28</text></g>
+
+  <rect x="741" y="397" width="370" height="222" rx="13" fill="white"/>
+  <text x="762" y="425" fill="#273246" font-family="Arial,sans-serif" font-size="12" font-weight="700">Investment by business unit</text>
+  <g font-family="Arial,sans-serif" font-size="9">
+    <text x="762" y="467" fill="#687284">FPT Software</text><rect x="850" y="454" width="224" height="17" rx="8.5" fill="#E5E9F0"/><rect x="850" y="454" width="182" height="17" rx="8.5" fill="#5069DD"/><text x="1039" y="467" fill="white" font-weight="700">¥388M</text>
+    <text x="762" y="510" fill="#687284">FPT Japan</text><rect x="850" y="497" width="224" height="17" rx="8.5" fill="#E5E9F0"/><rect x="850" y="497" width="123" height="17" rx="8.5" fill="#34B971"/><text x="980" y="510" fill="#268456" font-weight="700">¥232M</text>
+    <text x="762" y="553" fill="#687284">Contingency</text><rect x="850" y="540" width="224" height="17" rx="8.5" fill="#E5E9F0"/><rect x="850" y="540" width="61" height="17" rx="8.5" fill="#FB923C"/><text x="919" y="553" fill="#C8651E" font-weight="700">¥48M</text>
+  </g>
+  <rect x="1130" y="397" width="388" height="222" rx="13" fill="white"/>
+  <text x="1151" y="425" fill="#273246" font-family="Arial,sans-serif" font-size="12" font-weight="700">Risk heatmap</text>
+  <g>
+    <rect x="1152" y="451" width="76" height="45" rx="7" fill="#EAF8EF"/><rect x="1236" y="451" width="76" height="45" rx="7" fill="#F2F8E8"/><rect x="1320" y="451" width="76" height="45" rx="7" fill="#FFF4DC"/><rect x="1404" y="451" width="76" height="45" rx="7" fill="#FFE8DF"/>
+    <rect x="1152" y="504" width="76" height="45" rx="7" fill="#EDF9F2"/><rect x="1236" y="504" width="76" height="45" rx="7" fill="#FFF4DC"/><rect x="1320" y="504" width="76" height="45" rx="7" fill="#FFE8DF"/><rect x="1404" y="504" width="76" height="45" rx="7" fill="#FFDCD8"/>
+    <rect x="1152" y="557" width="76" height="45" rx="7" fill="#FFF4DC"/><rect x="1236" y="557" width="76" height="45" rx="7" fill="#FFE8DF"/><rect x="1320" y="557" width="76" height="45" rx="7" fill="#FFDCD8"/><rect x="1404" y="557" width="76" height="45" rx="7" fill="#FFC9C5"/>
+    <circle cx="1274" cy="525" r="7" fill="#FB923C"/><circle cx="1358" cy="474" r="7" fill="#E66652"/><circle cx="1442" cy="579" r="7" fill="#C93636"/>
+  </g>
+  <rect x="82" y="655" width="185" height="23" rx="6" fill="#18864B"/><text x="112" y="671" fill="white" font-family="Arial,sans-serif" font-size="9" font-weight="700">Executive Dashboard</text>
+  <rect x="275" y="655" width="130" height="23" rx="6" fill="#EDF1F5"/><text x="299" y="671" fill="#657083" font-family="Arial,sans-serif" font-size="9">Portfolio</text>
+  <rect x="413" y="655" width="130" height="23" rx="6" fill="#EDF1F5"/><text x="439" y="671" fill="#657083" font-family="Arial,sans-serif" font-size="9">Financials</text>
+  <rect x="551" y="655" width="130" height="23" rx="6" fill="#EDF1F5"/><text x="581" y="671" fill="#657083" font-family="Arial,sans-serif" font-size="9">Capacity</text>
+  <rect x="689" y="655" width="130" height="23" rx="6" fill="#EDF1F5"/><text x="723" y="671" fill="#657083" font-family="Arial,sans-serif" font-size="9">Risks</text>
+</svg>
