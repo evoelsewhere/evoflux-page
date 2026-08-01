@@ -164,7 +164,6 @@ export function HomePageContent({ locale = "en" }: { locale?: HomeLocale }) {
               <span>01 · WORD / DOCX</span>
               <h3>Long-form reports that stay coherent.</h3>
               <p>Cover, table of contents, branded sections, styled tables, diagrams, citations, headers, footers, and page-by-page layout QA.</p>
-              <div className="office-metrics"><b>20 pages</b><b>Auto TOC</b><b>Visual QA</b></div>
             </div>
           </article>
 
@@ -177,7 +176,6 @@ export function HomePageContent({ locale = "en" }: { locale?: HomeLocale }) {
               <span>02 · PRESENTATIONS</span>
               <h3>Strategy decks with a real visual system.</h3>
               <p>Executive narrative, native charts, architecture diagrams, roadmaps, speaker notes, and consistent slide hierarchy—assembled and checked as one deliverable.</p>
-              <div className="office-metrics"><b>12 slides</b><b>4 native charts</b><b>16:9 verified</b></div>
             </div>
           </article>
 
@@ -190,7 +188,6 @@ export function HomePageContent({ locale = "en" }: { locale?: HomeLocale }) {
               <span>03 · EXCEL / XLSX</span>
               <h3>Models that calculate, explain, and update.</h3>
               <p>Linked sheets, robust formulas, scenario controls, dashboards, risk heatmaps, validation, and clean number formats.</p>
-              <div className="office-metrics"><b>6 sheets</b><b>18 initiatives</b><b>0 formula errors</b></div>
             </div>
           </article>
         </div>

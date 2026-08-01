@@ -847,9 +847,6 @@ summary:focus-visible,
 .office-card-featured .office-card-copy p { max-width: 670px; font-size: 13px; }
 .office-card-compact .office-card-copy { padding: 24px 26px 27px; }
 .office-card-compact .office-card-copy h3 { font-size: 23px; }
-.office-metrics { display: flex; flex-wrap: wrap; gap: 7px; margin-top: 24px; }
-.office-metrics b { padding: 7px 9px; border: 1px solid rgba(17,17,16,.1); border-radius: 8px; color: #5f645e; background: #fafaf8; font-family: var(--font-geist-mono),monospace; font-size: 7px; font-weight: 580; text-transform: uppercase; letter-spacing: .045em; }
-.office-card-compact .office-metrics { margin-top: 18px; }
 .office-proof-line { display: grid; grid-template-columns: repeat(4,1fr); margin-top: 14px; overflow: hidden; border: 1px solid rgba(17,17,16,.11); border-radius: 16px; background: rgba(255,255,255,.72); }
 .office-proof-line span { display: flex; align-items: center; gap: 9px; min-height: 56px; padding: 0 20px; border-right: 1px solid rgba(17,17,16,.09); color: #646861; font-family: var(--font-geist-mono),monospace; font-size: 8px; text-transform: uppercase; letter-spacing: .055em; }
 .office-proof-line span:last-child { border-right: 0; }
