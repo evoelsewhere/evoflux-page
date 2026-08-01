@@ -1,6 +1,6 @@
-# EvoFlux FHM
+# EvoFlux
 
-EvoFlux is an open cowork, local-first AI agent workspace for FHM Q9, FPT, FPT Japan (FJP), and distributed engineering and knowledge-work teams.
+EvoFlux is an open cowork, local-first AI agent workspace for distributed engineering and knowledge-work teams.
 
 Core product areas:
 - Work: AI cowork for research, documents, data, browser work, and repeatable scheduled tasks.

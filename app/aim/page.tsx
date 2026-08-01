@@ -5,9 +5,9 @@ import { withBasePath } from "../base-path";
 import AimPipelineShowcase from "../components/AimPipelineShowcase";
 
 export const metadata: Metadata = {
-  title: "AIM — AI Innovation Modernization | EvoFlux FHM",
-  description: "EvoFlux AIM is the governed AI Innovation Modernization control plane for FHM Q9 and FPT Japan: understand legacy systems, transform safely, and prove equivalence.",
-  keywords: ["EvoFlux AIM", "AIM", "AI Innovation Modernization", "FHM Q9 modernization", "FPT Japan modernization", "FJP", "legacy modernization", "functional equivalence"],
+  title: "AIM — AI Innovation Modernization | EvoFlux",
+  description: "EvoFlux AIM is a governed AI Innovation Modernization control plane to understand legacy systems, transform safely, and prove functional equivalence.",
+  keywords: ["EvoFlux AIM", "AIM", "AI Innovation Modernization", "legacy modernization", "functional equivalence"],
   alternates: { canonical: withBasePath("/aim/"), languages: { en: withBasePath("/aim/"), ja: withBasePath("/jp/aim/") } },
 };
 
@@ -427,7 +427,7 @@ export function AimPageContent({ locale = "en" }: { locale?: AimLocale }) {
       <header className="site-header aim2-header">
         <div className="brand-cluster aim-brand-cluster">
           <a className="company-brand-link" href={withBasePath(locale === "ja" ? "/jp" : "/")} aria-label="Home">
-            <img className="company-brand aim-company-brand" src={withBasePath("/brand/fpt-software-fhm-q9.png")} width="885" height="241" alt="Company logo" />
+            <img className="company-brand aim-company-brand" src={withBasePath("/brand/company-logo.png")} width="885" height="241" alt="Company logo" />
           </a>
           <img className="aim-brand-logo" src={withBasePath("/brand/aim-logo-transparent.png")} width="1851" height="850" alt="AIM" />
         </div>

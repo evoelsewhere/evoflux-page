@@ -19,7 +19,7 @@ test("server-renders the EvoFlux landing page", async () => {
   assert.match(response.headers.get("content-type") ?? "", /^text\/html\b/i);
 
   const html = await response.text();
-  assert.match(html, /<title>EvoFlux FHM — Open Cowork AI &amp; AIM for FPT Japan<\/title>/i);
+  assert.match(html, /<title>EvoFlux — Open Cowork AI &amp; AIM<\/title>/i);
   assert.match(html, /AI agents that do/);
   assert.match(html, /One harness, three modes/);
   assert.match(html, /From a prompt to a board-ready artifact/);
@@ -29,7 +29,7 @@ test("server-renders the EvoFlux landing page", async () => {
   assert.match(html, /PowerPoint · PPTX/);
   assert.match(html, /Excel · XLSX/);
   assert.match(html, /Word · DOCX/);
-  assert.match(html, /brand\/fpt-software-fhm-q9\.png/);
+  assert.match(html, /brand\/company-logo\.png/);
   assert.doesNotMatch(html, /class="brand" href="#top"/);
   assert.match(html, /Set it once\./);
   assert.match(html, /Every · Cron · At/);
@@ -40,7 +40,7 @@ test("server-renders the EvoFlux landing page", async () => {
   assert.match(html, /AI Innovation Modernization connects legacy understanding/);
   assert.match(html, /"@type":"SoftwareApplication"/);
   assert.match(html, /rel="canonical" href="https:\/\/evoflux\.fhmq9\.cloud\//);
-  assert.match(html, /One local-first open cowork workspace for FHM Q9/);
+  assert.match(html, /One local-first open cowork workspace for Work, Coding/);
   assert.match(html, /Layered sandbox/);
   assert.match(html, /illustrations\/capability-sandbox\.jpg/);
   assert.match(html, /illustrations\/capability-webbridge\.jpg/);
@@ -58,8 +58,8 @@ test("server-renders the EvoFlux landing page", async () => {
   assert.match(html, /GitHub Copilot/);
   assert.match(html, /@lobehub\/icons-static-svg@1\.94\.0\/icons\/openai\.svg/);
   assert.match(html, /@lobehub\/icons-static-svg@1\.94\.0\/icons\/githubcopilot\.svg/);
-  assert.match(html, /id="fhm-cowork"/);
   assert.match(html, /id="team-workspace"/);
+  assert.doesNotMatch(html, /FHM Q9|FPT Japan|FJP|EvoFlux FHM/);
   assert.match(html, /EvoFlux for Mac/);
   assert.match(html, /EvoFlux for Windows/);
   assert.match(html, /platforms\/apple\.svg/);
@@ -81,7 +81,7 @@ test("server-renders the Japanese EvoFlux landing page", async () => {
   assert.equal(response.status, 200);
   const html = await response.text();
 
-  assert.match(html, /EvoFlux FHM — FPT Japan向けOpen Cowork AI・AIM/);
+  assert.match(html, /EvoFlux — Open Cowork AI・AIM/);
   assert.match(html, /実際の仕事を進める/);
   assert.match(html, /ナレッジワーク、ソフトウェア開発、レガシーモダナイゼーション/);
   assert.match(html, /一つのハーネス、三つのモード/);
@@ -99,6 +99,7 @@ test("server-renders the Japanese EvoFlux landing page", async () => {
   assert.match(html, /href="\/jp\?lang=ja"/);
   assert.doesNotMatch(html, /Linux/i);
   assert.doesNotMatch(html, /One desktop workspace/);
+  assert.doesNotMatch(html, /FHM Q9|FPT Japan|FJP|EvoFlux FHM/);
 });
 
 test("server-renders the dedicated AIM product page", async () => {
@@ -107,7 +108,7 @@ test("server-renders the dedicated AIM product page", async () => {
   assert.match(response.headers.get("content-type") ?? "", /^text\/html\b/i);
 
   const html = await response.text();
-  assert.match(html, /AIM — AI Innovation Modernization \| EvoFlux FHM/i);
+  assert.match(html, /AIM — AI Innovation Modernization \| EvoFlux/i);
   assert.match(html, /Move legacy systems forward/);
   assert.match(html, /operating system for a migration—not a prompt wrapped around a code generator/i);
   assert.match(html, /The migration-specific operating contract\./);
@@ -121,7 +122,7 @@ test("server-renders the dedicated AIM product page", async () => {
   assert.match(html, /evoflux-aim-overview-light\.jpg/);
   assert.match(html, /evoflux-aim-rulebook-light\.jpg/);
   assert.match(html, /evoflux-aim-suggest-light\.jpg/);
-  assert.match(html, /brand\/fpt-software-fhm-q9\.png/);
+  assert.match(html, /brand\/company-logo\.png/);
   assert.match(html, /brand\/aim-logo-transparent\.png/);
   assert.doesNotMatch(html, /class="brand"[^>]*aria-label="EvoFlux home"/);
   assert.doesNotMatch(html, /codex-preview|Your site is taking shape|react-loading-skeleton/i);
@@ -133,7 +134,7 @@ test("server-renders the Japanese AIM product page", async () => {
   assert.match(response.headers.get("content-type") ?? "", /^text\/html\b/i);
 
   const html = await response.text();
-  assert.match(html, /AIM — AI Innovation Modernization \| EvoFlux FHM/i);
+  assert.match(html, /AIM — AI Innovation Modernization \| EvoFlux/i);
   assert.match(html, /レガシーシステムを、次の時代へ。/);
   assert.match(html, /移行プロジェクトのオペレーティングシステムです/);
   assert.match(html, /すべての実行が、入力・作業・ゲート・出力を宣言します。/);

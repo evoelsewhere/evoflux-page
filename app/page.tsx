@@ -4,8 +4,8 @@ import { ModeShowcase } from "./components/ModeShowcase";
 import { localizeHomeNode, type HomeLocale } from "./home-locales";
 
 export const metadata: Metadata = {
-  title: "EvoFlux FHM — Open Cowork AI & AIM for FPT Japan",
-  description: "EvoFlux brings open cowork AI, Coding, WebBridge browser work, and AIM modernization to FHM Q9, FPT, FPT Japan, and FJP teams.",
+  title: "EvoFlux — Open Cowork AI & AIM",
+  description: "EvoFlux brings open cowork AI, Coding, WebBridge browser work, and AIM modernization into one local-first desktop workspace.",
   alternates: { canonical: withBasePath("/"), languages: { en: withBasePath("/"), ja: withBasePath("/jp/") } },
 };
 
@@ -42,7 +42,7 @@ export function HomePageContent({ locale = "en" }: { locale?: HomeLocale }) {
           <a className="company-brand-link" href="#top" aria-label="Home">
             <img
               className="company-brand"
-              src={withBasePath("/brand/fpt-software-fhm-q9.png")}
+              src={withBasePath("/brand/company-logo.png")}
               width="885"
               height="241"
               alt="Company logo"
@@ -392,8 +392,7 @@ export function HomePageContent({ locale = "en" }: { locale?: HomeLocale }) {
         </div>
       </section>
 
-      <section id="fhm-cowork" className="section ecosystem-section">
-        <span id="team-workspace" className="anchor-alias" aria-hidden="true" />
+      <section id="team-workspace" className="section ecosystem-section">
         <div className="ecosystem-intro">
           <span className="section-kicker">EvoFlux for modern teams</span>
           <h2>Open cowork AI for teams that do more than chat.</h2>

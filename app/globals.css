@@ -28,12 +28,6 @@ html {
   background: var(--paper);
 }
 
-.anchor-alias {
-  display: block;
-  height: 0;
-  scroll-margin-top: 92px;
-}
-
 body {
   margin: 0;
   background: var(--paper);
