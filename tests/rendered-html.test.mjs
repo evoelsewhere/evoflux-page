@@ -37,6 +37,10 @@ test("server-renders the EvoFlux landing page", async () => {
   assert.match(html, /illustrations\/capability-webbridge\.jpg/);
   assert.match(html, /illustrations\/capability-goal\.jpg/);
   assert.match(html, /illustrations\/capability-code-graph\.jpg/);
+  assert.match(html, /illustrations\/capability-memory\.jpg/);
+  assert.match(html, /illustrations\/capability-skills-mcp\.jpg/);
+  assert.match(html, /illustrations\/capability-engineering-lanes\.jpg/);
+  assert.match(html, /illustrations\/capability-observability\.jpg/);
   assert.match(html, /Your browser is part of the workspace\./);
   assert.match(html, /Durable Goal mode/);
   assert.match(html, /Structural code graph/);

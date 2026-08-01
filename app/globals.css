@@ -1010,10 +1010,14 @@ summary:focus-visible,
 .capability-screen-shell img { width: 100%; aspect-ratio: 16/9; object-fit: cover; object-position: top; }
 
 .capability-detail-grid { display: grid; grid-template-columns: repeat(2,1fr); gap: 12px; width: min(1240px,100%); margin: 96px auto 0; }
-.capability-detail-grid article { display: grid; grid-template-columns: auto 1fr; gap: 22px; min-height: 190px; padding: 30px; border: 1px solid var(--line); border-radius: 18px; background: #fafaf8; }
+.capability-detail-grid article { display: grid; grid-template-columns: auto minmax(0,1fr) 174px; gap: 22px; align-items: start; min-height: 210px; padding: 24px 24px 24px 30px; overflow: hidden; border: 1px solid var(--line); border-radius: 18px; background: #fafaf8; transition: background 180ms ease,transform 220ms var(--ease); }
+.capability-detail-grid article:hover { background: #fff; transform: translateY(-3px); }
 .capability-detail-grid article > span { display: grid; place-items: center; width: 37px; height: 37px; border: 1px solid var(--line); border-radius: 50%; color: #91938d; background: #fff; font-family: var(--font-geist-mono),monospace; font-size: 8px; }
 .capability-detail-grid h3 { margin: 3px 0 0; font-size: 18px; font-weight: 590; letter-spacing: -.03em; }
 .capability-detail-grid p { margin: 13px 0 0; color: var(--muted); font-size: 11px; line-height: 1.65; }
+.capability-detail-art { align-self: center; width: 174px; height: 160px; margin: 1px -4px 1px 0; overflow: hidden; border-radius: 16px; background: radial-gradient(circle at 50% 48%,#fff 0,#fafaf8 76%); }
+.capability-detail-art img { width: 100%; height: 100%; object-fit: cover; mix-blend-mode: multiply; transition: transform 420ms var(--ease); }
+.capability-detail-grid article:hover .capability-detail-art img { transform: scale(1.045); }
 
 .orchestration-section {
   position: relative;
@@ -1691,6 +1695,8 @@ footer {
   .scheduler-copy h2 { font-size: 48px; }
   .scheduler-screen-card { width: min(400px,76%); }
   .capability-feature { gap: 48px; padding: 52px; }
+  .capability-detail-grid article { grid-template-columns: auto minmax(0,1fr) 112px; gap: 16px; padding-left: 22px; }
+  .capability-detail-art { width: 112px; height: 138px; }
   .feature-row { gap: 52px; }
   .orchestration-proof { gap: 42px; padding: 48px; }
   .architecture-card { gap: 50px; padding: 60px; }
@@ -1816,6 +1822,8 @@ footer {
   .screen-topbar { display: none; }
 
   .section { padding: 84px 18px; }
+  .capability-detail-grid article { grid-template-columns: auto minmax(0,1fr); min-height: 300px; padding: 24px; }
+  .capability-detail-art { grid-column: 1 / -1; grid-row: 2; width: 100%; height: 155px; margin: 0; }
   .section-heading h2,.feature-copy h2,.architecture-copy h2,.closing-section h2 { font-size: 40px; }
   .section-heading > p,.feature-copy > p,.architecture-copy > p,.closing-section > p { font-size: 15px; }
   .mode-panel { padding-top: 34px; }

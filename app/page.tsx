@@ -220,10 +220,10 @@ export function HomePageContent({ locale = "en" }: { locale?: HomeLocale }) {
         </article>
 
         <div className="capability-detail-grid">
-          <article><span>05</span><div><h3>Memory that stays inspectable</h3><p>Dream consolidates sessions into a Markdown wiki with citations, confidence, related pages, and an append-only log.</p></div></article>
-          <article><span>06</span><div><h3>54 skills + MCP</h3><p>Built-in methods for research, TDD, security, docs, browser work, and migration; connected MCP tools inherit native permissions.</p></div></article>
-          <article><span>07</span><div><h3>Isolated engineering lanes</h3><p>Managed Git worktrees, full source control, diff review, tests, and independent specialist review keep parallel changes separated.</p></div></article>
-          <article><span>08</span><div><h3>Observable by default</h3><p>Streaming activity, tool timing, execution history, OpenTelemetry, Prometheus, and DuckDB summaries make runs inspectable.</p></div></article>
+          <article><span>05</span><div className="capability-detail-copy"><h3>Memory that stays inspectable</h3><p>Dream consolidates sessions into a Markdown wiki with citations, confidence, related pages, and an append-only log.</p></div><div className="capability-detail-art"><img src={withBasePath("/illustrations/capability-memory.jpg")} alt="" width="720" height="720" loading="lazy" /></div></article>
+          <article><span>06</span><div className="capability-detail-copy"><h3>54 skills + MCP</h3><p>Built-in methods for research, TDD, security, docs, browser work, and migration; connected MCP tools inherit native permissions.</p></div><div className="capability-detail-art"><img src={withBasePath("/illustrations/capability-skills-mcp.jpg")} alt="" width="720" height="720" loading="lazy" /></div></article>
+          <article><span>07</span><div className="capability-detail-copy"><h3>Isolated engineering lanes</h3><p>Managed Git worktrees, full source control, diff review, tests, and independent specialist review keep parallel changes separated.</p></div><div className="capability-detail-art"><img src={withBasePath("/illustrations/capability-engineering-lanes.jpg")} alt="" width="720" height="720" loading="lazy" /></div></article>
+          <article><span>08</span><div className="capability-detail-copy"><h3>Observable by default</h3><p>Streaming activity, tool timing, execution history, OpenTelemetry, Prometheus, and DuckDB summaries make runs inspectable.</p></div><div className="capability-detail-art"><img src={withBasePath("/illustrations/capability-observability.jpg")} alt="" width="720" height="720" loading="lazy" /></div></article>
         </div>
       </section>
 
