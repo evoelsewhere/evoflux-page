@@ -138,6 +138,7 @@ export function HomePageContent({ locale = "en" }: { locale?: HomeLocale }) {
               <span className="screen-live"><i /> Local</span>
             </div>
             <img src={withBasePath("/screens/evoflux-work-light.jpg")} alt="EvoFlux Work mode showing a launch readiness brief" />
+            <span className="hero-session-privacy" aria-hidden="true" />
           </div>
         </div>
       </section>
@@ -271,13 +272,13 @@ export function HomePageContent({ locale = "en" }: { locale?: HomeLocale }) {
           </div>
           <div className="capability-screen-shell">
             <div className="capability-screen-bar"><i /><i /><i /><span>EvoFlux · Settings · Sandbox</span><b>LIGHT MODE</b></div>
-            <img src={withBasePath("/screens/evoflux-sandbox-light.jpg")} alt="EvoFlux Sandbox settings showing outbound data protection and process security" />
+            <img src={withBasePath("/illustrations/sandbox-settings-mockup.png")} alt="Sharp EvoFlux Sandbox settings mockup showing outbound data protection and process security" />
           </div>
         </article>
 
         <article id="webbridge" className="capability-feature capability-feature-webbridge">
           <div className="capability-screen-shell webbridge-screen-shell">
-            <img src={withBasePath("/screens/evoflux-webbridge-extension-light.png")} alt="EvoFlux WebBridge connected to the EvoFlux website in a real browser" />
+            <img src={withBasePath("/illustrations/webbridge-browser-mockup.png")} alt="Sharp EvoFlux WebBridge mockup connected to a real signed-in browser" />
           </div>
           <div className="capability-feature-copy">
             <span className="capability-feature-label"><i /> WebBridge · real browser</span>

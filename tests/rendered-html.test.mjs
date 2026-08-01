@@ -59,8 +59,8 @@ test("server-renders the EvoFlux landing page", async () => {
   assert.match(html, /platforms\/windows\.svg/);
   assert.doesNotMatch(html, /Linux/i);
   assert.match(html, /evoflux-work-light\.jpg/);
-  assert.match(html, /evoflux-sandbox-light\.jpg/);
-  assert.match(html, /evoflux-webbridge-extension-light\.png/);
+  assert.match(html, /illustrations\/sandbox-settings-mockup\.png/);
+  assert.match(html, /illustrations\/webbridge-browser-mockup\.png/);
   assert.match(html, /evoflux-app-icon\.png/);
   assert.match(html, /Agent field live/);
   assert.match(html, /href="\/\?lang=en"/);
