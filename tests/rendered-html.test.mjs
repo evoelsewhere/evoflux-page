@@ -122,7 +122,7 @@ test("server-renders the dedicated AIM product page", async () => {
   assert.match(html, /evoflux-aim-rulebook-light\.jpg/);
   assert.match(html, /evoflux-aim-suggest-light\.jpg/);
   assert.match(html, /brand\/fpt-software-fhm-q9\.png/);
-  assert.match(html, /brand\/aim-logo\.png/);
+  assert.match(html, /brand\/aim-logo-transparent\.png/);
   assert.doesNotMatch(html, /class="brand"[^>]*aria-label="EvoFlux home"/);
   assert.doesNotMatch(html, /codex-preview|Your site is taking shape|react-loading-skeleton/i);
 });

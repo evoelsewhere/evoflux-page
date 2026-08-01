@@ -429,7 +429,7 @@ export function AimPageContent({ locale = "en" }: { locale?: AimLocale }) {
           <a className="company-brand-link" href={withBasePath(locale === "ja" ? "/jp" : "/")} aria-label="Home">
             <img className="company-brand aim-company-brand" src={withBasePath("/brand/fpt-software-fhm-q9.png")} width="885" height="241" alt="Company logo" />
           </a>
-          <img className="aim-brand-logo" src={withBasePath("/brand/aim-logo.png")} width="196" height="90" alt="AIM" />
+          <img className="aim-brand-logo" src={withBasePath("/brand/aim-logo-transparent.png")} width="1851" height="850" alt="AIM" />
         </div>
         <nav className="desktop-nav" aria-label="Primary navigation">
           <a href="#product-tour">Product tour</a>
