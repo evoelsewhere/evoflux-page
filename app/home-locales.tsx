@@ -36,6 +36,7 @@ const jaText: Record<string, string> = {
   "From a prompt to a board-ready artifact.": "プロンプトから、経営会議に出せる成果物へ。",
   "EvoFlux builds the actual editable file—not a wall of suggestions. Specialist workflows create the content, validate the structure, and visually inspect the result before delivery.": "EvoFluxが作るのは提案の羅列ではなく、実際に編集できるファイルです。専門ワークフローが内容を作成し、構造を検証し、納品前に見た目まで確認します。",
   "EvoFlux creating and previewing an executive PowerPoint deck": "エグゼクティブ向けPowerPointを作成・プレビューするEvoFlux",
+  "EvoFlux presentation mockup showing an executive AIM modernization deck": "エグゼクティブ向けAIMモダナイゼーション資料を表示するEvoFluxプレゼンテーションモックアップ",
   "Editable PPTX": "編集可能なPPTX",
   "01 · PRESENTATIONS": "01 · プレゼンテーション",
   "01 · DOCUMENTS": "01 · ドキュメント",

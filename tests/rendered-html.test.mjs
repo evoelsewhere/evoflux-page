@@ -23,7 +23,7 @@ test("server-renders the EvoFlux landing page", async () => {
   assert.match(html, /AI agents that do/);
   assert.match(html, /One harness, three modes/);
   assert.match(html, /From a prompt to a board-ready artifact/);
-  assert.match(html, /evoflux-office-powerpoint-light\.png/);
+  assert.match(html, /illustrations\/office-presentation-mockup\.svg/);
   assert.match(html, /evoflux-office-excel-light\.png/);
   assert.match(html, /evoflux-office-word-light\.png/);
   assert.match(html, /brand\/fpt-software-fhm-q9\.png/);

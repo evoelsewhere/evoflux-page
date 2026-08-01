@@ -176,7 +176,7 @@ export function HomePageContent({ locale = "en" }: { locale?: HomeLocale }) {
 
           <article className="office-card office-card-compact">
             <div className="office-art office-art-slides">
-              <img src={withBasePath("/screens/evoflux-office-powerpoint-light.png")} alt="EvoFlux creating and previewing an executive PowerPoint deck" loading="lazy" />
+              <img src={withBasePath("/illustrations/office-presentation-mockup.svg")} alt="EvoFlux presentation mockup showing an executive AIM modernization deck" loading="lazy" />
               <span className="office-artifact-badge"><i className="ppt" /> Editable PPTX</span>
             </div>
             <div className="office-card-copy">

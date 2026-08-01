@@ -1,0 +1,142 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="720" viewBox="0 0 1600 720" fill="none">
+  <defs>
+    <linearGradient id="bg" x1="80" y1="20" x2="1510" y2="700" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#EAF2FF"/>
+      <stop offset=".52" stop-color="#F5F3FF"/>
+      <stop offset="1" stop-color="#EDF9F2"/>
+    </linearGradient>
+    <linearGradient id="accent" x1="604" y1="183" x2="1292" y2="540" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#596FE8"/>
+      <stop offset=".52" stop-color="#2F9BEA"/>
+      <stop offset="1" stop-color="#28B76B"/>
+    </linearGradient>
+    <filter id="shadow" x="0" y="0" width="1600" height="720" filterUnits="userSpaceOnUse">
+      <feDropShadow dx="0" dy="20" stdDeviation="30" flood-color="#263452" flood-opacity=".15"/>
+    </filter>
+    <filter id="soft" x="-30%" y="-30%" width="160%" height="160%">
+      <feGaussianBlur stdDeviation="18"/>
+    </filter>
+  </defs>
+
+  <rect width="1600" height="720" rx="34" fill="url(#bg)"/>
+  <circle cx="1390" cy="90" r="150" fill="#8B5CF6" opacity=".08" filter="url(#soft)"/>
+  <circle cx="210" cy="650" r="190" fill="#4FACFE" opacity=".09" filter="url(#soft)"/>
+
+  <g filter="url(#shadow)">
+    <rect x="42" y="34" width="1516" height="652" rx="24" fill="#FAFBFD"/>
+    <rect x="42.5" y="34.5" width="1515" height="651" rx="23.5" stroke="#172033" stroke-opacity=".12"/>
+  </g>
+
+  <path d="M42 91H1558" stroke="#172033" stroke-opacity=".1"/>
+  <circle cx="72" cy="63" r="7" fill="#FF7669"/>
+  <circle cx="96" cy="63" r="7" fill="#F5BC4E"/>
+  <circle cx="120" cy="63" r="7" fill="#48C885"/>
+  <rect x="146" y="50" width="29" height="29" rx="9" fill="#111827"/>
+  <path d="M155 59H166V70H155V59Z" stroke="white" stroke-width="2" transform="rotate(-12 160.5 64.5)"/>
+  <text x="188" y="69" fill="#273043" font-family="Arial, sans-serif" font-size="14" font-weight="700">EvoFlux · Slides</text>
+  <rect x="1306" y="49" width="216" height="31" rx="15.5" fill="#ECFDF3" stroke="#28B76B" stroke-opacity=".24"/>
+  <circle cx="1330" cy="64.5" r="5" fill="#28B76B"/>
+  <text x="1343" y="69" fill="#23784C" font-family="Arial, sans-serif" font-size="11" font-weight="700" letter-spacing="1.2">PPTX · EDITABLE</text>
+
+  <rect x="61" y="111" width="244" height="552" rx="16" fill="#F0F3F8" stroke="#172033" stroke-opacity=".08"/>
+  <text x="81" y="139" fill="#7A8496" font-family="Arial, sans-serif" font-size="10" font-weight="700" letter-spacing="1.4">12 SLIDES</text>
+
+  <g>
+    <rect x="77" y="157" width="212" height="118" rx="11" fill="white" stroke="#6277EA" stroke-width="2"/>
+    <text x="91" y="177" fill="#6277EA" font-family="Arial, sans-serif" font-size="8" font-weight="700">01</text>
+    <text x="91" y="203" fill="#192436" font-family="Arial, sans-serif" font-size="15" font-weight="700">AI Innovation</text>
+    <text x="91" y="221" fill="#192436" font-family="Arial, sans-serif" font-size="15" font-weight="700">Modernization</text>
+    <path d="M91 246H155" stroke="#28B76B" stroke-width="5" stroke-linecap="round"/>
+    <circle cx="244" cy="224" r="25" fill="#F0F4FF"/>
+    <path d="M230 224H258M244 210V238" stroke="#6277EA" stroke-width="2"/>
+  </g>
+
+  <g opacity=".86">
+    <rect x="77" y="291" width="212" height="118" rx="11" fill="white" stroke="#172033" stroke-opacity=".1"/>
+    <text x="91" y="311" fill="#98A1B0" font-family="Arial, sans-serif" font-size="8" font-weight="700">02</text>
+    <rect x="91" y="329" width="70" height="8" rx="4" fill="#1C2940"/>
+    <rect x="91" y="345" width="104" height="5" rx="2.5" fill="#D7DDE8"/>
+    <rect x="91" y="367" width="37" height="25" rx="5" fill="#EAF0FF"/>
+    <rect x="135" y="357" width="37" height="35" rx="5" fill="#E8F7EF"/>
+    <rect x="179" y="340" width="37" height="52" rx="5" fill="#FFF1E7"/>
+    <rect x="223" y="319" width="37" height="73" rx="5" fill="#F0ECFF"/>
+  </g>
+
+  <g opacity=".76">
+    <rect x="77" y="425" width="212" height="118" rx="11" fill="white" stroke="#172033" stroke-opacity=".1"/>
+    <text x="91" y="445" fill="#98A1B0" font-family="Arial, sans-serif" font-size="8" font-weight="700">03</text>
+    <circle cx="121" cy="490" r="22" fill="#EDF1FF" stroke="#6277EA" stroke-opacity=".4"/>
+    <circle cx="183" cy="472" r="22" fill="#EAF8EF" stroke="#28B76B" stroke-opacity=".4"/>
+    <circle cx="245" cy="501" r="22" fill="#FFF1E7" stroke="#FB923C" stroke-opacity=".45"/>
+    <path d="M142 484L161 477M204 480L224 491" stroke="#8792A5" stroke-width="2" stroke-dasharray="4 4"/>
+  </g>
+
+  <rect x="77" y="561" width="212" height="84" rx="11" fill="#E8EDF5"/>
+  <rect x="91" y="579" width="93" height="7" rx="3.5" fill="#B7C0CF"/>
+  <rect x="91" y="594" width="174" height="5" rx="2.5" fill="#CDD4DF"/>
+  <rect x="91" y="606" width="142" height="5" rx="2.5" fill="#CDD4DF"/>
+  <rect x="91" y="625" width="48" height="8" rx="4" fill="#6277EA" opacity=".5"/>
+
+  <rect x="329" y="111" width="1207" height="552" rx="18" fill="#E5E9F0" stroke="#172033" stroke-opacity=".08"/>
+  <rect x="354" y="135" width="1157" height="504" rx="12" fill="#FFFDF9"/>
+
+  <text x="397" y="178" fill="#6277EA" font-family="Arial, sans-serif" font-size="11" font-weight="700" letter-spacing="1.5">FHM Q9 × FPT JAPAN · FY2027</text>
+  <text x="397" y="236" fill="#172235" font-family="Arial, sans-serif" font-size="48" font-weight="700">AI Innovation</text>
+  <text x="397" y="289" fill="#172235" font-family="Arial, sans-serif" font-size="48" font-weight="700">Modernization</text>
+  <text x="397" y="327" fill="#6B7484" font-family="Arial, sans-serif" font-size="17">From fragmented pilots to a governed AI delivery system.</text>
+
+  <g>
+    <path d="M905 242H1358" stroke="url(#accent)" stroke-width="4" stroke-linecap="round"/>
+    <circle cx="934" cy="242" r="28" fill="#EEF1FF" stroke="#6277EA" stroke-width="2"/>
+    <circle cx="1064" cy="242" r="28" fill="#EDF6FF" stroke="#3F9DE5" stroke-width="2"/>
+    <circle cx="1194" cy="242" r="28" fill="#ECF9F2" stroke="#28B76B" stroke-width="2"/>
+    <circle cx="1324" cy="242" r="28" fill="#FFF4E9" stroke="#FB923C" stroke-width="2"/>
+    <text x="929" y="248" fill="#4F63D8" font-family="Arial, sans-serif" font-size="16" font-weight="700">1</text>
+    <text x="1059" y="248" fill="#2688CF" font-family="Arial, sans-serif" font-size="16" font-weight="700">2</text>
+    <text x="1189" y="248" fill="#23985A" font-family="Arial, sans-serif" font-size="16" font-weight="700">3</text>
+    <text x="1319" y="248" fill="#D86F22" font-family="Arial, sans-serif" font-size="16" font-weight="700">4</text>
+    <text x="901" y="297" fill="#4A5363" font-family="Arial, sans-serif" font-size="11" font-weight="700" letter-spacing=".7">DISCOVER</text>
+    <text x="1039" y="297" fill="#4A5363" font-family="Arial, sans-serif" font-size="11" font-weight="700" letter-spacing=".7">DESIGN</text>
+    <text x="1174" y="297" fill="#4A5363" font-family="Arial, sans-serif" font-size="11" font-weight="700" letter-spacing=".7">PROVE</text>
+    <text x="1291" y="297" fill="#4A5363" font-family="Arial, sans-serif" font-size="11" font-weight="700" letter-spacing=".7">CUTOVER</text>
+  </g>
+
+  <rect x="397" y="387" width="1058" height="1" fill="#DDE1E8"/>
+
+  <g>
+    <rect x="397" y="421" width="225" height="143" rx="14" fill="#F2F4FF"/>
+    <text x="418" y="448" fill="#6E7890" font-family="Arial, sans-serif" font-size="10" font-weight="700" letter-spacing="1">PORTFOLIO</text>
+    <text x="418" y="506" fill="#26324A" font-family="Arial, sans-serif" font-size="43" font-weight="700">48</text>
+    <text x="473" y="506" fill="#697387" font-family="Arial, sans-serif" font-size="14">applications</text>
+    <rect x="418" y="533" width="163" height="7" rx="3.5" fill="#DCE2FF"/>
+    <rect x="418" y="533" width="112" height="7" rx="3.5" fill="#6277EA"/>
+  </g>
+
+  <g>
+    <rect x="640" y="421" width="225" height="143" rx="14" fill="#EFF8FF"/>
+    <text x="661" y="448" fill="#6E7890" font-family="Arial, sans-serif" font-size="10" font-weight="700" letter-spacing="1">DELIVERY</text>
+    <text x="661" y="506" fill="#26324A" font-family="Arial, sans-serif" font-size="43" font-weight="700">3</text>
+    <text x="690" y="506" fill="#697387" font-family="Arial, sans-serif" font-size="14">controlled waves</text>
+    <path d="M661 539H831" stroke="#B9DFF8" stroke-width="7" stroke-linecap="round"/>
+    <path d="M661 539H788" stroke="#3F9DE5" stroke-width="7" stroke-linecap="round"/>
+  </g>
+
+  <g>
+    <rect x="883" y="421" width="225" height="143" rx="14" fill="#EFFAF4"/>
+    <text x="904" y="448" fill="#6E7890" font-family="Arial, sans-serif" font-size="10" font-weight="700" letter-spacing="1">EVIDENCE</text>
+    <text x="904" y="506" fill="#26324A" font-family="Arial, sans-serif" font-size="43" font-weight="700">94%</text>
+    <text x="904" y="535" fill="#2F8054" font-family="Arial, sans-serif" font-size="13">verified before cutover</text>
+  </g>
+
+  <g>
+    <rect x="1126" y="421" width="329" height="143" rx="14" fill="#1C2638"/>
+    <text x="1149" y="448" fill="#9DA8BA" font-family="Arial, sans-serif" font-size="10" font-weight="700" letter-spacing="1">LEADERSHIP DECISION</text>
+    <text x="1149" y="486" fill="white" font-family="Arial, sans-serif" font-size="19" font-weight="700">Fund Wave 01</text>
+    <text x="1149" y="513" fill="#CCD4E0" font-family="Arial, sans-serif" font-size="12">12 applications · ¥184M</text>
+    <rect x="1149" y="533" width="119" height="22" rx="11" fill="#28B76B"/>
+    <text x="1174" y="548" fill="white" font-family="Arial, sans-serif" font-size="9" font-weight="700" letter-spacing=".7">READY TO PROVE</text>
+  </g>
+
+  <text x="397" y="611" fill="#9AA2AF" font-family="Arial, sans-serif" font-size="9" letter-spacing="1">01 / 12</text>
+  <text x="1403" y="611" fill="#9AA2AF" font-family="Arial, sans-serif" font-size="9">INTERNAL · LEADERSHIP REVIEW</text>
+</svg>
