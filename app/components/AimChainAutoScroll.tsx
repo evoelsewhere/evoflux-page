@@ -1,12 +1,21 @@
 "use client";
 
 import { useEffect } from "react";
+import { withBasePath } from "../base-path";
 
 const AUTO_ADVANCE_MS = 3400;
 const MANUAL_PAUSE_MS = 8000;
 
 export function AimChainAutoScroll() {
   useEffect(() => {
+    const stepIcons = ["connect", "adapt", "run", "scale"];
+    document.querySelectorAll<HTMLElement>(".aim2-start-grid article").forEach((card, index) => {
+      const icon = stepIcons[index];
+      if (!icon) return;
+      card.style.setProperty("--aim-step-icon", `url("${withBasePath(`/illustrations/aim-step-${icon}.png`)}")`);
+      card.classList.add("has-generated-icon");
+    });
+
     const track = document.querySelector<HTMLElement>(".aim2-chain-track");
     if (!track) return;
 
