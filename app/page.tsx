@@ -176,10 +176,10 @@ export function HomePageContent({ locale = "en" }: { locale?: HomeLocale }) {
         </div>
 
         <div className="capability-primer-grid">
-          <article><span>01 · SAFETY</span><h3>Layered sandbox</h3><p>Workspace boundaries, outbound redaction, native process isolation, command checks, and explicit network controls.</p><small>Local policy · per run</small></article>
-          <article><span>02 · BROWSER</span><h3>WebBridge</h3><p>Drive your real signed-in Chrome or Edge session and bring selected page context back into the same agent conversation.</p><small>Two-way · policy checked</small></article>
-          <article><span>03 · AUTONOMY</span><h3>Durable Goal mode</h3><p>Long objectives survive reconnects and restarts with status, token budgets, pause controls, and concrete blocker detection.</p><small>Persistent · bounded</small></article>
-          <article><span>04 · CODE</span><h3>Structural code graph</h3><p>Twenty-five parsers, typed relationships, incremental freshness, and deterministic cross-repository resolution.</p><small>Graph first · token efficient</small></article>
+          <article><span>01 · SAFETY</span><div className="capability-primer-art"><img src={withBasePath("/illustrations/capability-sandbox.jpg")} alt="" width="720" height="720" loading="lazy" /></div><h3>Layered sandbox</h3><p>Workspace boundaries, outbound redaction, native process isolation, command checks, and explicit network controls.</p><small>Local policy · per run</small></article>
+          <article><span>02 · BROWSER</span><div className="capability-primer-art"><img src={withBasePath("/illustrations/capability-webbridge.jpg")} alt="" width="720" height="720" loading="lazy" /></div><h3>WebBridge</h3><p>Drive your real signed-in Chrome or Edge session and bring selected page context back into the same agent conversation.</p><small>Two-way · policy checked</small></article>
+          <article><span>03 · AUTONOMY</span><div className="capability-primer-art"><img src={withBasePath("/illustrations/capability-goal.jpg")} alt="" width="720" height="720" loading="lazy" /></div><h3>Durable Goal mode</h3><p>Long objectives survive reconnects and restarts with status, token budgets, pause controls, and concrete blocker detection.</p><small>Persistent · bounded</small></article>
+          <article><span>04 · CODE</span><div className="capability-primer-art"><img src={withBasePath("/illustrations/capability-code-graph.jpg")} alt="" width="720" height="720" loading="lazy" /></div><h3>Structural code graph</h3><p>Twenty-five parsers, typed relationships, incremental freshness, and deterministic cross-repository resolution.</p><small>Graph first · token efficient</small></article>
         </div>
 
         <article className="capability-feature capability-feature-sandbox">

@@ -33,6 +33,10 @@ test("server-renders the EvoFlux landing page", async () => {
   assert.match(html, /rel="canonical" href="https:\/\/evoflux\.fhmq9\.cloud\//);
   assert.match(html, /One local-first open cowork workspace for FHM Q9/);
   assert.match(html, /Layered sandbox/);
+  assert.match(html, /illustrations\/capability-sandbox\.jpg/);
+  assert.match(html, /illustrations\/capability-webbridge\.jpg/);
+  assert.match(html, /illustrations\/capability-goal\.jpg/);
+  assert.match(html, /illustrations\/capability-code-graph\.jpg/);
   assert.match(html, /Your browser is part of the workspace\./);
   assert.match(html, /Durable Goal mode/);
   assert.match(html, /Structural code graph/);
