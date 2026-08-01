@@ -1,0 +1,12 @@
+{
+  "name": "EvoFlux FHM — Open Cowork AI & AIM",
+  "short_name": "EvoFlux",
+  "description": "Open cowork AI, Coding, WebBridge, and AI Innovation Modernization for FHM Q9 and FPT Japan.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#f7f7f4",
+  "theme_color": "#f7f7f4",
+  "icons": [
+    { "src": "/evoflux-app-icon.png", "sizes": "512x512", "type": "image/png" }
+  ]
+}

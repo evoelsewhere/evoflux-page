@@ -19,7 +19,8 @@ jobs:
     runs-on: ubuntu-latest
     env:
       GITHUB_PAGES: "true"
-      NEXT_PUBLIC_BASE_PATH: /evoflux-page
+      NEXT_PUBLIC_BASE_PATH: ""
+      PUBLIC_SITE_ORIGIN: https://evoflux.fhmq9.cloud
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-node@v4

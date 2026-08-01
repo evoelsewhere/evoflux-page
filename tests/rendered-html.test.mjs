@@ -19,13 +19,19 @@ test("server-renders the EvoFlux landing page", async () => {
   assert.match(response.headers.get("content-type") ?? "", /^text\/html\b/i);
 
   const html = await response.text();
-  assert.match(html, /<title>EvoFlux — AI agents that do real work<\/title>/i);
+  assert.match(html, /<title>EvoFlux FHM — Open Cowork AI &amp; AIM for FPT Japan<\/title>/i);
   assert.match(html, /AI agents that do/);
   assert.match(html, /One harness, three modes/);
   assert.match(html, /Set it once\./);
   assert.match(html, /Every · Cron · At/);
+  assert.match(html, /Any IANA timezone/);
   assert.match(html, /evoflux-scheduler-light\.png/);
-  assert.match(html, /Orchestrated\. Sandboxed\. Real-browser capable\./);
+  assert.match(html, /EvoFlux for FHM Q9 · FPT Japan · FJP/);
+  assert.match(html, /Open cowork AI for teams that do more than chat\./);
+  assert.match(html, /AI Innovation Modernization connects legacy understanding/);
+  assert.match(html, /"@type":"SoftwareApplication"/);
+  assert.match(html, /rel="canonical" href="https:\/\/evoflux\.fhmq9\.cloud\//);
+  assert.match(html, /One local-first open cowork workspace for FHM Q9/);
   assert.match(html, /Layered sandbox/);
   assert.match(html, /Your browser is part of the workspace\./);
   assert.match(html, /Durable Goal mode/);
@@ -51,12 +57,14 @@ test("server-renders the Japanese EvoFlux landing page", async () => {
   assert.equal(response.status, 200);
   const html = await response.text();
 
-  assert.match(html, /EvoFlux — 実際の仕事を進めるAIエージェント/);
+  assert.match(html, /EvoFlux FHM — FPT Japan向けOpen Cowork AI・AIM/);
   assert.match(html, /実際の仕事を進める/);
   assert.match(html, /ナレッジワーク、ソフトウェア開発、レガシーモダナイゼーション/);
   assert.match(html, /一つのハーネス、三つのモード/);
   assert.match(html, /一度設定すれば、/);
   assert.match(html, /間隔 · Cron · 指定時刻/);
+  assert.match(html, /任意のIANAタイムゾーン/);
+  assert.match(html, /FHM Q9 · FPT Japan · FJPのためのEvoFlux/);
   assert.match(html, /リポジトリ不要の共同作業/);
   assert.match(html, /ブラウザもワークスペースの一部/);
   assert.match(html, /EvoFluxを始めよう/);
@@ -73,7 +81,7 @@ test("server-renders the dedicated AIM product page", async () => {
   assert.match(response.headers.get("content-type") ?? "", /^text\/html\b/i);
 
   const html = await response.text();
-  assert.match(html, /AIM — AI Innovation Modernization \| EvoFlux/i);
+  assert.match(html, /AIM — AI Innovation Modernization \| EvoFlux FHM/i);
   assert.match(html, /Move legacy systems forward/);
   assert.match(html, /operating system for a migration—not a prompt wrapped around a code generator/i);
   assert.match(html, /The migration-specific operating contract\./);
@@ -96,7 +104,7 @@ test("server-renders the Japanese AIM product page", async () => {
   assert.match(response.headers.get("content-type") ?? "", /^text\/html\b/i);
 
   const html = await response.text();
-  assert.match(html, /AIM — AIイノベーション・モダナイゼーション \| EvoFlux/i);
+  assert.match(html, /AIM — AI Innovation Modernization \| EvoFlux FHM/i);
   assert.match(html, /レガシーシステムを、次の時代へ。/);
   assert.match(html, /移行プロジェクトのオペレーティングシステムです/);
   assert.match(html, /すべての実行が、入力・作業・ゲート・出力を宣言します。/);

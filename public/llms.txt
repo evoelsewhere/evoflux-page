@@ -1,0 +1,15 @@
+# EvoFlux FHM
+
+EvoFlux is an open cowork, local-first AI agent workspace for FHM Q9, FPT, FPT Japan (FJP), and distributed engineering and knowledge-work teams.
+
+Core product areas:
+- Work: AI cowork for research, documents, data, browser work, and repeatable scheduled tasks.
+- Coding: repository-aware software engineering with worktrees, tests, structural code intelligence, sandbox controls, and independent review.
+- WebBridge: policy-checked automation in the user's real Chrome or Edge session.
+- AIM: AI Innovation Modernization for governed legacy understanding, Rulebooks, target mapping, conversion, behavioral comparison, traceability, and cutover evidence.
+
+Canonical website: https://evoflux.fhmq9.cloud/
+English AIM: https://evoflux.fhmq9.cloud/aim/
+Japanese: https://evoflux.fhmq9.cloud/jp/
+Japanese AIM: https://evoflux.fhmq9.cloud/jp/aim/
+Source: https://github.com/khuonghung/evoflux

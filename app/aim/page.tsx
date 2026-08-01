@@ -8,9 +8,10 @@ const RELEASE_URL = "https://github.com/khuonghung/evoflux/releases/latest";
 const GITHUB_URL = "https://github.com/khuonghung/evoflux";
 
 export const metadata: Metadata = {
-  title: "AIM — AI Innovation Modernization | EvoFlux",
-  description: "A governed migration control plane for understanding legacy systems, transforming them safely, and proving functional equivalence.",
-  alternates: { languages: { en: withBasePath("/aim"), ja: withBasePath("/jp/aim") } },
+  title: "AIM — AI Innovation Modernization | EvoFlux FHM",
+  description: "EvoFlux AIM is the governed AI Innovation Modernization control plane for FHM Q9 and FPT Japan: understand legacy systems, transform safely, and prove equivalence.",
+  keywords: ["EvoFlux AIM", "AIM", "AI Innovation Modernization", "FHM Q9 modernization", "FPT Japan modernization", "FJP", "legacy modernization", "functional equivalence"],
+  alternates: { canonical: withBasePath("/aim/"), languages: { en: withBasePath("/aim/"), ja: withBasePath("/jp/aim/") } },
 };
 
 export type AimLocale = "en" | "ja";

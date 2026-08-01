@@ -7,9 +7,9 @@ const RELEASE_URL = "https://github.com/khuonghung/evoflux/releases/latest";
 const GITHUB_URL = "https://github.com/khuonghung/evoflux";
 
 export const metadata: Metadata = {
-  title: "EvoFlux — AI agents that do real work",
-  description: "A local-first desktop agent workspace for knowledge work, software engineering, and governed modernization.",
-  alternates: { languages: { en: withBasePath("/"), ja: withBasePath("/jp") } },
+  title: "EvoFlux FHM — Open Cowork AI & AIM for FPT Japan",
+  description: "EvoFlux brings open cowork AI, Coding, WebBridge browser work, and AIM modernization to FHM Q9, FPT, FPT Japan, and FJP teams.",
+  alternates: { canonical: withBasePath("/"), languages: { en: withBasePath("/"), ja: withBasePath("/jp/") } },
 };
 
 const steps = [
@@ -163,7 +163,7 @@ export function HomePageContent({ locale = "en" }: { locale?: HomeLocale }) {
               <img src={withBasePath("/screens/evoflux-scheduler-light.png")} alt="EvoFlux Scheduler creating a timezone-aware recurring task" />
             </div>
             <div className="scheduler-float scheduler-float-left"><small>Schedule types</small><strong>Every · Cron · At</strong></div>
-            <div className="scheduler-float scheduler-float-right"><i /><span><small>Timezone aware</small><strong>Asia / Saigon</strong></span></div>
+            <div className="scheduler-float scheduler-float-right"><i /><span><small>Timezone aware</small><strong>Any IANA timezone</strong></span></div>
           </div>
         </div>
       </section>
@@ -325,6 +325,19 @@ export function HomePageContent({ locale = "en" }: { locale?: HomeLocale }) {
         <p id="providers-title">Use the right model for every specialist</p>
         <div className="provider-track">
           {providers.map((provider) => <span key={provider}>{provider}</span>)}
+        </div>
+      </section>
+
+      <section id="fhm-cowork" className="section ecosystem-section">
+        <div className="ecosystem-intro">
+          <span className="section-kicker">EvoFlux for FHM Q9 · FPT Japan · FJP</span>
+          <h2>Open cowork AI for teams that do more than chat.</h2>
+          <p>EvoFlux gives FHM Q9, FPT, and FPT Japan teams one inspectable workspace for knowledge work, software delivery, browser automation, and governed modernization.</p>
+        </div>
+        <div className="ecosystem-grid">
+          <article><span>01 · COWORK</span><h3>Work together with AI</h3><p>Research, documents, data, and browser tasks become reviewable artifacts—not disposable chat answers.</p><small>Open cowork · local-first</small></article>
+          <article><span>02 · ENGINEERING</span><h3>Build with Coding agents</h3><p>Use repositories, worktrees, tests, code graphs, sandbox policy, and specialist review in one controlled delivery loop.</p><small>FHM · FPT · FJP</small></article>
+          <article><span>03 · MODERNIZATION</span><h3>Prove change with AIM</h3><p>AI Innovation Modernization connects legacy understanding, Rulebooks, target mappings, conversion, comparison, and cutover evidence.</p><small>AIM · governed evidence</small></article>
         </div>
       </section>
 

@@ -3,9 +3,10 @@ import { withBasePath } from "../base-path";
 import { HomePageContent } from "../page";
 
 export const metadata: Metadata = {
-  title: "EvoFlux — 実際の仕事を進めるAIエージェント",
-  description: "Work、Coding、AIMを一つに統合した、ローカルファーストのデスクトップ・エージェントワークスペース。",
-  alternates: { languages: { en: withBasePath("/"), ja: withBasePath("/jp") } },
+  title: "EvoFlux FHM — FPT Japan向けOpen Cowork AI・AIM",
+  description: "FHM Q9、FPT、FPT Japan（FJP）のためのOpen Cowork AI。Work、Coding、WebBridge、AIMモダナイゼーションを一つのローカルファースト環境へ。",
+  keywords: ["EvoFlux", "EvoFlux FHM", "FHM Q9", "FPT Japan", "FJP", "Cowork", "Open Cowork", "AIM", "AI Innovation Modernization"],
+  alternates: { canonical: withBasePath("/jp/"), languages: { en: withBasePath("/"), ja: withBasePath("/jp/") } },
 };
 
 export default function JapaneseHomePage() {

@@ -1,0 +1,5 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://evoflux.fhmq9.cloud/sitemap.xml
+Host: evoflux.fhmq9.cloud
