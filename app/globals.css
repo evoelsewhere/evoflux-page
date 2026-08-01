@@ -103,7 +103,7 @@ img {
 }
 
 .company-brand {
-  width: 212px;
+  width: 240px;
   height: auto;
   object-fit: contain;
 }
@@ -1763,7 +1763,7 @@ footer {
 
 @media (max-width: 1100px) {
   .site-header { grid-template-columns: 1fr auto; padding: 0 24px; }
-  .company-brand { width: 184px; }
+  .company-brand { width: 208px; }
   .office-heading { gap: 50px; }
   .office-showcase-grid { grid-template-columns: 1fr; }
   .office-card-featured { grid-row: auto; }
@@ -1805,7 +1805,7 @@ footer {
   .mobile-menu nav { position: fixed; top: 72px; right: 0; left: 0; display: flex; flex-direction: column; padding: 8px 24px 28px; border-bottom: 1px solid var(--line); background: rgba(255,255,255,.98); box-shadow: 0 20px 40px rgba(17,17,16,.08); }
   .mobile-menu nav a { padding: 17px 0; border-bottom: 1px solid var(--line); font-size: 16px; font-weight: 560; }
   .header-actions { gap: 10px; }
-  .company-brand { width: 148px; }
+  .company-brand { width: 160px; }
 
   .office-heading { grid-template-columns: 1fr; gap: 25px; }
   .office-heading > p { max-width: 620px; }
@@ -1896,7 +1896,7 @@ footer {
   .brand img { width: 32px; height: 32px; }
   .brand-cluster { gap: 9px; }
   .brand-divider { height: 24px; }
-  .company-brand { width: 116px; }
+  .company-brand { width: 124px; }
   .office-heading h2 { font-size: 44px; }
   .office-card { border-radius: 18px; }
   .office-card-featured .office-art { padding: 10px 10px 0; }
