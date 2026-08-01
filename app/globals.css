@@ -2415,7 +2415,11 @@ footer {
 .aim2-start-grid { display: grid; grid-template-columns: repeat(4,1fr); gap: 12px; width: min(1260px,100%); margin: 72px auto 0; }
 .aim2-start-grid article { min-height: 330px; padding: 28px; border: 1px solid rgba(23,24,28,.11); border-radius: 18px; background: #f7f7f4; }.aim2-start-grid article:nth-child(2) { background: #f2f1ff; }.aim2-start-grid article:nth-child(3) { background: #eff9f3; }
 .aim2-start-grid span { color: #898b84; font-family: var(--font-geist-mono),monospace; font-size: 8px; text-transform: uppercase; letter-spacing: .06em; }.aim2-start-grid h3 { margin: 110px 0 0; font-size: 24px; font-weight: 570; line-height: 1.07; letter-spacing: -.045em; }.aim2-start-grid p { margin: 16px 0 0; color: #6e706a; font-size: 11px; line-height: 1.57; }
-.aim2-start-grid article.has-generated-icon::before { content: ""; display: block; width: 150px; height: 98px; margin: 34px 0 0 -5px; background: var(--aim-step-icon) no-repeat left center/contain; }
+.aim2-start-grid article.has-generated-icon { display: flex; flex-direction: column; }
+.aim2-start-grid article.has-generated-icon > span { order: 1; }
+.aim2-start-grid article.has-generated-icon::before { content: ""; display: block; order: 2; width: 156px; height: 98px; margin: 30px auto 0; background: var(--aim-step-icon) no-repeat center/contain; }
+.aim2-start-grid article.has-generated-icon h3 { order: 3; }
+.aim2-start-grid article.has-generated-icon p { order: 4; }
 .aim2-start-grid article.has-generated-icon h3 { margin-top: 17px; }
 
 .aim2-faq { display: grid; grid-template-columns: .7fr 1.3fr; gap: 100px; width: min(1260px,100%); margin: 0 auto; background: #f4f4f1; }
@@ -2458,7 +2462,7 @@ footer {
   .aim2-pipeline-detail { grid-template-columns: 1fr; }.aim2-detail-copy { padding: 27px 23px; }.aim2-detail-heading h3 { font-size: 35px; }.aim2-detail-screen { grid-row: 1; margin: 10px 10px 0; }.aim2-detail-screen img { aspect-ratio: 16/7; }
   .aim2-chain-summary { margin-top: 48px; }.aim2-chain-track { display: flex; width: auto; margin: 24px -18px 0; padding: 4px 18px 18px; overflow-x: auto; overscroll-behavior-x: contain; scroll-behavior: smooth; scroll-padding-inline: 18px; scroll-snap-type: x mandatory; scrollbar-width: thin; }.aim2-chain-track article,.aim2-chain-track article:last-child { flex: 0 0 min(330px,82vw); grid-column: auto; min-height: 390px; scroll-snap-align: start; }.aim2-chain-track header { flex-wrap: wrap; }.aim2-side-flows { grid-template-columns: 1fr; }
   .aim2-trace { grid-template-columns: 1fr; gap: 52px; padding: 98px 18px; }.aim2-trace-copy h2 { font-size: 44px; }.aim2-trace-questions { grid-column: 1; grid-template-columns: 1fr; }.aim2-trace-questions span { grid-column: 1; }
-  .aim2-start-grid { grid-template-columns: 1fr; margin-top: 52px; }.aim2-start-grid article { min-height: 290px; }.aim2-start-grid h3 { margin-top: 80px; }.aim2-start-grid article.has-generated-icon::before { width: 145px; height: 96px; margin-top: 31px; }.aim2-start-grid article.has-generated-icon h3 { margin-top: 14px; }
+  .aim2-start-grid { grid-template-columns: 1fr; margin-top: 52px; }.aim2-start-grid article { min-height: 290px; }.aim2-start-grid h3 { margin-top: 80px; }.aim2-start-grid article.has-generated-icon::before { width: 150px; height: 96px; margin-top: 28px; }.aim2-start-grid article.has-generated-icon h3 { margin-top: 14px; }
   .aim2-faq { grid-template-columns: 1fr; gap: 48px; width: 100%; }.aim2-faq-intro h2 { font-size: 43px; }.aim2-faq-list summary { font-size: 15px; }
   .aim2-closing { min-height: 650px; padding: 90px 18px; }.aim2-closing h2 { font-size: 49px; }.aim2-closing-orbit { width: min(520px,calc(100vw - 36px)); height: min(270px,56vw); }
 }
