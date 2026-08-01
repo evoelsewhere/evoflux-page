@@ -98,6 +98,7 @@ export function ModeShowcase({ locale = "en" }: { locale?: "en" | "ja" }) {
           <div className="screen-frame mode-screen">
             <div className="screen-topbar"><span className="traffic red" /><span className="traffic amber" /><span className="traffic green" /><span className="screen-label">EvoFlux · {mode.label}</span></div>
             <img src={withBasePath(mode.image)} alt={mode.alt} />
+            {mode.id === "work" && <span className="mode-session-privacy" aria-hidden="true" />}
           </div>
         </div>
       </div>
