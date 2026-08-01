@@ -1,6 +1,7 @@
 import type { Metadata, Viewport } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import { BASE_PATH, withBasePath } from "./base-path";
+import { AimChainAutoScroll } from "./components/AimChainAutoScroll";
 import "./globals.css";
 
 const SITE_URL = "https://evoflux.fhmq9.cloud";
@@ -15,9 +16,12 @@ const geistMono = Geist_Mono({
   subsets: ["latin"],
 });
 
-const pagesLocaleBootstrap = BASE_PATH
+const pagesLocaleBootstrap = (BASE_PATH
   ? `(()=>{try{const b=${JSON.stringify(BASE_PATH)},u=new URL(location.href),p=u.pathname.replace(/\\/$/,"")||"/",q=u.searchParams.get("lang"),k="evoflux_locale";if(q==="en"||q==="ja"){localStorage.setItem(k,q);u.searchParams.delete("lang");history.replaceState(null,"",u.pathname+(u.search||"")+(u.hash||""));}if(p===b+"/jp"||p===b+"/jp/aim"){localStorage.setItem(k,"ja");return;}if(p===b||p===b+"/aim"){const s=localStorage.getItem(k),l=s==="en"||s==="ja"?s:(navigator.language||"").toLowerCase().startsWith("ja")?"ja":"en";if(l==="ja")location.replace(b+(p.endsWith("/aim")?"/jp/aim/":"/jp/"));}}catch{}})();`
-  : "";
+  : "").replace(
+    'location.replace(b+(p.endsWith("/aim")?"/jp/aim/":"/jp/"))',
+    'location.replace(b+(p.endsWith("/aim")?"/jp/aim/":"/jp/")+(u.search||"")+(u.hash||""))',
+  );
 
 export const metadata: Metadata = {
   metadataBase: new URL(SITE_URL),
@@ -135,6 +139,7 @@ export default function RootLayout({
       >
         {pagesLocaleBootstrap && <script dangerouslySetInnerHTML={{ __html: pagesLocaleBootstrap }} />}
         <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }} />
+        <AimChainAutoScroll />
         {children}
       </body>
     </html>

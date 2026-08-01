@@ -28,6 +28,12 @@ html {
   background: var(--paper);
 }
 
+.anchor-alias {
+  display: block;
+  height: 0;
+  scroll-margin-top: 92px;
+}
+
 body {
   margin: 0;
   background: var(--paper);
@@ -2438,7 +2444,7 @@ footer {
   .aim2-rulebook { grid-template-columns: 1fr; gap: 45px; padding: 98px 18px; }.aim2-rulebook-intro h2 { font-size: 44px; }.aim2-rulebook-screen { grid-row: 2; }.aim2-rulebook-grid,.aim2-rulebook-flow { grid-column: 1; }.aim2-rulebook-grid { grid-template-columns: 1fr; }.aim2-rulebook-grid article { min-height: 145px; }
   .aim2-pipeline-showcase { margin-top: 52px; }.aim2-pipeline-thumbs { display: flex; margin: 0 -18px; padding: 0 18px 12px; overflow-x: auto; overscroll-behavior-x: contain; scroll-snap-type: x mandatory; scrollbar-width: thin; }.aim2-pipeline-thumbs button { flex: 0 0 min(300px,78vw); min-width: 0; scroll-snap-align: start; }
   .aim2-pipeline-detail { grid-template-columns: 1fr; }.aim2-detail-copy { padding: 27px 23px; }.aim2-detail-heading h3 { font-size: 35px; }.aim2-detail-screen { grid-row: 1; margin: 10px 10px 0; }.aim2-detail-screen img { aspect-ratio: 16/7; }
-  .aim2-chain-summary { margin-top: 48px; }.aim2-chain-track { grid-template-columns: 1fr; }.aim2-chain-track article,.aim2-chain-track article:last-child { grid-column: auto; min-height: 0; }.aim2-chain-track header { flex-wrap: wrap; }.aim2-side-flows { grid-template-columns: 1fr; }
+  .aim2-chain-summary { margin-top: 48px; }.aim2-chain-track { display: flex; width: auto; margin: 24px -18px 0; padding: 4px 18px 18px; overflow-x: auto; overscroll-behavior-x: contain; scroll-behavior: smooth; scroll-padding-inline: 18px; scroll-snap-type: x mandatory; scrollbar-width: thin; }.aim2-chain-track article,.aim2-chain-track article:last-child { flex: 0 0 min(330px,82vw); grid-column: auto; min-height: 390px; scroll-snap-align: start; }.aim2-chain-track header { flex-wrap: wrap; }.aim2-side-flows { grid-template-columns: 1fr; }
   .aim2-trace { grid-template-columns: 1fr; gap: 52px; padding: 98px 18px; }.aim2-trace-copy h2 { font-size: 44px; }.aim2-trace-questions { grid-column: 1; grid-template-columns: 1fr; }.aim2-trace-questions span { grid-column: 1; }
   .aim2-start-grid { grid-template-columns: 1fr; margin-top: 52px; }.aim2-start-grid article { min-height: 250px; }.aim2-start-grid h3 { margin-top: 80px; }
   .aim2-faq { grid-template-columns: 1fr; gap: 48px; width: 100%; }.aim2-faq-intro h2 { font-size: 43px; }.aim2-faq-list summary { font-size: 15px; }
@@ -2467,7 +2473,7 @@ footer {
   .aim2-pipeline-thumbs { margin-right: -16px; margin-left: -16px; padding-right: 16px; padding-left: 16px; }.aim2-pipeline-thumbs button { flex-basis: min(290px,82vw); }
   .aim2-detail-copy { padding: 24px 18px; }.aim2-detail-copy dl > div { grid-template-columns: 1fr; gap: 7px; }.aim2-detail-heading h3 { font-size: 31px; }
   .aim2-chain-summary { grid-template-columns: 1fr; gap: 8px; padding: 8px; }.aim2-chain-summary span { min-height: 72px; }.aim2-chain-summary i { margin: -1px auto; transform: rotate(90deg); }
-  .aim2-chain-track { grid-template-columns: 1fr; }.aim2-chain-track article,.aim2-chain-track article:last-child { grid-column: auto; min-height: 0; padding: 21px 18px; }.aim2-chain-track dl .is-work { min-height: 0; }.aim2-chain-track dl div { grid-template-columns: 45px minmax(0,1fr); }
+  .aim2-chain-track { margin-right: -16px; margin-left: -16px; padding-right: 16px; padding-left: 16px; scroll-padding-inline: 16px; }.aim2-chain-track article,.aim2-chain-track article:last-child { flex-basis: min(300px,82vw); min-height: 0; padding: 21px 18px; }.aim2-chain-track dl .is-work { min-height: 0; }.aim2-chain-track dl div { grid-template-columns: 45px minmax(0,1fr); }
   .aim2-trace-map article { grid-template-columns: 42px 1fr; }.aim2-trace-map b { grid-column: 2; width: fit-content; margin-top: 8px; }
   .aim2-start-grid article { padding: 24px 22px; }
 }
