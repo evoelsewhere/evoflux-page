@@ -40,10 +40,20 @@ export function HomePageContent({ locale = "en" }: { locale?: HomeLocale }) {
   const page = (
     <main lang={locale}>
       <header className="site-header">
-        <a className="brand" href="#top" aria-label="EvoFlux home">
-          <img src={withBasePath("/evoflux-app-icon.png")} alt="" width="34" height="34" />
-          <span>EvoFlux</span>
-        </a>
+        <div className="brand-cluster">
+          <a className="brand" href="#top" aria-label="EvoFlux home">
+            <img src={withBasePath("/evoflux-app-icon.png")} alt="" width="34" height="34" />
+            <span>EvoFlux</span>
+          </a>
+          <span className="brand-divider" aria-hidden="true" />
+          <img
+            className="company-brand"
+            src={withBasePath("/brand/fpt-software-fhm-q9.png")}
+            width="885"
+            height="241"
+            alt="FPT Software, FHM and Q9 Quy Nhon Delivery Unit"
+          />
+        </div>
 
         <nav className="desktop-nav" aria-label="Primary navigation">
           <a href="#modes">Modes</a>
@@ -139,6 +149,64 @@ export function HomePageContent({ locale = "en" }: { locale?: HomeLocale }) {
           <p>Move from a quick research task to a production repository or a governed migration without changing how work is controlled.</p>
         </div>
         <ModeShowcase locale={locale} />
+      </section>
+
+      <section id="office" className="section office-section">
+        <div className="office-heading">
+          <div>
+            <span className="section-kicker">Office · artifact creation</span>
+            <h2>From a prompt to a board-ready artifact.</h2>
+          </div>
+          <p>EvoFlux builds the actual editable file—not a wall of suggestions. Specialist workflows create the content, validate the structure, and visually inspect the result before delivery.</p>
+        </div>
+
+        <div className="office-showcase-grid">
+          <article className="office-card office-card-featured">
+            <div className="office-art office-art-word">
+              <img src={withBasePath("/screens/evoflux-office-word-light.png")} alt="EvoFlux creating and previewing a structured Word transformation report" loading="lazy" />
+              <span className="office-artifact-badge"><i className="docx" /> Structured DOCX</span>
+            </div>
+            <div className="office-card-copy">
+              <span>01 · DOCUMENTS</span>
+              <h3>Long-form reports that stay coherent.</h3>
+              <p>Cover, table of contents, branded sections, styled tables, diagrams, citations, headers, footers, and page-by-page layout QA.</p>
+              <div className="office-metrics"><b>20 pages</b><b>Auto TOC</b><b>Visual QA</b></div>
+            </div>
+          </article>
+
+          <article className="office-card office-card-compact">
+            <div className="office-art office-art-slides">
+              <img src={withBasePath("/screens/evoflux-office-powerpoint-light.png")} alt="EvoFlux creating and previewing an executive PowerPoint deck" loading="lazy" />
+              <span className="office-artifact-badge"><i className="ppt" /> Editable PPTX</span>
+            </div>
+            <div className="office-card-copy">
+              <span>02 · PRESENTATIONS</span>
+              <h3>Strategy decks with a real visual system.</h3>
+              <p>Executive narrative, native charts, architecture diagrams, roadmaps, speaker notes, and consistent slide hierarchy—assembled and checked as one deliverable.</p>
+              <div className="office-metrics"><b>12 slides</b><b>4 native charts</b><b>16:9 verified</b></div>
+            </div>
+          </article>
+
+          <article className="office-card office-card-compact">
+            <div className="office-art office-art-excel">
+              <img src={withBasePath("/screens/evoflux-office-excel-light.png")} alt="EvoFlux creating and previewing a multi-sheet Excel portfolio model" loading="lazy" />
+              <span className="office-artifact-badge"><i className="xlsx" /> Formula-ready XLSX</span>
+            </div>
+            <div className="office-card-copy">
+              <span>03 · SPREADSHEETS</span>
+              <h3>Models that calculate, explain, and update.</h3>
+              <p>Linked sheets, robust formulas, scenario controls, dashboards, risk heatmaps, validation, and clean number formats.</p>
+              <div className="office-metrics"><b>6 sheets</b><b>18 initiatives</b><b>0 formula errors</b></div>
+            </div>
+          </article>
+        </div>
+
+        <div className="office-proof-line">
+          <span><i /> Native files</span>
+          <span><i /> Editable objects</span>
+          <span><i /> Formula and structure checks</span>
+          <span><i /> Rendered visual review</span>
+        </div>
       </section>
 
       <section id="automation" className="section scheduler-section">

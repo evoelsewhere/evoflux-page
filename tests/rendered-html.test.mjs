@@ -22,6 +22,11 @@ test("server-renders the EvoFlux landing page", async () => {
   assert.match(html, /<title>EvoFlux FHM — Open Cowork AI &amp; AIM for FPT Japan<\/title>/i);
   assert.match(html, /AI agents that do/);
   assert.match(html, /One harness, three modes/);
+  assert.match(html, /From a prompt to a board-ready artifact/);
+  assert.match(html, /evoflux-office-powerpoint-light\.png/);
+  assert.match(html, /evoflux-office-excel-light\.png/);
+  assert.match(html, /evoflux-office-word-light\.png/);
+  assert.match(html, /brand\/fpt-software-fhm-q9\.png/);
   assert.match(html, /Set it once\./);
   assert.match(html, /Every · Cron · At/);
   assert.match(html, /Any IANA timezone/);
@@ -69,6 +74,8 @@ test("server-renders the Japanese EvoFlux landing page", async () => {
   assert.match(html, /実際の仕事を進める/);
   assert.match(html, /ナレッジワーク、ソフトウェア開発、レガシーモダナイゼーション/);
   assert.match(html, /一つのハーネス、三つのモード/);
+  assert.match(html, /プロンプトから、経営会議に出せる成果物へ。/);
+  assert.match(html, /構造化DOCX/);
   assert.match(html, /一度設定すれば、/);
   assert.match(html, /間隔 · Cron · 指定時刻/);
   assert.match(html, /任意のIANAタイムゾーン/);
