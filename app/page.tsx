@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { withBasePath } from "./base-path";
 import { ModeShowcase } from "./components/ModeShowcase";
+import { AsciiSpaceBackground } from "./components/AsciiSpaceBackground";
 import { localizeHomeNode, type HomeLocale } from "./home-locales";
 
 export const metadata: Metadata = {
@@ -36,7 +37,7 @@ const providers = [
 
 export function HomePageContent({ locale = "en" }: { locale?: HomeLocale }) {
   const page = (
-    <main lang={locale}>
+    <main className="home-page" lang={locale}>
       <header className="site-header">
         <div className="brand-cluster">
           <a className="company-brand-link" href="#top" aria-label="Home">
@@ -79,6 +80,7 @@ export function HomePageContent({ locale = "en" }: { locale?: HomeLocale }) {
       </header>
 
       <section id="top" className="hero">
+        <AsciiSpaceBackground />
         <div className="flux-atmosphere" aria-hidden="true">
           <div className="flux-ring flux-ring-one" />
           <div className="flux-ring flux-ring-two" />

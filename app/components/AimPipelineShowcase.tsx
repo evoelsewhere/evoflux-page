@@ -28,7 +28,7 @@ const pipelines: Pipeline[] = [
     process: "The aim-appraiser indexes the estate, identifies units and dependencies, scores complexity, and proposes a wave plan.",
     gate: "3 gates · approve plan, approve rework, choose whether to generate next actions",
     output: "Unit inventory, risk baseline, approved waves, suggested workflow",
-    image: "/screens/evoflux-aim-pipelines-light.jpg?v=2",
+    image: "/screens/evoflux-aim-pipelines-light.jpg?v=3",
   },
   {
     id: "understand",
@@ -39,7 +39,7 @@ const pipelines: Pipeline[] = [
     process: "The aim-archaeologist claims the unit, snapshots source evidence, traces dependency closure, and writes structured knowledge into the KB.",
     gate: "2 gates · verify the understanding package and approve it",
     output: "Module documentation, dependency map, data knowledge, candidate business rules, phase = understood",
-    image: "/screens/evoflux-aim-understand-light.jpg?v=2",
+    image: "/screens/evoflux-aim-understand-light.jpg?v=3",
   },
   {
     id: "review-rules",
@@ -50,7 +50,7 @@ const pipelines: Pipeline[] = [
     process: "AIM lists rule candidates with source citations for a domain expert to confirm, reject, edit, or declare that no rule exists.",
     gate: "1 gate · domain or business-rule approval",
     output: "Confirmed business rules or an explicit no-rules decision",
-    image: "/screens/evoflux-aim-review-rules-light.jpg?v=2",
+    image: "/screens/evoflux-aim-review-rules-light.jpg?v=3",
   },
   {
     id: "design",
@@ -61,7 +61,7 @@ const pipelines: Pipeline[] = [
     process: "The aim-target-architect creates the target mapping, interface decisions, dependencies, acceptance criteria, and implementation boundary.",
     gate: "1 gate · architect approves the target design",
     output: "Approved mapping and design package, phase = designed",
-    image: "/screens/evoflux-aim-design-light.jpg?v=2",
+    image: "/screens/evoflux-aim-design-light.jpg?v=3",
   },
   {
     id: "convert-unit",
@@ -72,7 +72,7 @@ const pipelines: Pipeline[] = [
     process: "The aim-converter applies the mapping and Rulebook, writes only to target, runs the build, and records the implementation evidence.",
     gate: "Policy gate · readiness, exclusive claim, and build verification",
     output: "Target code, tests/build result, linked paths, phase = converted",
-    image: "/screens/evoflux-aim-convert-light.jpg?v=2",
+    image: "/screens/evoflux-aim-convert-light.jpg?v=3",
   },
   {
     id: "convert-wave",
@@ -83,7 +83,7 @@ const pipelines: Pipeline[] = [
     process: "AIM freezes the eligible set, acquires claims, revalidates readiness, then converts and verifies each selected unit sequentially.",
     gate: "1 gate · approve the batch before target writes begin",
     output: "Converted and build-verified units with batch run history",
-    image: "/screens/evoflux-aim-convert-wave-light.jpg?v=2",
+    image: "/screens/evoflux-aim-convert-wave-light.jpg?v=3",
   },
   {
     id: "golden",
@@ -94,7 +94,7 @@ const pipelines: Pipeline[] = [
     process: "The aim-test-engineer prepares the case contract, validates the legacy runner, captures outputs, and stores immutable expected evidence.",
     gate: "1 gate · approve the legacy baseline",
     output: "Versioned golden cases and expected outputs for the selected case set",
-    image: "/screens/evoflux-aim-golden-light.jpg?v=2",
+    image: "/screens/evoflux-aim-golden-light.jpg?v=3",
   },
   {
     id: "compare",
@@ -105,7 +105,7 @@ const pipelines: Pipeline[] = [
     process: "Legacy and target runners execute the same cases; the Rulebook canonicalizer removes approved noise; deterministic compare either passes or routes differences to triage.",
     gate: "1 gate · certify equivalence or hold for repair",
     output: "Equivalence certificate, canonical diffs, or triage findings",
-    image: "/screens/evoflux-aim-compare-light.jpg?v=2",
+    image: "/screens/evoflux-aim-compare-light.jpg?v=3",
   },
   {
     id: "cutover",
@@ -116,7 +116,7 @@ const pipelines: Pipeline[] = [
     process: "AIM checks every unit and dependency, locks the eligible set, asks for accountable approval, and records the state transition.",
     gate: "1 gate · human confirms cutover",
     output: "Cutover readiness record and wave units marked cutover",
-    image: "/screens/evoflux-aim-cutover-light.jpg?v=2",
+    image: "/screens/evoflux-aim-cutover-light.jpg?v=3",
   },
   {
     id: "suggest",
@@ -127,7 +127,7 @@ const pipelines: Pipeline[] = [
     process: "A deterministic planner evaluates readiness and downstream impact, then creates an auditable queue instead of guessing from a backlog.",
     gate: "No approval gate · suggestions never execute themselves",
     output: "Ready-now actions, blocked actions, reasons, and recommended order",
-    image: "/screens/evoflux-aim-suggest-light.jpg?v=2",
+    image: "/screens/evoflux-aim-suggest-light.jpg?v=3",
   },
 ];
 

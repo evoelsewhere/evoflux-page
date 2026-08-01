@@ -3,6 +3,7 @@ import type { Metadata } from "next";
 import { Children, cloneElement, isValidElement, type ReactElement, type ReactNode } from "react";
 import { withBasePath } from "../base-path";
 import AimPipelineShowcase from "../components/AimPipelineShowcase";
+import { AsciiSpaceBackground } from "../components/AsciiSpaceBackground";
 
 export const metadata: Metadata = {
   title: "AIM — AI Innovation Modernization | EvoFlux",
@@ -17,28 +18,28 @@ const productSurfaces = [
   {
     number: "01",
     title: "Overview",
-    image: "/screens/evoflux-aim-overview-light.jpg",
+    image: "/screens/evoflux-aim-overview-light.jpg?v=3",
     text: "The operating board: estate progress, live health, approvals, claims, wave readiness, and a dependency-aware work queue.",
     fact: "42 units · 9 waves in this pilot",
   },
   {
     number: "02",
     title: "Knowledge Base",
-    image: "/screens/evoflux-aim-knowledge-light.jpg",
+    image: "/screens/evoflux-aim-knowledge-light.jpg?v=3",
     text: "The durable project memory: unit docs, rules, mappings, decisions, golden cases, state, and run evidence stored as reviewable files.",
     fact: "945 files · Git-trackable",
   },
   {
     number: "03",
     title: "Rulebook",
-    image: "/screens/evoflux-aim-rulebook-light.jpg",
+    image: "/screens/evoflux-aim-rulebook-light.jpg?v=3",
     text: "The project-specific operating contract that tells agents how this source stack is understood, mapped, executed, and compared.",
     fact: "Pinned identity + version",
   },
   {
     number: "04",
     title: "Pipelines",
-    image: "/screens/evoflux-aim-pipelines-light.jpg?v=2",
+    image: "/screens/evoflux-aim-pipelines-light.jpg?v=3",
     text: "Executable migration workflows with typed inputs, explicit agents and tools, readiness checks, human gates, and inspectable run history.",
     fact: "10 standard pipelines",
   },
@@ -451,6 +452,7 @@ export function AimPageContent({ locale = "en" }: { locale?: AimLocale }) {
       </header>
 
       <section className="aim2-hero">
+        <AsciiSpaceBackground />
         <div className="aim2-space" aria-hidden="true">
           {Array.from({ length: 18 }, (_, index) => <i key={index} />)}
           <span className="aim2-orbit aim2-orbit-a" /><span className="aim2-orbit aim2-orbit-b" />
@@ -472,7 +474,7 @@ export function AimPageContent({ locale = "en" }: { locale?: AimLocale }) {
         </div>
         <div className="aim2-hero-screen">
           <div className="aim2-window-bar"><i /><i /><i /><span>EvoFlux · AIM overview</span><b>LIGHT MODE</b></div>
-          <img src={withBasePath("/screens/evoflux-aim-overview-light.jpg")} alt="EvoFlux AIM overview in light mode with migration progress, health, and dependency-aware work queue" />
+          <img src={withBasePath("/screens/evoflux-aim-overview-light.jpg?v=3")} alt="EvoFlux AIM overview in light mode with migration progress, health, and dependency-aware work queue" />
           <div className="aim2-screen-caption"><span><i /> LIVE PILOT</span><p>42 units · 9 waves · 945 knowledge files</p></div>
         </div>
       </section>
@@ -490,6 +492,7 @@ export function AimPageContent({ locale = "en" }: { locale?: AimLocale }) {
           </article>
           <div className="aim2-system-core">
             <span>AIM control plane</span>
+            <img className="aim2-system-logo" src={withBasePath("/brand/aim-logo-transparent.png")} width="1851" height="850" alt="" aria-hidden="true" />
             <div><b>Overview</b><small>state + queue</small></div><div><b>Knowledge Base</b><small>shared truth</small></div><div><b>Rulebook</b><small>operating policy</small></div><div><b>Pipelines</b><small>execution + gates</small></div><div><b>Traceability</b><small>links + evidence</small></div>
           </div>
           <article className="aim2-system-column aim2-system-output">
@@ -541,7 +544,7 @@ export function AimPageContent({ locale = "en" }: { locale?: AimLocale }) {
         </div>
         <div className="aim2-rulebook-screen">
           <div className="aim2-window-bar"><i /><i /><i /><span>pgrust-rulebook · README.md</span><b>ACTIVE</b></div>
-          <img src={withBasePath("/screens/evoflux-aim-rulebook-light.jpg")} alt="EvoFlux AIM Rulebook file open in the Knowledge Base" />
+          <img src={withBasePath("/screens/evoflux-aim-rulebook-light.jpg?v=3")} alt="EvoFlux AIM Rulebook file open in the Knowledge Base" />
         </div>
         <div className="aim2-rulebook-grid">
           {rulebookContents.map(([title, text], index) => <article key={title}><span>{String(index + 1).padStart(2, "0")}</span><div><h3>{title}</h3><p>{text}</p></div></article>)}
