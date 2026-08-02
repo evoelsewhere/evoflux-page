@@ -2,6 +2,7 @@ import type { Metadata, Viewport } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import { BASE_PATH, withBasePath } from "./base-path";
 import { AimChainAutoScroll } from "./components/AimChainAutoScroll";
+import { HashAnchorScroll } from "./components/HashAnchorScroll";
 import "./globals.css";
 
 const SITE_URL = "https://evoflux.fhmq9.cloud";
@@ -136,6 +137,7 @@ export default function RootLayout({
         {pagesLocaleBootstrap && <script dangerouslySetInnerHTML={{ __html: pagesLocaleBootstrap }} />}
         <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }} />
         <AimChainAutoScroll />
+        <HashAnchorScroll />
         {children}
       </body>
     </html>

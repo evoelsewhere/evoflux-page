@@ -28,6 +28,10 @@ html {
   background: var(--paper);
 }
 
+section[id] {
+  scroll-margin-top: 88px;
+}
+
 body {
   margin: 0;
   background: var(--paper);
@@ -595,23 +599,28 @@ summary:focus-visible,
 .mode-session-privacy {
   position: absolute;
   z-index: 2;
-  top: 43%;
+  top: 27.5%;
   bottom: 3.5%;
   left: 0;
   width: 29.8%;
   pointer-events: none;
-  background: rgba(242,245,249,.16);
+  background: linear-gradient(135deg,rgba(242,245,249,.42),rgba(232,237,246,.3));
   border-top: 1px solid rgba(255,255,255,.34);
-  backdrop-filter: blur(5px) saturate(.72);
-  -webkit-backdrop-filter: blur(5px) saturate(.72);
-  mask-image: linear-gradient(to bottom,transparent 0,#000 13px,#000 100%);
-  -webkit-mask-image: linear-gradient(to bottom,transparent 0,#000 13px,#000 100%);
+  box-shadow: inset -1px 0 rgba(255,255,255,.22);
+  backdrop-filter: blur(10px) saturate(.52);
+  -webkit-backdrop-filter: blur(10px) saturate(.52);
+  mask-image: linear-gradient(to bottom,transparent 0,#000 16px,#000 100%);
+  -webkit-mask-image: linear-gradient(to bottom,transparent 0,#000 16px,#000 100%);
 }
 
 .mode-session-privacy {
-  top: 44%;
+  top: 27.5%;
   bottom: 2.5%;
   width: 29.6%;
+}
+
+@supports not ((backdrop-filter: blur(1px)) or (-webkit-backdrop-filter: blur(1px))) {
+  .hero-session-privacy,.mode-session-privacy { background: rgba(238,242,248,.94); }
 }
 
 .hero-status {
@@ -634,7 +643,7 @@ summary:focus-visible,
   display: block;
 }
 
-.hero-status strong { font-size: 13px; letter-spacing: -.015em; }
+.hero-status strong { color: var(--ink); font-size: 13px; letter-spacing: -.015em; }
 .hero-status small { margin-top: 3px; color: var(--muted); font-size: 10px; }
 .status-left { top: 50px; left: -58px; }
 .status-right { right: -48px; bottom: 72px; }
