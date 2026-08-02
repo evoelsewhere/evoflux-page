@@ -29,9 +29,15 @@ export function HashAnchorScroll() {
 
           const scrollMargin = Number.parseFloat(getComputedStyle(target).scrollMarginTop) || 0;
           const top = Math.max(0, target.getBoundingClientRect().top + window.scrollY - scrollMargin);
+          if (!smooth || reducedMotion.matches) {
+            document.documentElement.scrollTop = top;
+            document.body.scrollTop = top;
+            return;
+          }
+
           window.scrollTo({
             top,
-            behavior: smooth && !reducedMotion.matches ? "smooth" : "auto",
+            behavior: "smooth",
           });
         });
       });
