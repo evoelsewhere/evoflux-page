@@ -1681,18 +1681,26 @@ summary:focus-visible,
 .closing-section h2 { margin-top: 17px; font-size: clamp(48px,5vw,68px); }
 .closing-section > p { max-width: 600px; margin: 18px auto 0; font-size: 17px; line-height: 1.6; }
 .download-grid { display: grid; grid-template-columns: repeat(3,1fr); gap: 16px; width: min(1180px,100%); margin: 58px auto 0; }
-.download-card { display: block; overflow: hidden; padding: 10px; border: 1px solid var(--line); border-radius: 20px; background: rgba(255,255,255,.82); text-align: left; transition: transform 220ms var(--ease), border-color 180ms ease, box-shadow 220ms ease; }
-.download-card:hover { border-color: var(--line-strong); box-shadow: 0 24px 60px rgba(37,43,58,.12); transform: translateY(-5px); }
+.download-card { display: block; overflow: hidden; padding: 10px; border: 1px solid var(--line); border-radius: 20px; background: rgba(255,255,255,.82); text-align: left; transition: transform 320ms var(--ease), border-color 220ms ease, box-shadow 320ms ease; }
+.download-card:hover { border-color: rgba(107,117,150,.28); box-shadow: 0 28px 72px rgba(37,43,58,.16); transform: translateY(-7px); }
 .download-card.is-coming-soon:hover { border-color: var(--line); box-shadow: none; transform: none; }
-.download-visual { position: relative; display: grid; place-items: center; height: 220px; overflow: hidden; border-radius: 14px; }
-.download-visual::before,.download-visual::after { content: ""; position: absolute; border-radius: 50%; filter: blur(3px); }
-.download-card-mac .download-visual { background: radial-gradient(circle at 50% 55%,rgba(255,255,255,.32),transparent 35%),linear-gradient(145deg,#ff9560 0%,#f4b8a5 100%); }
-.download-card-mac .download-visual::before { width: 390px; height: 210px; opacity: .38; background: repeating-radial-gradient(circle at 50% 75%,rgba(255,255,255,.46) 0 1px,transparent 2px 12px); }
-.download-card-windows .download-visual { background: radial-gradient(circle at 50% 55%,rgba(255,255,255,.25),transparent 36%),linear-gradient(145deg,#4f86eb 0%,#aabfe9 100%); }
-.download-card-windows .download-visual::before { width: 420px; height: 210px; opacity: .32; background: repeating-linear-gradient(90deg,rgba(255,255,255,.34) 0 1px,transparent 1px 15px); mask-image: radial-gradient(ellipse,#000,transparent 68%); }
-.platform-mark { position: relative; z-index: 1; display: grid; place-items: center; width: 138px; height: 138px; border: 1px solid rgba(255,255,255,.72); border-radius: 14px; background: rgba(255,255,255,.14); box-shadow: inset 0 1px 0 rgba(255,255,255,.65),0 24px 65px rgba(48,61,96,.18); font-style: normal; backdrop-filter: blur(14px); }
-.platform-mark img { display: block; width: 68px; height: 68px; object-fit: contain; }
+.download-visual { position: relative; isolation: isolate; display: grid; place-items: center; height: 220px; overflow: hidden; border-radius: 14px; background-size: 180% 180%; animation: downloadAurora 13s ease-in-out infinite; }
+.download-visual::before,.download-visual::after { content: ""; position: absolute; pointer-events: none; }
+.download-visual::before { width: 390px; height: 390px; border: 1px solid rgba(255,255,255,.24); border-radius: 50%; background: repeating-radial-gradient(circle,rgba(255,255,255,.32) 0 1px,transparent 2px 18px); opacity: .48; animation: downloadRings 20s linear infinite; }
+.download-visual::after { top: -54px; left: -46px; width: 154px; height: 154px; border-radius: 50%; background: rgba(255,255,255,.48); filter: blur(34px); mix-blend-mode: soft-light; animation: downloadOrb 10s ease-in-out infinite alternate; }
+.download-card-silicon .download-visual { background-image: radial-gradient(circle at 68% 24%,rgba(255,225,180,.72),transparent 32%),linear-gradient(135deg,#ff795f 0%,#ff9b78 38%,#ed77ad 74%,#8d77df 100%); }
+.download-card-intel .download-visual { background-image: radial-gradient(circle at 72% 24%,rgba(170,244,255,.58),transparent 31%),linear-gradient(135deg,#6d61df 0%,#8e73e8 36%,#588ee5 70%,#41bdd4 100%); animation-delay: -5s; }
+.download-card-windows .download-visual { background-image: radial-gradient(circle at 70% 24%,rgba(187,251,255,.68),transparent 32%),linear-gradient(135deg,#376ed9 0%,#4f8ee9 35%,#55b8e8 68%,#70ded0 100%); animation-delay: -9s; }
+.download-card-intel .download-visual::before { animation-direction: reverse; animation-duration: 24s; }
+.download-card-windows .download-visual::before { width: 430px; height: 430px; background: repeating-conic-gradient(from 0deg,rgba(255,255,255,.25) 0 1deg,transparent 1deg 14deg); mask-image: radial-gradient(circle,transparent 0 31%,#000 33% 66%,transparent 68%); animation-duration: 26s; }
+.platform-mark { position: relative; z-index: 1; display: grid; place-items: center; width: 138px; height: 138px; overflow: hidden; border: 1px solid rgba(255,255,255,.72); border-radius: 22px; background: linear-gradient(145deg,rgba(255,255,255,.24),rgba(255,255,255,.08)); box-shadow: inset 0 1px 0 rgba(255,255,255,.72),0 24px 65px rgba(48,61,96,.22),0 0 42px rgba(255,255,255,.12); font-style: normal; backdrop-filter: blur(18px); animation: platformFloat 6s ease-in-out infinite; transition: transform 420ms var(--ease),box-shadow 320ms ease,background 320ms ease; }
+.download-card:nth-child(2) .platform-mark { animation-delay: -2s; }
+.download-card:nth-child(3) .platform-mark { animation-delay: -4s; }
+.platform-mark::before { content: ""; position: absolute; inset: 11px; border: 1px solid rgba(255,255,255,.2); border-radius: 16px; }
+.platform-mark::after { content: ""; position: absolute; top: -35%; bottom: -35%; left: -55%; width: 30%; background: linear-gradient(90deg,transparent,rgba(255,255,255,.62),transparent); filter: blur(2px); transform: rotate(18deg); animation: platformShine 7s ease-in-out infinite; }
+.platform-mark img { position: relative; z-index: 2; display: block; width: 68px; height: 68px; object-fit: contain; filter: drop-shadow(0 10px 18px rgba(31,45,82,.16)); }
 .download-card-windows .platform-mark img { width: 66px; height: 66px; }
+.download-card:hover .platform-mark { animation-play-state: paused; background: linear-gradient(145deg,rgba(255,255,255,.32),rgba(255,255,255,.11)); box-shadow: inset 0 1px 0 rgba(255,255,255,.8),0 30px 70px rgba(38,49,94,.28),0 0 52px rgba(255,255,255,.2); transform: translateY(-6px) rotateX(5deg) rotateY(-5deg) scale(1.035); }
 .download-copy { display: grid; grid-template-columns: 1fr auto; align-items: end; padding: 23px 15px 15px; }
 .download-copy strong,.download-copy small { display: block; grid-column: 1; }
 .download-copy strong { color: var(--ink); font-size: 20px; font-weight: 610; letter-spacing: -.03em; }
@@ -1700,6 +1708,16 @@ summary:focus-visible,
 .download-copy > b { grid-row: 1/3; grid-column: 2; display: inline-flex; align-items: center; gap: 9px; min-height: 38px; padding: 0 15px; border-radius: 12px; color: var(--ink); background: #f5f5f3; font-size: 12px; font-weight: 540; }
 .download-copy > b i { font-size: 13px; font-style: normal; transition: transform 180ms ease; }
 .download-card:hover .download-copy > b i { transform: translateY(2px); }
+
+@keyframes downloadAurora { 0%,100% { background-position: 0% 30%; } 50% { background-position: 100% 70%; } }
+@keyframes downloadRings { to { transform: rotate(360deg) scale(1.04); } }
+@keyframes downloadOrb { to { transform: translate3d(330px,155px,0) scale(1.28); } }
+@keyframes platformFloat { 0%,100% { transform: translateY(0) rotateX(0); } 50% { transform: translateY(-7px) rotateX(2deg); } }
+@keyframes platformShine { 0%,55% { opacity: 0; transform: translateX(0) rotate(18deg); } 68% { opacity: .72; } 84%,100% { opacity: 0; transform: translateX(720px) rotate(18deg); } }
+
+@media (prefers-reduced-motion: reduce) {
+  .download-visual,.download-visual::before,.download-visual::after,.platform-mark,.platform-mark::after { animation: none !important; }
+}
 
 footer {
   display: grid;

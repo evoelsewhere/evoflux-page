@@ -467,15 +467,15 @@ export function HomePageContent({ locale = "en" }: { locale?: HomeLocale }) {
         <h2>Start with EvoFlux.</h2>
         <p>Think, build, verify, and ship from one local-first desktop workspace.</p>
         <div className="download-grid">
-          <a className="download-card download-card-mac" href={withBasePath("/archive/package/macos-silicon/EvoFlux-macOS-Apple-Silicon.dmg")} download>
+          <a className="download-card download-card-mac download-card-silicon" href="https://github.com/morphai-lab/evoflux-page/releases/download/v0.0.3/EvoFlux-macOS-Apple-Silicon.dmg" download>
             <span className="download-visual" aria-hidden="true"><i className="platform-mark"><img src={withBasePath("/platforms/apple.svg")} alt="" /></i></span>
             <span className="download-copy"><strong>EvoFlux for Mac — Apple silicon</strong><small>macOS · Apple silicon</small><b>Download <i>↓</i></b></span>
           </a>
-          <a className="download-card download-card-mac" href={withBasePath("/archive/package/macos-intel/EvoFlux-macOS-Intel.dmg")} download>
+          <a className="download-card download-card-mac download-card-intel" href="https://github.com/morphai-lab/evoflux-page/releases/download/v0.0.3/EvoFlux-macOS-Intel.dmg" download>
             <span className="download-visual" aria-hidden="true"><i className="platform-mark"><img src={withBasePath("/platforms/apple.svg")} alt="" /></i></span>
             <span className="download-copy"><strong>EvoFlux for Mac — Intel</strong><small>macOS · Intel</small><b>Download <i>↓</i></b></span>
           </a>
-          <a className="download-card download-card-windows" href={withBasePath("/archive/package/window/EvoFlux-Windows.exe")} download>
+          <a className="download-card download-card-windows" href="https://github.com/morphai-lab/evoflux-page/releases/download/v0.0.3/EvoFlux-Windows.exe" download>
             <span className="download-visual" aria-hidden="true"><i className="platform-mark"><img src={withBasePath("/platforms/windows.svg")} alt="" /></i></span>
             <span className="download-copy"><strong>EvoFlux for Windows</strong><small>Windows 10 or later</small><b>Download <i>↓</i></b></span>
           </a>

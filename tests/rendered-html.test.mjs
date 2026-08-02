@@ -56,10 +56,10 @@ test("server-renders the EvoFlux landing page", async () => {
   assert.doesNotMatch(html, /Coming soon/);
   assert.match(html, /Download EvoFlux/);
   assert.match(html, /archive\/extension\/EvoFlux-WebBridge\.zip/);
-  assert.match(html, /archive\/package\/macos-silicon\/EvoFlux-macOS-Apple-Silicon\.dmg/);
-  assert.match(html, /archive\/package\/macos-intel\/EvoFlux-macOS-Intel\.dmg/);
-  assert.match(html, /archive\/package\/window\/EvoFlux-Windows\.exe/);
-  assert.doesNotMatch(html, /github\.com|>GitHub</i);
+  assert.match(html, /releases\/download\/v0\.0\.3\/EvoFlux-macOS-Apple-Silicon\.dmg/);
+  assert.match(html, /releases\/download\/v0\.0\.3\/EvoFlux-macOS-Intel\.dmg/);
+  assert.match(html, /releases\/download\/v0\.0\.3\/EvoFlux-Windows\.exe/);
+  assert.doesNotMatch(html, />GitHub</i);
   assert.match(html, /GitHub Copilot/);
   assert.match(html, /@lobehub\/icons-static-svg@1\.94\.0\/icons\/openai\.svg/);
   assert.match(html, /@lobehub\/icons-static-svg@1\.94\.0\/icons\/githubcopilot\.svg/);

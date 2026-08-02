@@ -48,7 +48,7 @@ for (const route of routes) {
     .replaceAll('href="/assets/_vinext_fonts/', `href="${basePath}/assets/_vinext_fonts/`)
     .replaceAll(`http://localhost:3000${basePath}`, `${publicOrigin}${basePath}`);
 
-  if (/http:\/\/localhost:3000/.test(html) || (!basePath && html.includes("/evoflux-page/"))) {
+  if (/http:\/\/localhost:3000/.test(html) || (!basePath && /\b(?:href|src)="\/evoflux-page\//.test(html))) {
     throw new Error(`Static render for ${route.pathname} contains a URL that is not Pages-safe`);
   }
   await writeFile(outputPath, html);
