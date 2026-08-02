@@ -1,0 +1,39 @@
+{
+  "manifest_version": 3,
+  "name": "EvoFlux WebBridge",
+  "version": "2.1.0",
+  "minimum_chrome_version": "116",
+  "description": "Securely connects your real Chrome/Edge browser to EvoFlux for agent automation and browser-originated interactions.",
+  "permissions": [
+    "alarms",
+    "contextMenus",
+    "debugger",
+    "sidePanel",
+    "storage",
+    "tabGroups",
+    "tabs",
+    "activeTab",
+    "scripting"
+  ],
+  "host_permissions": [
+    "<all_urls>"
+  ],
+  "background": {
+    "service_worker": "background.js"
+  },
+  "side_panel": {
+    "default_path": "sidepanel.html"
+  },
+  "action": {
+    "default_icon": {
+      "16": "icons/icon16.png",
+      "48": "icons/icon48.png",
+      "128": "icons/icon128.png"
+    }
+  },
+  "icons": {
+    "16": "icons/icon16.png",
+    "48": "icons/icon48.png",
+    "128": "icons/icon128.png"
+  }
+}

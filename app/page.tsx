@@ -64,7 +64,7 @@ export function HomePageContent({ locale = "en" }: { locale?: HomeLocale }) {
             <a href={withBasePath("/?lang=en")} className={locale === "en" ? "is-active" : ""} lang="en">EN</a>
             <a href={withBasePath("/jp?lang=ja")} className={locale === "ja" ? "is-active" : ""} lang="ja">日本語</a>
           </div>
-          <span className="button button-dark button-small is-coming-soon" aria-disabled="true">Coming soon</span>
+          <a className="button button-dark button-small" href="#download">Download</a>
           <details className="mobile-menu">
             <summary aria-label="Open navigation"><span /><span /></summary>
             <nav aria-label="Mobile navigation">
@@ -74,6 +74,7 @@ export function HomePageContent({ locale = "en" }: { locale?: HomeLocale }) {
               <a href="#local-first">Local-first</a>
               <a href="#architecture">Architecture</a>
               <a href={withBasePath(locale === "ja" ? "/jp/aim" : "/aim")}>AIM</a>
+              <a href="#download">Download</a>
             </nav>
           </details>
         </div>
@@ -101,7 +102,7 @@ export function HomePageContent({ locale = "en" }: { locale?: HomeLocale }) {
           <h1>AI agents that do <em>real work.</em></h1>
           <p>One desktop workspace for knowledge work, software engineering, and legacy modernization—orchestrated in parallel and verified before delivery.</p>
           <div className="hero-actions">
-            <span className="button button-dark is-coming-soon" aria-disabled="true">Coming soon</span>
+            <a className="button button-dark" href="#download">Download EvoFlux</a>
             <a className="button button-ghost" href="#modes">Explore the workspace <span aria-hidden="true">↘</span></a>
           </div>
           <div className="trust-row" aria-label="Product attributes">
@@ -275,6 +276,10 @@ export function HomePageContent({ locale = "en" }: { locale?: HomeLocale }) {
               <li><b>Human handoff</b><span>Take control for login, secrets, or manual steps, then return the same tab to the agent.</span></li>
               <li><b>Policy and audit</b><span>Domain allow/block lists, sharing rules, scoped credentials, one-time tickets, and a complete action trail.</span></li>
             </ul>
+            <div className="capability-download-action">
+              <a className="button button-dark" href={withBasePath("/archive/extension/EvoFlux-WebBridge.zip")} download>Download WebBridge extension</a>
+              <small>Chrome · Edge · ZIP</small>
+            </div>
             <div className="capability-facts"><span><strong>2-way</strong>context flow</span><span><strong>CDP</strong>real tab control</span><span><strong>0</strong>raw secret reads</span></div>
           </div>
         </article>
@@ -456,20 +461,24 @@ export function HomePageContent({ locale = "en" }: { locale?: HomeLocale }) {
         </div>
       </section>
 
-      <section className="closing-section">
+      <section id="download" className="closing-section">
         <div className="closing-glow" />
         <span className="section-kicker">Choose your platform</span>
         <h2>Start with EvoFlux.</h2>
         <p>Think, build, verify, and ship from one local-first desktop workspace.</p>
         <div className="download-grid">
-          <div className="download-card download-card-mac is-coming-soon" aria-disabled="true">
+          <a className="download-card download-card-mac" href={withBasePath("/archive/package/macos-silicon/EvoFlux-macOS-Apple-Silicon.dmg")} download>
             <span className="download-visual" aria-hidden="true"><i className="platform-mark"><img src={withBasePath("/platforms/apple.svg")} alt="" /></i></span>
-            <span className="download-copy"><strong>EvoFlux for Mac</strong><small>macOS · Apple silicon</small><b>Coming soon</b></span>
-          </div>
-          <div className="download-card download-card-windows is-coming-soon" aria-disabled="true">
+            <span className="download-copy"><strong>EvoFlux for Mac — Apple silicon</strong><small>macOS · Apple silicon</small><b>Download <i>↓</i></b></span>
+          </a>
+          <a className="download-card download-card-mac" href={withBasePath("/archive/package/macos-intel/EvoFlux-macOS-Intel.dmg")} download>
+            <span className="download-visual" aria-hidden="true"><i className="platform-mark"><img src={withBasePath("/platforms/apple.svg")} alt="" /></i></span>
+            <span className="download-copy"><strong>EvoFlux for Mac — Intel</strong><small>macOS · Intel</small><b>Download <i>↓</i></b></span>
+          </a>
+          <a className="download-card download-card-windows" href={withBasePath("/archive/package/window/EvoFlux-Windows.exe")} download>
             <span className="download-visual" aria-hidden="true"><i className="platform-mark"><img src={withBasePath("/platforms/windows.svg")} alt="" /></i></span>
-            <span className="download-copy"><strong>EvoFlux for Windows</strong><small>Windows 10 or later</small><b>Coming soon</b></span>
-          </div>
+            <span className="download-copy"><strong>EvoFlux for Windows</strong><small>Windows 10 or later</small><b>Download <i>↓</i></b></span>
+          </a>
         </div>
       </section>
 
