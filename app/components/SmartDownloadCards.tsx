@@ -3,9 +3,11 @@
 import { useEffect, useState } from "react";
 import { withBasePath } from "../base-path";
 
-const APPLE_SILICON_URL = "https://github.com/morphai-lab/evoflux-page/releases/download/v0.0.3/EvoFlux-macOS-Apple-Silicon.dmg";
-const INTEL_URL = "https://github.com/morphai-lab/evoflux-page/releases/download/v0.0.3/EvoFlux-macOS-Intel.dmg";
-const WINDOWS_URL = "https://github.com/morphai-lab/evoflux-page/releases/download/v0.0.3/EvoFlux-Windows.exe";
+const RELEASE_VERSION = "v0.0.4";
+const RELEASE_BASE_URL = `https://github.com/morphai-lab/evoflux-page/releases/download/${RELEASE_VERSION}`;
+const APPLE_SILICON_URL = `${RELEASE_BASE_URL}/EvoFlux-macOS-Apple-Silicon.dmg`;
+const INTEL_URL = `${RELEASE_BASE_URL}/EvoFlux-macOS-Intel.dmg`;
+const WINDOWS_URL = `${RELEASE_BASE_URL}/EvoFlux-Windows.exe`;
 const ARCH_STORAGE_KEY = "evoflux_mac_architecture";
 
 type MacArchitecture = "silicon" | "intel";
@@ -115,7 +117,7 @@ export function SmartDownloadCards({ locale = "en" }: { locale?: "en" | "ja" }) 
         </div>
         <div className="download-copy">
           <strong>{isJapanese ? "Mac版EvoFlux" : "EvoFlux for Mac"}</strong>
-          <small>macOS · {architectureLabel}</small>
+          <small>macOS · {architectureLabel} · {RELEASE_VERSION}</small>
           <a className="download-button" href={macUrl} download>
             {isJapanese ? "ダウンロード" : "Download"} <i aria-hidden="true">↓</i>
           </a>
@@ -144,7 +146,7 @@ export function SmartDownloadCards({ locale = "en" }: { locale?: "en" | "ja" }) 
         </span>
         <span className="download-copy">
           <strong>{isJapanese ? "Windows版EvoFlux" : "EvoFlux for Windows"}</strong>
-          <small>{isJapanese ? "Windows 10以降" : "Windows 10 or later"}</small>
+          <small>{isJapanese ? "Windows 10以降" : "Windows 10 or later"} · {RELEASE_VERSION}</small>
           <b>{isJapanese ? "ダウンロード" : "Download"} <i>↓</i></b>
         </span>
       </a>
