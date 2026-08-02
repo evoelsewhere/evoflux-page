@@ -59,6 +59,9 @@ test("server-renders the EvoFlux landing page", async () => {
   assert.match(html, /releases\/download\/v0\.0\.3\/EvoFlux-macOS-Apple-Silicon\.dmg/);
   assert.match(html, /releases\/download\/v0\.0\.3\/EvoFlux-macOS-Intel\.dmg/);
   assert.match(html, /releases\/download\/v0\.0\.3\/EvoFlux-Windows\.exe/);
+  assert.match(html, /data-auto-detect="macos"/);
+  assert.match(html, /Choose Mac architecture/);
+  assert.doesNotMatch(html, /EvoFlux for Mac — (?:Apple silicon|Intel)/);
   assert.doesNotMatch(html, />GitHub</i);
   assert.match(html, /GitHub Copilot/);
   assert.match(html, /@lobehub\/icons-static-svg@1\.94\.0\/icons\/openai\.svg/);

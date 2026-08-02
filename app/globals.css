@@ -1689,9 +1689,10 @@ summary:focus-visible,
 
 .closing-section h2 { margin-top: 17px; font-size: clamp(48px,5vw,68px); }
 .closing-section > p { max-width: 600px; margin: 18px auto 0; font-size: 17px; line-height: 1.6; }
-.download-grid { display: grid; grid-template-columns: repeat(3,1fr); gap: 16px; width: min(1180px,100%); margin: 58px auto 0; }
+.download-grid { display: grid; grid-template-columns: repeat(2,minmax(0,1fr)); gap: 16px; width: min(880px,100%); margin: 58px auto 0; }
 .download-card { display: block; overflow: hidden; padding: 10px; border: 1px solid var(--line); border-radius: 20px; background: rgba(255,255,255,.82); text-align: left; transition: transform 320ms var(--ease), border-color 220ms ease, box-shadow 320ms ease; }
 .download-card:hover { border-color: rgba(107,117,150,.28); box-shadow: 0 28px 72px rgba(37,43,58,.16); transform: translateY(-7px); }
+.download-card.is-device-match { border-color: rgba(91,110,213,.3); box-shadow: 0 24px 60px rgba(74,89,166,.12); }
 .download-card.is-coming-soon:hover { border-color: var(--line); box-shadow: none; transform: none; }
 .download-visual { position: relative; isolation: isolate; display: grid; place-items: center; height: 220px; overflow: hidden; border-radius: 14px; background-size: 180% 180%; animation: downloadAurora 13s ease-in-out infinite; }
 .download-visual::before,.download-visual::after { content: ""; position: absolute; pointer-events: none; }
@@ -1702,6 +1703,8 @@ summary:focus-visible,
 .download-card-windows .download-visual { background-image: radial-gradient(circle at 70% 24%,rgba(187,251,255,.68),transparent 32%),linear-gradient(135deg,#376ed9 0%,#4f8ee9 35%,#55b8e8 68%,#70ded0 100%); animation-delay: -9s; }
 .download-card-intel .download-visual::before { animation-direction: reverse; animation-duration: 24s; }
 .download-card-windows .download-visual::before { width: 430px; height: 430px; background: repeating-conic-gradient(from 0deg,rgba(255,255,255,.25) 0 1deg,transparent 1deg 14deg); mask-image: radial-gradient(circle,transparent 0 31%,#000 33% 66%,transparent 68%); animation-duration: 26s; }
+.download-device-pill { position: absolute; z-index: 3; top: 14px; left: 14px; display: inline-flex; align-items: center; gap: 7px; min-height: 28px; padding: 0 10px; border: 1px solid rgba(255,255,255,.55); border-radius: 999px; color: rgba(28,32,46,.76); background: rgba(255,255,255,.72); box-shadow: 0 8px 24px rgba(30,37,67,.09); font-family: var(--font-geist-mono),monospace; font-size: 9px; font-weight: 600; text-transform: uppercase; letter-spacing: .04em; backdrop-filter: blur(12px); }
+.download-device-pill i { width: 6px; height: 6px; border-radius: 50%; background: #43d48b; box-shadow: 0 0 0 4px rgba(67,212,139,.12); }
 .platform-mark { position: relative; z-index: 1; display: grid; place-items: center; width: 138px; height: 138px; overflow: hidden; border: 1px solid rgba(255,255,255,.72); border-radius: 22px; background: linear-gradient(145deg,rgba(255,255,255,.24),rgba(255,255,255,.08)); box-shadow: inset 0 1px 0 rgba(255,255,255,.72),0 24px 65px rgba(48,61,96,.22),0 0 42px rgba(255,255,255,.12); font-style: normal; backdrop-filter: blur(18px); animation: platformFloat 6s ease-in-out infinite; transition: transform 420ms var(--ease),box-shadow 320ms ease,background 320ms ease; }
 .download-card:nth-child(2) .platform-mark { animation-delay: -2s; }
 .download-card:nth-child(3) .platform-mark { animation-delay: -4s; }
@@ -1714,9 +1717,15 @@ summary:focus-visible,
 .download-copy strong,.download-copy small { display: block; grid-column: 1; }
 .download-copy strong { color: var(--ink); font-size: 20px; font-weight: 610; letter-spacing: -.03em; }
 .download-copy small { margin-top: 9px; color: var(--muted); font-size: 13px; }
-.download-copy > b { grid-row: 1/3; grid-column: 2; display: inline-flex; align-items: center; gap: 9px; min-height: 38px; padding: 0 15px; border-radius: 12px; color: var(--ink); background: #f5f5f3; font-size: 12px; font-weight: 540; }
-.download-copy > b i { font-size: 13px; font-style: normal; transition: transform 180ms ease; }
-.download-card:hover .download-copy > b i { transform: translateY(2px); }
+.download-copy > b,.download-button { grid-row: 1/3; grid-column: 2; display: inline-flex; align-items: center; gap: 9px; min-height: 38px; padding: 0 15px; border-radius: 12px; color: var(--ink); background: #f5f5f3; font-size: 12px; font-weight: 540; }
+.download-copy > b i,.download-button i { font-size: 13px; font-style: normal; transition: transform 180ms ease; }
+.download-card:hover .download-copy > b i,.download-card:hover .download-button i { transform: translateY(2px); }
+.download-button:hover { background: #ececeb; }
+.download-arch-switch { display: grid; grid-template-columns: 1fr auto auto; align-items: center; gap: 5px; margin: 0 15px 15px; padding: 4px; border: 1px solid rgba(27,31,43,.08); border-radius: 12px; background: #f7f7f5; }
+.download-arch-switch > span { padding-left: 9px; color: var(--muted); font-family: var(--font-geist-mono),monospace; font-size: 9px; text-transform: uppercase; letter-spacing: .05em; }
+.download-arch-switch button { min-height: 30px; padding: 0 10px; border: 0; border-radius: 8px; color: var(--muted); background: transparent; font-size: 10px; cursor: pointer; transition: color 160ms ease,background 160ms ease,box-shadow 160ms ease; }
+.download-arch-switch button[aria-pressed="true"] { color: var(--ink); background: #fff; box-shadow: 0 2px 8px rgba(32,37,52,.08); }
+.download-arch-switch button:focus-visible { outline: 2px solid #6a73e9; outline-offset: 1px; }
 
 @keyframes downloadAurora { 0%,100% { background-position: 0% 30%; } 50% { background-position: 100% 70%; } }
 @keyframes downloadRings { to { transform: rotate(360deg) scale(1.04); } }
