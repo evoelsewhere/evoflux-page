@@ -16,6 +16,7 @@ export function HashAnchorScroll() {
   useEffect(() => {
     let firstFrame = 0;
     let secondFrame = 0;
+    const initialSyncTimers: number[] = [];
     const reducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)");
 
     const scrollToHash = (hash: string, smooth: boolean) => {
@@ -23,15 +24,27 @@ export function HashAnchorScroll() {
       window.cancelAnimationFrame(secondFrame);
       firstFrame = window.requestAnimationFrame(() => {
         secondFrame = window.requestAnimationFrame(() => {
-          targetFromHash(hash)?.scrollIntoView({
+          const target = targetFromHash(hash);
+          if (!target) return;
+
+          const scrollMargin = Number.parseFloat(getComputedStyle(target).scrollMarginTop) || 0;
+          const top = Math.max(0, target.getBoundingClientRect().top + window.scrollY - scrollMargin);
+          window.scrollTo({
+            top,
             behavior: smooth && !reducedMotion.matches ? "smooth" : "auto",
-            block: "start",
           });
         });
       });
     };
 
     const syncCurrentHash = () => scrollToHash(window.location.hash, false);
+    const syncInitialHash = () => {
+      initialSyncTimers.splice(0).forEach(window.clearTimeout);
+      syncCurrentHash();
+      for (const delay of [80, 280, 800]) {
+        initialSyncTimers.push(window.setTimeout(syncCurrentHash, delay));
+      }
+    };
     const onHashChange = () => scrollToHash(window.location.hash, true);
     const onClick = (event: MouseEvent) => {
       if (
@@ -70,16 +83,19 @@ export function HashAnchorScroll() {
     document.addEventListener("click", onClick);
     window.addEventListener("hashchange", onHashChange);
     window.addEventListener("popstate", syncCurrentHash);
-    if (document.readyState === "complete") syncCurrentHash();
-    else window.addEventListener("load", syncCurrentHash, { once: true });
+    window.addEventListener("pageshow", syncInitialHash);
+    if (document.readyState === "complete") syncInitialHash();
+    else window.addEventListener("load", syncInitialHash, { once: true });
 
     return () => {
       window.cancelAnimationFrame(firstFrame);
       window.cancelAnimationFrame(secondFrame);
+      initialSyncTimers.splice(0).forEach(window.clearTimeout);
       document.removeEventListener("click", onClick);
       window.removeEventListener("hashchange", onHashChange);
       window.removeEventListener("popstate", syncCurrentHash);
-      window.removeEventListener("load", syncCurrentHash);
+      window.removeEventListener("pageshow", syncInitialHash);
+      window.removeEventListener("load", syncInitialHash);
     };
   }, []);
 
