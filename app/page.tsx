@@ -5,8 +5,8 @@ import { AsciiSpaceBackground } from "./components/AsciiSpaceBackground";
 import { localizeHomeNode, type HomeLocale } from "./home-locales";
 
 export const metadata: Metadata = {
-  title: "EvoFlux — Open Cowork AI & AIM",
-  description: "EvoFlux brings open cowork AI, Coding, WebBridge browser work, and AIM modernization into one local-first desktop workspace.",
+  title: "EvoFlux — Cowork, Agentic Coding & AI Innovation Modernization",
+  description: "EvoFlux brings Cowork, agentic coding, WebBridge browser automation, and governed AI Innovation Modernization into one local-first workspace.",
   alternates: { canonical: withBasePath("/"), languages: { en: withBasePath("/"), ja: withBasePath("/jp/") } },
 };
 

@@ -19,7 +19,7 @@ test("server-renders the EvoFlux landing page", async () => {
   assert.match(response.headers.get("content-type") ?? "", /^text\/html\b/i);
 
   const html = await response.text();
-  assert.match(html, /<title>EvoFlux — Open Cowork AI &amp; AIM<\/title>/i);
+  assert.match(html, /<title>EvoFlux — Cowork, Agentic Coding &amp; AI Innovation Modernization<\/title>/i);
   assert.match(html, /AI agents that do/);
   assert.match(html, /One harness, three modes/);
   assert.match(html, /From a prompt to a board-ready artifact/);
@@ -40,7 +40,7 @@ test("server-renders the EvoFlux landing page", async () => {
   assert.match(html, /AI Innovation Modernization connects legacy understanding/);
   assert.match(html, /"@type":"SoftwareApplication"/);
   assert.match(html, /rel="canonical" href="https:\/\/evoflux\.fhmq9\.cloud\//);
-  assert.match(html, /One local-first open cowork workspace for Work, Coding/);
+  assert.match(html, /One local-first AI workspace for Cowork, agentic coding/);
   assert.match(html, /Layered sandbox/);
   assert.match(html, /illustrations\/capability-sandbox\.jpg/);
   assert.match(html, /illustrations\/capability-webbridge\.jpg/);
@@ -81,7 +81,7 @@ test("server-renders the Japanese EvoFlux landing page", async () => {
   assert.equal(response.status, 200);
   const html = await response.text();
 
-  assert.match(html, /EvoFlux — Open Cowork AI・AIM/);
+  assert.match(html, /EvoFlux｜Cowork・Agentic Coding・AI Innovation Modernization/);
   assert.match(html, /実際の仕事を進める/);
   assert.match(html, /ナレッジワーク、ソフトウェア開発、レガシーモダナイゼーション/);
   assert.match(html, /一つのハーネス、三つのモード/);
