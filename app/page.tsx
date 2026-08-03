@@ -107,7 +107,6 @@ export function HomePageContent({ locale = "en" }: { locale?: HomeLocale }) {
             <a className="button button-ghost" href="#modes">Explore the workspace <span aria-hidden="true">↘</span></a>
           </div>
           <div className="trust-row" aria-label="Product attributes">
-            <span>Apache 2.0</span><i />
             <span>12 model providers</span><i />
             <span>macOS · Windows</span>
           </div>
@@ -479,7 +478,7 @@ export function HomePageContent({ locale = "en" }: { locale?: HomeLocale }) {
           <div><strong>Product</strong><a href="#modes">Work</a><a href="#modes">Coding</a><a href={withBasePath(locale === "ja" ? "/jp/aim" : "/aim")}>AIM</a></div>
           <div><strong>Principles</strong><a href="#local-first">Local-first</a><a href="#orchestration">Orchestrated</a><a href="#architecture">Verified</a></div>
         </div>
-        <div className="footer-bottom"><span>© 2026 EvoFlux</span><span>Apache 2.0 · Built in the open</span></div>
+        <div className="footer-bottom"><span>© 2026 EvoFlux</span><span>Built in the open</span></div>
       </footer>
     </main>
   );

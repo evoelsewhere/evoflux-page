@@ -60,6 +60,7 @@ test("server-renders the EvoFlux landing page", async () => {
   assert.match(html, /releases\/download\/v0\.0\.4\/EvoFlux-macOS-Intel\.dmg/);
   assert.match(html, /releases\/download\/v0\.0\.4\/EvoFlux-Windows\.exe/);
   assert.match(html, /v0\.0\.4/);
+  assert.doesNotMatch(html, /Apache 2\.0/i);
   assert.match(html, /data-auto-detect="macos"/);
   assert.match(html, /Choose Mac architecture/);
   assert.doesNotMatch(html, /EvoFlux for Mac — (?:Apple silicon|Intel)/);
@@ -103,6 +104,7 @@ test("server-renders the Japanese EvoFlux landing page", async () => {
   assert.match(html, /リポジトリ不要の共同作業/);
   assert.match(html, /ブラウザもワークスペースの一部/);
   assert.match(html, /EvoFluxを始めよう/);
+  assert.doesNotMatch(html, /Apache 2\.0/i);
   assert.match(html, /href="\/jp\/aim"/);
   assert.match(html, /href="\/\?lang=en"/);
   assert.match(html, /href="\/jp\?lang=ja"/);
@@ -122,6 +124,7 @@ test("server-renders the dedicated AIM product page", async () => {
   assert.match(html, /operating system for a migration—not a prompt wrapped around a code generator/i);
   assert.match(html, /The migration-specific operating contract\./);
   assert.match(html, /Every run declares its input, work, gate, and output\./);
+  assert.doesNotMatch(html, /Apache 2\.0/i);
   assert.match(html, /Read-only legacy estate/);
   assert.match(html, /Domain expert confirms behavior/);
   assert.match(html, /Cutover record \+ auditable release state/);

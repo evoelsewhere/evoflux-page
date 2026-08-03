@@ -276,7 +276,7 @@ const jaText: Record<string, string> = {
   "License": "ライセンス",
   "Orchestrated": "オーケストレーション",
   "Verified": "検証済み",
-  "Apache 2.0 · Built in the open": "Apache 2.0 · オープンに開発",
+  "Built in the open": "オープンに開発",
 };
 
 function localizeText(value: string): string {

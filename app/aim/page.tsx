@@ -389,7 +389,7 @@ const jaText: Record<string, string> = {
   "Open source": "オープンソース",
   "Quick start": "クイックスタート",
   "License": "ライセンス",
-  "Apache 2.0 · Built in the open": "Apache 2.0 · オープンに開発",
+  "Built in the open": "オープンに開発",
   "EvoFlux AIM overview in light mode with migration progress, health, and dependency-aware work queue": "移行の進捗、稼働状況、依存関係を考慮した作業キューを表示するEvoFlux AIMのライトモード概要",
   "EvoFlux AIM Overview light-mode screen": "EvoFlux AIM概要のライトモード画面",
   "EvoFlux AIM Knowledge Base light-mode screen": "EvoFlux AIMナレッジベースのライトモード画面",
@@ -626,7 +626,7 @@ export function AimPageContent({ locale = "en" }: { locale?: AimLocale }) {
       <footer className="aim2-footer">
         <div className="footer-brand"><img src={withBasePath("/evoflux-app-icon.png")} alt="" width="32" height="32" /><strong>EvoFlux</strong><p>Local-first agent infrastructure for work, coding, and governed modernization.</p></div>
         <div className="footer-links"><div><strong>Product</strong><a href={withBasePath(locale === "ja" ? "/jp" : "/")}>Overview</a><a href={withBasePath(locale === "ja" ? "/jp#modes" : "/#modes")}>Work & Coding</a><a href={withBasePath(locale === "ja" ? "/jp/aim" : "/aim")}>AIM</a></div><div><strong>AIM</strong><a href="#product-tour">Product tour</a><a href="#rulebook">Rulebook</a><a href="#pipelines">Pipelines</a><a href="#traceability">Traceability</a></div></div>
-        <div className="footer-bottom"><span>© 2026 EvoFlux</span><span>Apache 2.0 · Built in the open</span></div>
+        <div className="footer-bottom"><span>© 2026 EvoFlux</span><span>Built in the open</span></div>
       </footer>
     </main>
   );
