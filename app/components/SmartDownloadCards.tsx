@@ -4,10 +4,12 @@ import { useEffect, useState } from "react";
 import { withBasePath } from "../base-path";
 
 const RELEASE_VERSION = "v0.0.4";
-const RELEASE_BASE_URL = `https://github.com/morphai-lab/evoflux-page/releases/download/${RELEASE_VERSION}`;
-const APPLE_SILICON_URL = `${RELEASE_BASE_URL}/EvoFlux-macOS-Apple-Silicon.dmg`;
-const INTEL_URL = `${RELEASE_BASE_URL}/EvoFlux-macOS-Intel.dmg`;
-const WINDOWS_URL = `${RELEASE_BASE_URL}/EvoFlux-Windows.exe`;
+const RELEASE_BUILD = "30784603013";
+const RELEASE_TAG = `${RELEASE_VERSION}-build.${RELEASE_BUILD}`;
+const RELEASE_BASE_URL = `https://github.com/morphai-lab/evoflux-page/releases/download/${RELEASE_TAG}`;
+const APPLE_SILICON_URL = `${RELEASE_BASE_URL}/EvoFlux-${RELEASE_VERSION}-macOS-Apple-Silicon.dmg`;
+const INTEL_URL = `${RELEASE_BASE_URL}/EvoFlux-${RELEASE_VERSION}-macOS-Intel.dmg`;
+const WINDOWS_URL = `${RELEASE_BASE_URL}/EvoFlux-${RELEASE_VERSION}-Windows-x64.exe`;
 const ARCH_STORAGE_KEY = "evoflux_mac_architecture";
 
 type MacArchitecture = "silicon" | "intel";
@@ -117,7 +119,7 @@ export function SmartDownloadCards({ locale = "en" }: { locale?: "en" | "ja" }) 
         </div>
         <div className="download-copy">
           <strong>{isJapanese ? "Mac版EvoFlux" : "EvoFlux for Mac"}</strong>
-          <small>macOS · {architectureLabel} · {RELEASE_VERSION}</small>
+          <small>macOS · {architectureLabel} · {RELEASE_VERSION} · build {RELEASE_BUILD}</small>
           <a className="download-button" href={macUrl} download>
             {isJapanese ? "ダウンロード" : "Download"} <i aria-hidden="true">↓</i>
           </a>
@@ -146,7 +148,7 @@ export function SmartDownloadCards({ locale = "en" }: { locale?: "en" | "ja" }) 
         </span>
         <span className="download-copy">
           <strong>{isJapanese ? "Windows版EvoFlux" : "EvoFlux for Windows"}</strong>
-          <small>{isJapanese ? "Windows 10以降" : "Windows 10 or later"} · {RELEASE_VERSION}</small>
+          <small>{isJapanese ? "Windows 10以降" : "Windows 10 or later"} · {RELEASE_VERSION} · build {RELEASE_BUILD}</small>
           <b>{isJapanese ? "ダウンロード" : "Download"} <i>↓</i></b>
         </span>
       </a>
