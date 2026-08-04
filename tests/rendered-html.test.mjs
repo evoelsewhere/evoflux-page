@@ -56,10 +56,10 @@ test("server-renders the EvoFlux landing page", async () => {
   assert.doesNotMatch(html, /Coming soon/);
   assert.match(html, /Download EvoFlux/);
   assert.match(html, /archive\/extension\/EvoFlux-WebBridge\.zip/);
-  assert.match(html, /releases\/download\/v0\.0\.4-build\.30784603013\/EvoFlux-v0\.0\.4-macOS-Apple-Silicon\.dmg/);
-  assert.match(html, /releases\/download\/v0\.0\.4-build\.30784603013\/EvoFlux-v0\.0\.4-macOS-Intel\.dmg/);
-  assert.match(html, /releases\/download\/v0\.0\.4-build\.30784603013\/EvoFlux-v0\.0\.4-Windows-x64\.exe/);
-  assert.match(html, /v0\.0\.4/);
+  assert.match(html, /github\.com\/evoelsewhere\/evoflux-page\/releases\/download\/v0\.0\.5\/EvoFlux-v0\.0\.5-macOS-Apple-Silicon\.dmg/);
+  assert.match(html, /github\.com\/evoelsewhere\/evoflux-page\/releases\/download\/v0\.0\.5\/EvoFlux-v0\.0\.5-macOS-Intel\.dmg/);
+  assert.match(html, /github\.com\/evoelsewhere\/evoflux-page\/releases\/download\/v0\.0\.5\/EvoFlux-v0\.0\.5-Windows-x64\.exe/);
+  assert.match(html, /v0\.0\.5/);
   assert.doesNotMatch(html, /Apache 2\.0/i);
   assert.match(html, /data-auto-detect="macos"/);
   assert.match(html, /Choose Mac architecture/);

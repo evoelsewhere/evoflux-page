@@ -7,7 +7,7 @@ This directory is the source of downloadable artifacts published by the website.
 - `package/macos-intel/` — reserved for Intel Mac desktop packages.
 - `package/window/` — reserved for Windows desktop packages.
 
-The production installers are hosted as public GitHub Release assets in `morphai-lab/evoflux-page` because their files exceed the GitHub Pages repository size limit. The website download cards point to the verified `v0.0.4-build.30784603013` release.
+The production installers are mirrored as public GitHub Release assets in `evoelsewhere/evoflux-page` because their files exceed the GitHub Pages repository size limit. The website download cards point to the checksum-verified `v0.0.5` release copied from `evoelsewhere/evoflux`.
 
 Release filenames include the EvoFlux version so downloaded installers remain
 identifiable outside the website.
