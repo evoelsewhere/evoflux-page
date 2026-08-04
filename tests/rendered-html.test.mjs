@@ -1,4 +1,5 @@
 import assert from "node:assert/strict";
+import { readFile } from "node:fs/promises";
 import test from "node:test";
 
 async function render(path = "/", requestHeaders = {}) {
@@ -111,6 +112,16 @@ test("server-renders the Japanese EvoFlux landing page", async () => {
   assert.doesNotMatch(html, /Linux/i);
   assert.doesNotMatch(html, /One desktop workspace/);
   assert.doesNotMatch(html, /FHM Q9|FPT Japan|FJP|EvoFlux FHM/);
+});
+
+test("shows platform-specific security guidance before installer downloads", async () => {
+  const component = await readFile(new URL("../app/components/SmartDownloadCards.tsx", import.meta.url), "utf8");
+  assert.match(component, /System Settings → Privacy & Security/);
+  assert.match(component, /Open Anyway/);
+  assert.match(component, /Downloads → Keep → Show more → Keep anyway/);
+  assert.match(component, /More info → Run anyway/);
+  assert.match(component, /role="dialog"/);
+  assert.match(component, /aria-modal="true"/);
 });
 
 test("server-renders the dedicated AIM product page", async () => {
