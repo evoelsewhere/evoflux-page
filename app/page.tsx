@@ -20,12 +20,12 @@ const workflow = [
 ];
 
 const capabilities = [
-  { number: "01", label: "ARTIFACTS", title: "Create the file, not just the answer.", text: "Build editable Word, PowerPoint, and Excel deliverables with structure checks and visual review.", fact: "DOCX · PPTX · XLSX", image: "/illustrations/office-document-mockup.svg", alt: "Structured document created in EvoFlux" },
-  { number: "02", label: "BROWSER", title: "Work in your real browser.", text: "WebBridge uses your signed-in Chrome or Edge session with explicit sharing, policy checks, and human handoff.", fact: "Navigate · act · capture evidence", image: "/illustrations/webbridge-browser-mockup.png", alt: "EvoFlux WebBridge browser workspace", download: true },
-  { number: "03", label: "AUTOMATION", title: "Bring recurring work back on time.", text: "Schedule Work or Coding tasks by interval, exact time, or cron with a clear timezone and session policy.", fact: "Every · Cron · At", image: "/screens/evoflux-scheduler-light.png", alt: "EvoFlux scheduled task workflow" },
-  { number: "04", label: "AUTONOMY", title: "Keep long objectives moving.", text: "Goal mode survives reconnects and restarts with status, budgets, pause controls, and concrete blocker detection.", fact: "Persistent · bounded", image: "/illustrations/capability-goal.jpg", alt: "EvoFlux durable Goal mode" },
-  { number: "05", label: "ENGINEERING", title: "Understand code structurally.", text: "Code graphs, isolated worktrees, tests, diffs, and independent review support safer parallel delivery.", fact: "Graph · build · test · review", image: "/illustrations/capability-code-graph.jpg", alt: "EvoFlux structural code graph" },
-  { number: "06", label: "PLUGINS", title: "Extend EvoFlux without losing control.", text: "Portable Agent Plugins package skills and MCP tools with reviewed permissions, isolated secrets, and local lifecycle management.", fact: "Discover · review · install · update", image: "/illustrations/capability-skills-mcp.jpg", alt: "EvoFlux skills and MCP plugin capabilities" },
+  { number: "01", mark: "DOC", label: "ARTIFACTS", title: "Create the file, not just the answer.", text: "Build editable Word, PowerPoint, and Excel deliverables with structure checks and visual review.", fact: "DOCX · PPTX · XLSX" },
+  { number: "02", mark: "WEB", label: "BROWSER", title: "Work in your real browser.", text: "WebBridge uses your signed-in Chrome or Edge session with explicit sharing, policy checks, and human handoff.", fact: "Navigate · act · capture evidence", download: true },
+  { number: "03", mark: "AT", label: "AUTOMATION", title: "Bring recurring work back on time.", text: "Schedule Work or Coding tasks by interval, exact time, or cron with a clear timezone and session policy.", fact: "Every · Cron · At" },
+  { number: "04", mark: "GO", label: "AUTONOMY", title: "Keep long objectives moving.", text: "Goal mode survives reconnects and restarts with status, budgets, pause controls, and concrete blocker detection.", fact: "Persistent · bounded" },
+  { number: "05", mark: "</>", label: "ENGINEERING", title: "Understand code structurally.", text: "Code graphs, isolated worktrees, tests, diffs, and independent review support safer parallel delivery.", fact: "Graph · build · test · review" },
+  { number: "06", mark: "MCP", label: "PLUGINS", title: "Extend EvoFlux without losing control.", text: "Portable Agent Plugins package skills and MCP tools with reviewed permissions, isolated secrets, and local lifecycle management.", fact: "Discover · review · install · update" },
 ];
 
 const PROVIDER_ICON_BASE = "https://cdn.jsdelivr.net/npm/@lobehub/icons-static-svg@1.94.0/icons";
@@ -98,11 +98,9 @@ export function HomePageContent({ locale = "en" }: { locale?: HomeLocale }) {
         <div className="compact-section-head"><div><span className="section-kicker">Everything in one workspace</span><h2>Six capabilities, organized around the work.</h2></div><p>Use only what the task needs. Every capability returns to the same conversation, files, permissions, and delivery record.</p></div>
         <div className="compact-capability-grid">
           {capabilities.map((capability) => (
-            <article className="compact-card" key={capability.number} tabIndex={0}>
-              <img className="compact-card-bg" src={withBasePath(capability.image)} alt={capability.alt} loading="lazy" />
-              <div className="compact-card-shade" aria-hidden="true" />
+            <article className="compact-card" data-number={capability.number} key={capability.number}>
+              <div className="compact-card-top"><span>{capability.number} · {capability.label}</span><b>{capability.mark}</b></div>
               <div className="compact-card-copy">
-                <span>{capability.number} · {capability.label}</span>
                 <h3>{capability.title}</h3>
                 <div className="compact-card-detail">
                   <p>{capability.text}</p><small>{capability.fact}</small>

@@ -24,8 +24,8 @@ test("server-renders the EvoFlux landing page", async () => {
   assert.match(html, /AI agents that do/);
   assert.match(html, /Three modes\. One clear operating model\./);
   assert.match(html, /Six capabilities, organized around the work\./);
-  assert.match(html, /illustrations\/office-document-mockup\.svg/);
   assert.match(html, /DOCX · PPTX · XLSX/);
+  assert.doesNotMatch(html, /illustrations\/(?:office-document-mockup\.svg|webbridge-browser-mockup\.png|capability-goal\.jpg|capability-code-graph\.jpg|capability-skills-mcp\.jpg)/);
   assert.doesNotMatch(html, /brand\/company-logo\.png|Company logo/);
   assert.match(html, /class="brand" href="#top" aria-label="EvoFlux home"/);
   assert.match(html, /Every · Cron · At/);
