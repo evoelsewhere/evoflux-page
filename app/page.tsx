@@ -50,6 +50,7 @@ export function HomePageContent({ locale = "en" }: { locale?: HomeLocale }) {
         <nav className="desktop-nav" aria-label="Primary navigation">
           <a href="#modes">Modes</a>
           <a href="#capabilities">Capabilities</a>
+          <a href="#plugins">Plugins</a>
           <a href="#orchestration">Orchestration</a>
           <a href="#local-first">Local-first</a>
           <a href={withBasePath(locale === "ja" ? "/jp/aim" : "/aim")}>AIM</a>
@@ -66,6 +67,7 @@ export function HomePageContent({ locale = "en" }: { locale?: HomeLocale }) {
             <nav aria-label="Mobile navigation">
               <a href="#modes">Modes</a>
               <a href="#capabilities">Capabilities</a>
+              <a href="#plugins">Plugins</a>
               <a href="#orchestration">Orchestration</a>
               <a href="#local-first">Local-first</a>
               <a href="#architecture">Architecture</a>
@@ -284,6 +286,83 @@ export function HomePageContent({ locale = "en" }: { locale?: HomeLocale }) {
           <article><span>06</span><div className="capability-detail-copy"><h3>54 skills + MCP</h3><p>Built-in methods for research, TDD, security, docs, browser work, and migration; connected MCP tools inherit native permissions.</p></div><div className="capability-detail-art"><img src={withBasePath("/illustrations/capability-skills-mcp.jpg")} alt="" width="720" height="720" loading="lazy" /></div></article>
           <article><span>07</span><div className="capability-detail-copy"><h3>Isolated engineering lanes</h3><p>Managed Git worktrees, full source control, diff review, tests, and independent specialist review keep parallel changes separated.</p></div><div className="capability-detail-art"><img src={withBasePath("/illustrations/capability-engineering-lanes.jpg")} alt="" width="720" height="720" loading="lazy" /></div></article>
           <article><span>08</span><div className="capability-detail-copy"><h3>Observable by default</h3><p>Streaming activity, tool timing, execution history, OpenTelemetry, Prometheus, and DuckDB summaries make runs inspectable.</p></div><div className="capability-detail-art"><img src={withBasePath("/illustrations/capability-observability.jpg")} alt="" width="720" height="720" loading="lazy" /></div></article>
+        </div>
+      </section>
+
+      <section id="plugins" className="plugins-section">
+        <div className="plugins-shell">
+          <div className="plugins-heading">
+            <div>
+              <span className="section-kicker">Agent Plugins · portable by design</span>
+              <h2>Extend the workspace.<br />Keep control at the boundary.</h2>
+            </div>
+            <p>Plugin Center brings portable Agent Skills and MCP servers into Work and Coding through one inspectable lifecycle. Import, validate, review, configure, and enable without merging plugin state into your global setup.</p>
+          </div>
+
+          <div className="plugin-architecture" aria-label="Agent Plugins architecture">
+            <article className="plugin-lane plugin-package">
+              <header><span>01</span><small>Portable package</small></header>
+              <div className="plugin-file-stack" aria-hidden="true">
+                <i><b>{"{}"}</b><em>plugin.json</em></i>
+                <i><b>SK</b><em>skills/*</em></i>
+                <i><b>↔</b><em>mcp.json</em></i>
+              </div>
+              <h3>Standards-compatible by default.</h3>
+              <p>Use the Agent Plugins 1.0 package contract. Distribute one deterministic <code>.evoplugin</code> archive or link an unpacked development folder.</p>
+            </article>
+
+            <span className="plugin-flow-arrow" aria-hidden="true">→</span>
+
+            <article className="plugin-lane plugin-center">
+              <header><span>02</span><small>Plugin Center</small><b>Inspect first</b></header>
+              <div className="plugin-action-grid" aria-label="Plugin Center lifecycle">
+                {[
+                  ["✓", "Validate"], ["↓", "Import"], ["↗", "Link"],
+                  ["＋", "Create"], ["✎", "Edit"], ["□", "Pack"],
+                ].map(([icon, label]) => <span key={label}><i>{icon}</i><strong>{label}</strong></span>)}
+              </div>
+              <h3>One place for the full lifecycle.</h3>
+              <p>Scaffold, inspect, import, developer-link, edit, pack, update, enable, disable, and uninstall with package-level diagnostics.</p>
+            </article>
+
+            <span className="plugin-flow-arrow" aria-hidden="true">→</span>
+
+            <article className="plugin-lane plugin-runtime">
+              <header><span>03</span><small>Isolated runtime</small></header>
+              <div className="plugin-runtime-stack">
+                <span><i>◆</i><strong>Skill catalog</strong><small>Load on activation</small></span>
+                <span><i>▦</i><strong>MCP manager</strong><small>stdio · HTTP</small></span>
+                <span><i>✓</i><strong>Permissions</strong><small>Normal policy applies</small></span>
+              </div>
+              <h3>Useful capability, bounded access.</h3>
+              <p>Plugin servers stay separate from global MCP configuration. Every tool call still passes through agent selection, permissions, and sandbox policy.</p>
+            </article>
+          </div>
+
+          <div className="plugin-trust-panel">
+            <div className="plugin-trust-copy">
+              <span className="capability-feature-label"><i /> Trust review · before enable</span>
+              <h3>Know what a plugin can touch before it runs.</h3>
+              <p>New imports remain disabled while EvoFlux statically discloses executable commands, remote hosts, environment-field names, and declared capabilities. Credentials are scoped to one installation, masked on read, and stored outside the package.</p>
+            </div>
+            <div className="plugin-trust-ledger" aria-label="Plugin trust review">
+              <header><span><i /> release-audit</span><b>Review required</b></header>
+              <dl>
+                <div><dt>Executable</dt><dd>python · server.py</dd><i>declared</i></div>
+                <div><dt>Remote host</dt><dd>api.example.com</dd><i>1 host</i></div>
+                <div><dt>Environment</dt><dd>API_TOKEN · CACHE_DIR</dd><i>names only</i></div>
+                <div><dt>Capabilities</dt><dd>1 Skill · 4 MCP tools</dd><i>bounded</i></div>
+              </dl>
+              <footer><span>Disabled until review</span><b>Trust and enable</b></footer>
+            </div>
+          </div>
+
+          <div className="plugin-facts" aria-label="Agent Plugin capabilities">
+            <span><strong>1.0</strong>Agent Plugins contract</span>
+            <span><strong>2</strong>MCP transports</span>
+            <span><strong>0</strong>automatic global grants</span>
+            <span><strong>Local</strong>registry · data · secrets</span>
+          </div>
         </div>
       </section>
 

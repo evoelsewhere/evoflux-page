@@ -70,6 +70,11 @@ test("server-renders the EvoFlux landing page", async () => {
   assert.match(html, /@lobehub\/icons-static-svg@1\.94\.0\/icons\/openai\.svg/);
   assert.match(html, /@lobehub\/icons-static-svg@1\.94\.0\/icons\/githubcopilot\.svg/);
   assert.match(html, /id="team-workspace"/);
+  assert.match(html, /id="plugins"/);
+  assert.match(html, /Agent Plugins · portable by design/);
+  assert.match(html, /Agent Plugins 1\.0 package contract/);
+  assert.match(html, /Trust and enable/);
+  assert.match(html, /Plugin servers stay separate from global MCP configuration/);
   assert.doesNotMatch(html, /FHM Q9|FPT Japan|FJP|EvoFlux FHM/);
   assert.match(html, /EvoFlux for Mac/);
   assert.match(html, /EvoFlux for Windows/);
@@ -104,6 +109,8 @@ test("server-renders the Japanese EvoFlux landing page", async () => {
   assert.match(html, /あらゆるチームのためのEvoFlux/);
   assert.match(html, /リポジトリ不要の共同作業/);
   assert.match(html, /ブラウザもワークスペースの一部/);
+  assert.match(html, /Agent Plugins · ポータブル設計/);
+  assert.match(html, /実行前に、pluginが触れる範囲を把握/);
   assert.match(html, /EvoFluxを始めよう/);
   assert.doesNotMatch(html, /Apache 2\.0/i);
   assert.match(html, /href="\/jp\/aim"/);
