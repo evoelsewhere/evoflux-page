@@ -36,6 +36,8 @@ test("server-renders the EvoFlux landing page", async () => {
   assert.match(html, /rel="canonical" href="https:\/\/evoflux\.fhmq9\.cloud\//);
   assert.match(html, /One local-first AI workspace for Cowork, agentic coding/);
   assert.match(html, /Work in your real browser\./);
+  assert.match(html, /archive\/extension\/EvoFlux-WebBridge\.zip/);
+  assert.match(html, /Download WebBridge/);
   assert.match(html, /Keep long objectives moving\./);
   assert.match(html, /Understand code structurally\./);
   assert.doesNotMatch(html, /Coming soon/);

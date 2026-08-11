@@ -1,7 +1,6 @@
 import type { Metadata } from "next";
 import { withBasePath } from "./base-path";
 import { ModeShowcase } from "./components/ModeShowcase";
-import { AsciiSpaceBackground } from "./components/AsciiSpaceBackground";
 import { SmartDownloadCards } from "./components/SmartDownloadCards";
 import { localizeHomeNode, type HomeLocale } from "./home-locales";
 
@@ -18,6 +17,15 @@ const workflow = [
   ["04", "Verify", "Run checks and attach evidence."],
   ["05", "Review", "Resolve findings and approvals."],
   ["06", "Deliver", "Ship the artifact and its proof."],
+];
+
+const capabilities = [
+  { number: "01", label: "ARTIFACTS", title: "Create the file, not just the answer.", text: "Build editable Word, PowerPoint, and Excel deliverables with structure checks and visual review.", fact: "DOCX · PPTX · XLSX", image: "/illustrations/office-document-mockup.svg", alt: "Structured document created in EvoFlux" },
+  { number: "02", label: "BROWSER", title: "Work in your real browser.", text: "WebBridge uses your signed-in Chrome or Edge session with explicit sharing, policy checks, and human handoff.", fact: "Navigate · act · capture evidence", image: "/illustrations/webbridge-browser-mockup.png", alt: "EvoFlux WebBridge browser workspace", download: true },
+  { number: "03", label: "AUTOMATION", title: "Bring recurring work back on time.", text: "Schedule Work or Coding tasks by interval, exact time, or cron with a clear timezone and session policy.", fact: "Every · Cron · At", image: "/screens/evoflux-scheduler-light.png", alt: "EvoFlux scheduled task workflow" },
+  { number: "04", label: "AUTONOMY", title: "Keep long objectives moving.", text: "Goal mode survives reconnects and restarts with status, budgets, pause controls, and concrete blocker detection.", fact: "Persistent · bounded", image: "/illustrations/capability-goal.jpg", alt: "EvoFlux durable Goal mode" },
+  { number: "05", label: "ENGINEERING", title: "Understand code structurally.", text: "Code graphs, isolated worktrees, tests, diffs, and independent review support safer parallel delivery.", fact: "Graph · build · test · review", image: "/illustrations/capability-code-graph.jpg", alt: "EvoFlux structural code graph" },
+  { number: "06", label: "PLUGINS", title: "Extend EvoFlux without losing control.", text: "Portable Agent Plugins package skills and MCP tools with reviewed permissions, isolated secrets, and local lifecycle management.", fact: "Discover · review · install · update", image: "/illustrations/capability-skills-mcp.jpg", alt: "EvoFlux skills and MCP plugin capabilities" },
 ];
 
 const PROVIDER_ICON_BASE = "https://cdn.jsdelivr.net/npm/@lobehub/icons-static-svg@1.94.0/icons";
@@ -60,9 +68,12 @@ export function HomePageContent({ locale = "en" }: { locale?: HomeLocale }) {
       </header>
 
       <section id="top" className="hero">
-        <AsciiSpaceBackground />
-        <div className="flux-atmosphere" aria-hidden="true"><div className="flux-ring flux-ring-one" /><div className="flux-ring flux-ring-two" /><div className="flux-pulse pulse-one" /><div className="flux-pulse pulse-two" /><div className="flux-pulse pulse-three" /></div>
-        <div className="space-field" aria-hidden="true">{Array.from({ length: 12 }, (_, index) => <i key={index} />)}<span className="space-beam beam-one" /><span className="space-beam beam-two" /><span className="space-beam beam-three" /></div>
+        <div className="hero-aurora-background" aria-hidden="true">
+          <span className="aurora-ribbon aurora-ribbon-one" /><span className="aurora-ribbon aurora-ribbon-two" /><span className="aurora-ribbon aurora-ribbon-three" />
+          <div className="aurora-halo" />
+          <div className="aurora-flow-trace"><i /><i /><i /><i /><i /><i /></div>
+          <div className="aurora-work-signals"><span>PLAN</span><span>DELEGATE</span><span>EXECUTE</span><span>VERIFY</span><span>DELIVER</span></div>
+        </div>
         <div className="hero-copy reveal">
           <div className="eyebrow"><span className="eyebrow-dot" />Local-first agent harness</div>
           <img className="hero-mark" src={withBasePath("/evoflux-app-icon.png")} width="92" height="92" alt="EvoFlux" />
@@ -86,12 +97,20 @@ export function HomePageContent({ locale = "en" }: { locale?: HomeLocale }) {
       <section id="capabilities" className="section compact-capabilities">
         <div className="compact-section-head"><div><span className="section-kicker">Everything in one workspace</span><h2>Six capabilities, organized around the work.</h2></div><p>Use only what the task needs. Every capability returns to the same conversation, files, permissions, and delivery record.</p></div>
         <div className="compact-capability-grid">
-          <article className="compact-card is-wide"><div className="compact-card-copy"><span>01 · ARTIFACTS</span><h3>Create the file, not just the answer.</h3><p>Build editable Word, PowerPoint, and Excel deliverables with structure checks and visual review.</p><small>DOCX · PPTX · XLSX</small></div><img src={withBasePath("/illustrations/office-document-mockup.svg")} alt="Structured document created in EvoFlux" loading="lazy" /></article>
-          <article className="compact-card"><span>02 · BROWSER</span><h3>Work in your real browser.</h3><p>WebBridge uses your signed-in Chrome or Edge session with explicit sharing, policy checks, and human handoff.</p><small>Navigate · act · capture evidence</small></article>
-          <article className="compact-card"><span>03 · AUTOMATION</span><h3>Bring recurring work back on time.</h3><p>Schedule Work or Coding tasks by interval, exact time, or cron with a clear timezone and session policy.</p><small>Every · Cron · At</small></article>
-          <article className="compact-card"><span>04 · AUTONOMY</span><h3>Keep long objectives moving.</h3><p>Goal mode survives reconnects and restarts with status, budgets, pause controls, and concrete blocker detection.</p><small>Persistent · bounded</small></article>
-          <article className="compact-card"><span>05 · ENGINEERING</span><h3>Understand code structurally.</h3><p>Code graphs, isolated worktrees, tests, diffs, and independent review support safer parallel delivery.</p><small>Graph · build · test · review</small></article>
-          <article className="compact-card is-accent"><span>06 · PLUGINS</span><h3>Extend EvoFlux without losing control.</h3><p>Portable Agent Plugins package skills and MCP tools with reviewed permissions, isolated secrets, and local lifecycle management.</p><small>Discover · review · install · update</small></article>
+          {capabilities.map((capability) => (
+            <article className="compact-card" key={capability.number} tabIndex={0}>
+              <img className="compact-card-bg" src={withBasePath(capability.image)} alt={capability.alt} loading="lazy" />
+              <div className="compact-card-shade" aria-hidden="true" />
+              <div className="compact-card-copy">
+                <span>{capability.number} · {capability.label}</span>
+                <h3>{capability.title}</h3>
+                <div className="compact-card-detail">
+                  <p>{capability.text}</p><small>{capability.fact}</small>
+                  {capability.download && <a className="compact-card-download" href={withBasePath("/archive/extension/EvoFlux-WebBridge.zip")} download>Download WebBridge <span aria-hidden="true">↓</span></a>}
+                </div>
+              </div>
+            </article>
+          ))}
         </div>
       </section>
 
