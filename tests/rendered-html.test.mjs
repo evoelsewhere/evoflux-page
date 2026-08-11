@@ -30,8 +30,8 @@ test("server-renders the EvoFlux landing page", async () => {
   assert.match(html, /PowerPoint · PPTX/);
   assert.match(html, /Excel · XLSX/);
   assert.match(html, /Word · DOCX/);
-  assert.match(html, /brand\/company-logo\.png/);
-  assert.doesNotMatch(html, /class="brand" href="#top"/);
+  assert.doesNotMatch(html, /brand\/company-logo\.png|Company logo/);
+  assert.match(html, /class="brand" href="#top" aria-label="EvoFlux home"/);
   assert.match(html, /Set it once\./);
   assert.match(html, /Every · Cron · At/);
   assert.match(html, /Any IANA timezone/);
@@ -145,9 +145,9 @@ test("server-renders the dedicated AIM product page", async () => {
   assert.match(html, /evoflux-aim-overview-light\.jpg/);
   assert.match(html, /evoflux-aim-rulebook-light\.jpg/);
   assert.match(html, /evoflux-aim-suggest-light\.jpg/);
-  assert.match(html, /brand\/company-logo\.png/);
+  assert.doesNotMatch(html, /brand\/company-logo\.png|Company logo/);
   assert.match(html, /brand\/aim-logo-transparent\.png/);
-  assert.doesNotMatch(html, /class="brand"[^>]*aria-label="EvoFlux home"/);
+  assert.match(html, /class="brand"[^>]*aria-label="EvoFlux home"/);
   assert.doesNotMatch(html, /codex-preview|Your site is taking shape|react-loading-skeleton/i);
 });
 

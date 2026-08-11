@@ -41,14 +41,9 @@ export function HomePageContent({ locale = "en" }: { locale?: HomeLocale }) {
     <main className="home-page" lang={locale}>
       <header className="site-header">
         <div className="brand-cluster">
-          <a className="company-brand-link" href="#top" aria-label="Home">
-            <img
-              className="company-brand"
-              src={withBasePath("/brand/company-logo.png")}
-              width="885"
-              height="241"
-              alt="Company logo"
-            />
+          <a className="brand" href="#top" aria-label="EvoFlux home">
+            <img src={withBasePath("/evoflux-app-icon.png")} width="34" height="34" alt="" />
+            <span>EvoFlux</span>
           </a>
         </div>
 

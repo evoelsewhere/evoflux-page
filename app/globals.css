@@ -106,17 +106,6 @@ img {
   background: rgba(17, 17, 16, 0.13);
 }
 
-.company-brand {
-  width: 260px;
-  height: auto;
-  object-fit: contain;
-}
-
-.company-brand-link {
-  display: flex;
-  align-items: center;
-}
-
 .brand img {
   width: 34px;
   height: 34px;
@@ -1986,7 +1975,6 @@ footer {
 
 @media (max-width: 1100px) {
   .site-header { grid-template-columns: 1fr auto; padding: 0 24px; }
-  .company-brand { width: 220px; }
   .office-heading { gap: 50px; }
   .office-showcase-grid { grid-template-columns: 1fr; }
   .office-card-featured { grid-row: auto; }
@@ -2028,7 +2016,6 @@ footer {
   .mobile-menu nav { position: fixed; top: 72px; right: 0; left: 0; display: flex; flex-direction: column; padding: 8px 24px 28px; border-bottom: 1px solid var(--line); background: rgba(255,255,255,.98); box-shadow: 0 20px 40px rgba(17,17,16,.08); }
   .mobile-menu nav a { padding: 17px 0; border-bottom: 1px solid var(--line); font-size: 16px; font-weight: 560; }
   .header-actions { gap: 10px; }
-  .company-brand { width: 176px; }
 
   .office-heading { grid-template-columns: 1fr; gap: 25px; }
   .office-heading > p { max-width: 620px; }
@@ -2122,7 +2109,6 @@ footer {
   .brand span { font-size: 17px; }
   .brand img { width: 32px; height: 32px; }
   .brand-cluster { gap: 9px; }
-  .company-brand { width: 145px; }
   .office-heading h2 { font-size: 44px; }
   .office-card { border-radius: 18px; }
   .office-card-featured .office-art { padding: 10px 10px 0; }
@@ -2301,7 +2287,6 @@ footer {
 }
 
 .aim-brand-cluster { gap: 16px; }
-.aim-company-brand { width: 235px; }
 .aim-brand-logo { width: 82px; height: auto; object-fit: contain; }
 
 .aim2-language-switch { display: inline-flex; align-items: center; gap: 2px; padding: 3px; border: 1px solid rgba(17,17,16,.1); border-radius: 9px; background: rgba(247,247,244,.8); }
@@ -2608,7 +2593,6 @@ footer {
 @media (max-width: 800px) {
   .aim2-header { padding-right: 18px; padding-left: 18px; }
   .aim2-header .header-actions { gap: 8px; }
-  .aim-company-brand { width: 180px; }
   .aim-brand-logo { width: 64px; }
   .aim2-hero { min-height: auto; padding: 100px 22px 85px; }
   .aim2-hero h1 { font-size: clamp(52px,13vw,76px); }
@@ -2634,7 +2618,6 @@ footer {
 @media (max-width: 480px) {
   .aim2-header { padding-right: 12px; padding-left: 12px; }
   .aim-brand-cluster { gap: 8px; }
-  .aim-company-brand { width: 135px; }
   .aim-brand-logo { width: 52px; }
   .aim2-header .header-actions { gap: 6px; }
   .aim2-header .mobile-menu summary { width: 34px; height: 34px; border-radius: 10px; }

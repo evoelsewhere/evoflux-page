@@ -427,9 +427,11 @@ export function AimPageContent({ locale = "en" }: { locale?: AimLocale }) {
     <main className="aim2-page" lang={locale}>
       <header className="site-header aim2-header">
         <div className="brand-cluster aim-brand-cluster">
-          <a className="company-brand-link" href={withBasePath(locale === "ja" ? "/jp" : "/")} aria-label="Home">
-            <img className="company-brand aim-company-brand" src={withBasePath("/brand/company-logo.png")} width="885" height="241" alt="Company logo" />
+          <a className="brand" href={withBasePath(locale === "ja" ? "/jp" : "/")} aria-label="EvoFlux home">
+            <img src={withBasePath("/evoflux-app-icon.png")} width="34" height="34" alt="" />
+            <span>EvoFlux</span>
           </a>
+          <span className="brand-divider" aria-hidden="true" />
           <img className="aim-brand-logo" src={withBasePath("/brand/aim-logo-transparent.png")} width="1851" height="850" alt="AIM" />
         </div>
         <nav className="desktop-nav" aria-label="Primary navigation">
