@@ -359,6 +359,7 @@ const jaText: Record<string, string> = {
   "Portable Agent Plugins package skills and MCP tools with reviewed permissions, isolated secrets, and local lifecycle management.": "ポータブルなAgent Pluginsが、レビュー済み権限、分離された機密情報、ローカルのライフサイクル管理とともにスキルとMCPツールを提供します。",
   "Discover · review · install · update": "発見 · レビュー · インストール · 更新",
   "One delivery loop": "一つのデリバリーループ",
+  "EvoFlux delivery workflow": "EvoFluxデリバリーワークフロー",
   "From intent to verified outcome.": "意図から検証済み成果まで。",
   "Small tasks stay direct. Larger tasks gain specialists and gates without changing the way progress is inspected.": "小さなタスクは直接処理し、大きなタスクには進捗確認方法を変えずにスペシャリストとゲートを追加します。",
   "Define the outcome and proof.": "成果と証明を定義。",

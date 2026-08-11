@@ -97,7 +97,14 @@ export function HomePageContent({ locale = "en" }: { locale?: HomeLocale }) {
 
       <section id="workflow" className="compact-workflow">
         <div className="compact-section-head is-light"><div><span className="section-kicker">One delivery loop</span><h2>From intent to verified outcome.</h2></div><p>Small tasks stay direct. Larger tasks gain specialists and gates without changing the way progress is inspected.</p></div>
-        <div className="compact-workflow-track">{workflow.map(([number, title, text]) => <article key={number}><span>{number}</span><h3>{title}</h3><p>{text}</p></article>)}</div>
+        <div className="compact-workflow-track" aria-label="EvoFlux delivery workflow">
+          {workflow.map(([number, title, text], index) => (
+            <article key={number}>
+              <div className="workflow-node"><span>{number}</span>{index < workflow.length - 1 && <i aria-hidden="true">→</i>}</div>
+              <div className="workflow-card"><h3>{title}</h3><p>{text}</p></div>
+            </article>
+          ))}
+        </div>
       </section>
 
       <section id="trust" className="section compact-trust">
